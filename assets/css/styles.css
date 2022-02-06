@@ -277,7 +277,7 @@ ul {
     text-decoration: none;
     float: right;
     border: none;
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-weight: bold;
     transition: .5s;
 }
@@ -376,12 +376,9 @@ font-size: 3vw;
     background-color: rgba(0, 0, 0, .5);
     padding-top: 60px;
 }
-#navbar .sticky button.link {
-font-size: 1.5vw;
-}
 .sticky+.p{
     display:inline;
-    font-size: 17px;
+    font-size: 128px;
 }
 
 /* The side navigation menu */
@@ -518,6 +515,7 @@ padding: 2px 2px 2px 2px;
         border-left: 4px solid aqua;
         color: rgb(0, 132, 255);
         transition: 0.5s;
+        
     }
 
     #navbar button.active {
@@ -529,12 +527,14 @@ padding: 2px 2px 2px 2px;
         color: #ffffff;
         padding: 16px;
         float: left;
+        font-size: 32px;
     }
 
     #navbar button.active:hover {
         background-color: transparent;
         color: skyblue;
         transition: 0.5s;
+        font-size: 32px;
     }
 }
 @keyframes slidedown {
