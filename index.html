@@ -1,0 +1,560 @@
+<!DOCTYPE = html5>
+<html lang="en" style ="background-color: rgba (0,0,0,0.1);" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Diante Littles" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QFT&trade; - HQ</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/fonts.css">
+	<link rel="stylesheet" href="assets/css/Accordion.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+	<meta name="description" content="View live stats about TrueBlueCreativeWorksâ„¢ as well as any upcomming projects that we may have in store" />
+	<script src='assets/js/SH_UTC.js'> </script>
+</head>
+
+<body class="body-bg">
+    <header>
+       <div id="mySidenav" class="sidenav">
+        <a href="index.html" class="title">
+        <img src="assets/images/favicons/favicon.ico" style="align-self: auto;" width="32px" height="32px" alt="HomePage" />TBI&trade;- Staffing</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&otimes;</a
+			>
+			<a href="#" class="link" onclick="openPage('Home' , this, 'skyblue')" id="defaultOpen"
+				><i class="fa fa-home"></i>  Home</a
+			>
+			<a href="#"  class="link" onclick="openPage('News' , this, 'skyblue')"
+				><i class="fa fa-newspaper-o "></i>  News</a
+			>
+			<a href="#"  class="link" onclick="openPage('Jobs' , this, 'skyblue')"
+				><i class="fa fa-users"></i>  Jobs</a
+			>
+			<a href="#"  class="link" onclick="openPage('Community' , this, 'skyblue')"
+				><i class="fa fa-users"></i>  Community</a
+			>
+			<a href="#"  class="link" onclick="openPage('Server' , this, 'skyblue')"
+				><i class="fa fa-server "></i>  Server</a
+			>			
+			<a  href="#" class="link" onclick="openPage('About' , this, 'skyblue')"
+				><i class="fa fa-support"></i>  About</a
+			>
+		</div>
+
+		<div class="main">
+			<div id="navbar">
+				<img src="./assets/images/favicons/favicon.ico"  width = '32vw' alt="icon">
+				<p id='logo'>QFT&trade; - </p>
+				<button href="#" class="active" onclick="openNav()">
+					<i class="fa fa-bars"></i>
+                </button>
+               
+				<button
+					href="#"
+					class="link"
+					onclick="openPage('About' , this, 'skyblue')"
+				>
+					<i class="fa fa-support"></i>   Contact</button
+				><button
+					href="#"
+					class="link"
+					onclick="openPage('Server' , this, 'skyblue')"
+				>
+					<i class="fa fa-server "></i>  Server</button
+				>
+				<button
+					href="#"
+					class="link"
+					onclick="openPage('Community' , this,  'skyblue')"
+				>
+					<i class="fa fa-users "></i>  Community</button
+				>
+				<button
+					href="#"
+					class="link"
+					onclick="openPage('Jobs' , this,  'skyblue')"
+				>
+					<i class="fa fa-users "></i>  Jobs</button
+				>
+				<button
+					href="#"
+					class="link"
+					onclick="openPage('News' , this, 'skyblue')"
+				>
+					<i class="fa fa-newspaper-o "></i>  News</button
+				><button
+					href="#"
+					class="link"
+					onclick="openPage('Home' , this, ' skyblue')"
+					id="defaultOpen"
+				>
+					<i class="fa fa-home"></i> Home
+				</button>
+            </div>
+		<div class="heading section has-text-centered">
+
+		<p class="title has-text-white"> QuazarFutureTech&trade;</p>
+            </header>
+            <main class="has-text-centered">
+
+			
+			
+			<div id="Home" class="linkcontent">
+				<div class="Header">
+			<img src="assets/images/icon.png" width="150px">
+            <p class="title is-1 has-text-white">Staffing Hub</p>
+			<p class="subtitle has-text-white">Welcome to our Staffing Dashboard. Here you can view live stats regarding all of our services as well as our communications and infrastructure.</p><br />
+			
+		    </div>
+<div id="particles-dots" class="particles"></div>
+<div class="Main">	
+   
+
+<div class="box  has-text-white">
+   <p class="title is-1 has-text-white">Overall Status</p>
+   <p class="subtitle has-text-white"> Status : <span class='is_UnderConstruction'> &bull; Under Construction</span></p>
+   <p class="subtitle has-text-white"> UpTime :  <span id='SH_Uptime' class="subtitle has-text-white"></span></p>
+   <p class="subtitle has-text-white"> Desc: Our status report page as well as a few other key services is currently under constuction. some data may not be entirely time accurate furthermore Styles and Web Api are not fully integrated yet. we are working on this and will continue to alert you of any upcoming changes.</p>
+		
+</div>
+
+
+<div class="box">
+	<svg viewBox="0 0 1023 83" color=white enable-background="new 0 0 1023 83" xml:space="preserve">
+		<path  d="M1024,27.68c0,0-109.167-28.004-221.241-28.004S511.5,27.563,511.5,27.563
+			S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"></path>
+		</svg>
+		<button class="accordion" onclick="">
+			<p class="title is-1 has-text-white">Our Guild</p>
+		</button>
+		<div class="panel">
+			<p class="subtitle has-text-white"> Desc: We coordinate our company through third party services like discord allowing us to stay on task, effective and efficient.</p>
+	<widgetbot
+  server="708119280582918267"
+  channel="774784035053895701"
+  width="100%"
+  height="75%"
+></widgetbot>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+
+</div>
+</div>
+
+<div class="box">
+					<svg viewBox="0 0 1023 83" color=white enable-background="new 0 0 1023 83" xml:space="preserve">
+            <path  d="M1024,27.68c0,0-109.167-28.004-221.241-28.004S511.5,27.563,511.5,27.563
+                S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"></path>
+            </svg>
+					<!--<ul>
+						<li ><p class="subtitle has-text-white"> Status : <span class='is_Offline'> <span class='dot'>&bull;</span > Offline </span></p></li>
+					</ul>
+
+					<ul>	
+						<li ><p class="subtitle has-text-white"> Status : <span class='is_UnderConstruction'> <span class='dot'>&bull;</span > Under Construction</span></p></li>
+					</ul>
+					<ul><li ><p class="subtitle has-text-white"> Status : <span class='is_Online'> <span class='dot'>&bull;</span > Online</span></p></li></ul>
+					<ul><li ><p class="subtitle has-text-white"> Status : <span class='is_ComingSoon'> <span class='dot'>&bull;</span > Coming Soon</span></p></li></ul>-->
+
+					<button class="accordion" onclick="">
+								<p class="title is-1 has-text-white">Jobs</p>
+							</button>
+							<div class="panel">
+							
+					<center>
+						<p class="subtitle has-text-white">
+						We are currently hiring workers!!! To find out more please visit our jobs tab.
+					   </p>
+					   <button
+					href="#"
+					class="link"
+					onclick="openPage('Jobs' , this,  'skyblue')"
+				>
+					<i class="fa fa-users "></i> Jobs</button
+				>
+					</center>
+				</div>
+					<!--<ul>
+						<li ><p class="subtitle has-text-white"> Status : <span class='is_Offline'> <span class='dot'>&bull;</span > Offline </span></p></li>
+					</ul>
+
+					<ul>	
+						<li ><p class="subtitle has-text-white"> Status : <span class='is_UnderConstruction'> <span class='dot'>&bull;</span > Under Construction</span></p></li>
+					</ul>
+					<ul><li ><p class="subtitle has-text-white"> Status : <span class='is_Online'> <span class='dot'>&bull;</span > Online</span></p></li></ul>
+					<ul><li ><p class="subtitle has-text-white"> Status : <span class='is_ComingSoon'> <span class='dot'>&bull;</span > Coming Soon</span></p></li></ul>-->
+
+					<button class="accordion" onclick="">
+								<p class="title is-1 has-text-white">Services We Use</p>
+							</button>
+							<div class="panel">
+							
+					<center>
+						<p class="subtitle has-text-white">
+						Although we are a tech company and we develop a lot of tools and resources for other communities / companies, 
+						We are still working to build ourselves up as well. to make things easy and efficient we take advatage of the latest
+						tools and resources available.
+					   </p>
+
+					   <p class=" has-text-white"> One day we would like to develop our own tools so we don't have to use our current tools.</p class="subtitle has-text-white">
+					   <p class=" has-text-white"> The tools we use includes but isn't limited to: Discord, Google, Slack, Trello, & More</p class="subtitle has-text-white">
+					   <p class=" has-text-white"> These platforms enable us to quickly and effectively organize our Staff </p class="subtitle has-text-white">
+					   <p class=" has-text-white">We remain greatful of these services and we aspire to build a platform like these one day</p class="subtitle has-text-white">
+					   <button
+					href="#"
+					class="link"
+					onclick="openPage('Jobs' , this,  'skyblue')"
+				>
+					<i class="fa fa-users "></i> Jobs</button
+				>
+					</center>
+				</div>
+
+				<button class="accordion" onclick="">
+					<p class="title is-1 has-text-white">Visitors</p>
+				</button>
+				<div class="panel">
+					<p class="has-text-white">Live Stats on all those who visit our Site</p>
+				<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5f2cdix04ny&amp;m=6&amp;c=ff0000&amp;cr1=ffffff&amp;f=ubuntu&amp;l=1" async="async"></script>
+				</div>
+
+
+			</div>
+
+
+
+
+			</div>
+			</div>
+
+			<div id="News" class="linkcontent">
+				<div class="Header">
+				<p class="title is-1 has-text-white">News</p>
+				<p class="subtitle has-text-white">Here we have live updates for the overall status of our company</p><br/>
+				</div>
+				<center>
+				<div class="Main">
+				
+				<div class='box'>
+					<a class="twitter-timeline" data-theme="dark" href="https://twitter.com/hub_blue?ref_src=twsrc%5Etfw">Tweets by hub_blue</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+				</div> </center>
+			</div>
+
+            <div id="Jobs" class="linkcontent">
+				<div class="Header">
+				<p class="title is-1 has-text-white">Jobs</p>
+				<p class="subtitle has-text-white">Here you will find all the information about our jobs, our goals, and our overall mission</p><br />
+				</div>
+				
+				<div class="Main">
+				<div class="box">
+				<center>
+				<p class="title is-1 has-text-white">Job Status</p>
+   				<p class="subtitle has-text-white"> Status : <span class='is_Open'> &bull; Hiring</span></p>
+				<p class="subtitle has-text-white"> Desc: we are currently looking for online freelance workers until we reach a more stable position. </br> Interested? Please explore the page further to see what oppurtunities await.</p>
+				</center>
+			</div>
+					<div class=" box has-text-white"><center>
+						<button class="accordion" onclick="">
+							<p class="title is-1 has-text-white">Recruitment</p>
+						</button>
+						<div class="panel">
+							<p class="subtitle has-text-white">Since We are still fairly new we use 3rd party apps like Discord to coordinate our staff.</p> 
+							<p class="subtitle has-text-white">If you haven't already please head over to <span><a href="https://discord.com">discord.com</a></span>, get their app, and join our guild.</p> 
+							<p class="subtitle has-text-white">Upon clicking the "Apply" button you will be prompted to join our guild.</p> 
+							<p></p>
+						</div>
+
+						<button class="accordion" onclick="">
+							<p class="title is-1 has-text-white">Jobs</p>
+						</button>
+						<div class="panel">
+				        <p class="subtitle has-text-white">Here is a list of the departments that make up TBI&trade;</p>
+							<button class="accordion2" onclick="">
+							<p class="subtitle has-text-white">Devevelopment Department </br> [<span class='is_Open'> &bull; Hiring</span>] </p> 
+							</button>
+							<div class='panel'>
+								<ul>
+									<hr>
+								<li class="subtitle has-text-white">Web Developer  </br>[<span class='is_Open'> &bull; Available</span>]</li> 
+							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+								<hr>
+								<li class="subtitle has-text-white">App Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+								<hr>
+								<li class="subtitle has-text-white">Software Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+								<hr>
+								<li class="subtitle has-text-white">Game Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+								<hr>
+								<li class="subtitle has-text-white">Bot Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+								<hr>
+								<li class="subtitle has-text-white">Graphics Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+								<hr>
+								<li class="subtitle has-text-white">Audio Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+								<hr>
+								<li class="subtitle has-text-white">Production Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+								<hr>
+								</ul>
+							</div>
+							
+							<button class="accordion2" onclick="">
+							<p class="subtitle has-text-white">Promotions Department <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
+							</button>
+							<div class='panel'>
+								<ul>
+									<hr>
+									<li class="subtitle has-text-white">Marketing Agent </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							        <br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+									<hr>
+									<li class="subtitle has-text-white">Events Manager  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							        <br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+									<hr>
+									<li class="subtitle has-text-white">Partnership Manager  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							        <br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+									<hr>
+									<li class="subtitle has-text-white">Partnership Scout  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    	<br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+									<hr>
+									<li class="subtitle has-text-white">Partnership Representative  </br>[<span class='is_Open'> &bull; Available</span>] </li>
+							    	<br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+									<hr>
+								</ul>
+							</div>
+
+							<button class="accordion2" onclick="">
+							<p class="subtitle has-text-white">Mainenence Department  <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
+							</button>
+							<div class='panel'>
+								<ul>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+								</ul>
+							</div>
+							<button class="accordion2" onclick="">
+							<p class="subtitle has-text-white">Support Department  <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
+							</button>
+							<div class='panel'>
+								<ul>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+								</ul>
+							</div>
+							<button class="accordion2" onclick="">
+							<p class="subtitle has-text-white">Security Department <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
+							</button>
+							<div class='panel'>
+								<ul>
+								<hr>
+								<hr>
+								<hr>
+								<hr>
+								<hr>
+								<hr>
+							</ul>
+						</div>
+							<button class="accordion2" onclick="">
+							<p class="subtitle has-text-white">Sales Department <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
+							</button>
+							<div class='panel'> 
+								<ul>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+									<hr>
+								</ul>
+							</div>
+				            </div>
+				   
+				   
+				    <button class="accordion" onclick="">
+						<p class="title is-1 has-text-white">Temp Agents</p>
+					</button>
+					<div class=panel>
+						<p class="subtitle has-text-white">Temporary Agents </br>[<span class='is_Open'> &bull; Hiring</span>]</p>
+						<br>
+							<a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
+						<br>
+						<p class="subtitle has-text-white" style= 'margin-top: 26px;'>
+							 Looking for work without the full commitment of working for our company? 
+							 Well worry not this program is just right for you!!!
+							 Our Temporary Agency Progam allows for you to work to complete a primary objective.
+							 After completing a series of tasks you will be released from your assignment and compensated for your work.
+						</p>
+						
+					</div>
+
+					<button class="accordion" onclick="">
+						<p class="title is-1 has-text-white">Volunteering</p>
+					</button>
+					<div class=panel>
+
+					</div>
+
+
+				</center>
+					</div>		
+
+					
+					
+
+		</div></div>
+		<!------------------------------------------------- New Page------------------------------------------------------->
+		<div id="Community" class="linkcontent">
+			<div class="Header">
+				<p class="title is-1 has-text-white">Community Status</p>
+				<p class="subtitle has-text-white">The Overall Status for all of our communities</p><br/>
+				</div>
+				<div class = "Main">
+					<div class="box  has-text-white">
+						<center>
+							<p class="title is-1 has-text-white">Overall Status</p>
+   <p class="subtitle has-text-white"> Status : <span class='is_UnderConstruction'> &bull; UnderConstruction</span></p>
+   <p class="subtitle has-text-white"> UpTime :  <span id='SH_Uptime' class="subtitle has-text-white"></span></p>
+   <p class="subtitle has-text-white"> Desc: Our Community guilds are currently under construction and are do to be completed soon.</p>
+						</center>
+					</div>
+				</div>
+		</div>
+		<!------------------------------------------------- New Page------------------------------------------------------->
+				<div id="Server" class="linkcontent">
+				<div class="Header">
+				<p class="title is-1 has-text-white">Server Status</p>
+				<p class="subtitle has-text-white">Here you will find the status regarding our server.</p><br/>
+				</div>
+				
+				<div class="Main">
+				
+					<div class="box  has-text-white">
+					
+				<center>	
+   <p class="title is-1 has-text-white">Overall Status</p>
+   <p class="subtitle has-text-white"> Status : <span class='is_Offline'> &bull; Offline</span></p>
+   <p class="subtitle has-text-white"> UpTime :  <span id='SH_Uptime' class="subtitle has-text-white"></span></p>
+   <p class="subtitle has-text-white"> Desc: We are currently obtaining the parts to build our own data servers, though we haven't begun construction yet, they are expected to be completed soon.</p>
+ </center>
+
+
+				</div>
+				 <!-- Create the canvas element the game draws to -->
+<canvas id="canvas">
+	<p>Your browser doesn't support HTML5 canvas.</p>
+</canvas>
+
+<!-- Run the game code -->
+<script type="text/javascript" src="html5game/Digi_Clock.js?RBOAC=69072871"></script>
+				</div>
+			</div>
+			<div id="About" class="linkcontent">
+				<div class="Header">
+                <p class="title is-1 has-text-white">About Us</p>
+				<p class="subtitle has-text-white">Here you will find the status regarding our server.</p><br/>
+				</div>
+				<div class="Main">
+					<div class="box  has-text-white">
+					<p class="title is-1 has-text-white">Contact info</p>
+					<p class="subtitle has-text-white">
+					Not available yet
+					</p>
+				</div>
+					<div class="box  has-text-white">
+					<p class="subtitle has-text-white">
+						Note: We know that we are relatively new... we are working hard to create a legitimate and progressive Tech development company. It is For this reason that we believe in remaining open and maintaining transparency with the statistics of our company.
+        				<br> Thank you for your understanding and for your support.
+        				</br>
+					</p>
+				</div>
+			</div>
+			</div>
+		</div>
+        <div style="box-shadow:0 0 24px black;">
+         
+    <script src="assets/js/accordion.js"></script>
+         </main>   
+    <footer  class="footer has-text-white has-text-left">
+	<p>Thank you for visiting our website.</p>
+<div class="section">
+		<center>
+			
+	<div class="columns" >
+    <div class="column">
+	<a href='https://twitter.com/hub_blue'><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	</div>
+	<div class="column" >
+	<a href='https://www.facebook.com/Truebluecreativeworks-101183958080109/'><i class="fa fa-facebook" aria-hidden="true"></i></a>
+	</div>
+	<div class="column">
+    <a href='https://www.youtube.com/channel/UCGsZl-E9C42VZKpYXPsUjDQ/featured'><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+	</div>
+	
+
+</div></center>
+	</div>
+
+    </footer>
+    <script src='src/plugins/particles/particles.js'></script>
+    <script src='src/plugins/particles/particles-dots.js'></script>
+	<script src="assets/js/app.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '722753546033954876', // ????????™ • Support
+        channel: '762668955646558208' // #web-support
+    })
+</script>
+        <!--<h1 style="text-align: center;">
+        Status Report
+    </h1>
+    <hr>
+    <h2 style="text-align: center;">Status Report Page</h2>
+    <p>
+        Desc: Our status Report page is currently under constuction. some data may not be entirely time accurate furthermore Styles and Web Api are not integrated yet. we are working on this and will continue to alert you of changes.
+    </p>
+    <p>
+        Note: We know that we are relatively new... we are working hard to create a legitimate and progressive Tech development company. It is For this reason that we believe in remaining open and maintaining transparency with the statistics of our company.
+        <br> Thank you for your understanding and for your support.
+        </br>
+    </p>
+
+    <h2 style="text-align: center;"> truebluehub </h2>
+    <h3>Our Site</h3>
+    <p>
+        Desc: Our site is currently down we are working hard to restore it.
+    </p>
+    <h3>Our Discord Server</h3>
+    <p>
+        Desc: Our Server is Fully Operational and there are no "Latency Issues" from Discord so far.
+    </p>-->
+
+</body>
+
+</html>
