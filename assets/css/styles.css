@@ -63,7 +63,7 @@ ul {
     font-size: 2vw;
     border-radius: 28px;
     border: 2px solid red;
-    box-shadow: 4px 4px 8px red, 0 0 25px red, 0 0 5px red;
+    box-shadow: none;
     text-shadow: 4px 4px 8px red, 0 0 25px red, 0 0 5px red;
     color: red;
 }
@@ -73,7 +73,8 @@ ul {
     font-size: 1rem;
     border-radius: 28px;
     overflow: hidden;
-    box-shadow: 4px 4px 8px orange, 0 0 25px orange, 0 0 5px orange;
+    box-shadow: none;
+     border: 2px solid orange;
     text-shadow: 4px 4px 8px orange, 0 0 25px orange, 0 0 5px orange;
     color: orange;
 }

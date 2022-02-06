@@ -1,6 +1,5 @@
 .body-bg {
-  background-color: #000099;
-  background-image: url("../images/BG.png");
+  background-image: linear-gradient(120deg, rgb(0, 132, 255),#303135);
   height: 100%;
   box-sizing:border-box;
 	padding-top: 1px;
