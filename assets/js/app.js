@@ -41,7 +41,7 @@ function openPage(pageName,elmnt,color) {
     }
     document.getElementById(pageName).style.display = "block";
 	elmnt.style.textShadow = "0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet";
-	elmnt.style.boxShadow = "0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet";
+	elmnt.style.boxShadow = "";
 	elmnt.style.color = color;
   }
   

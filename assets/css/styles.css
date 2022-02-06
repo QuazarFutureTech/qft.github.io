@@ -116,45 +116,44 @@ ul {
     color: linear-gradient(120deg, rgb(0, 132, 255), violet);
 }
 #particles-dots{
-    position:absolute;
+    position: absolute;
     width:100%;
-    height:100%;
+    height:50%;
     top:0;
     left:0;
     background-color:transparent;
-    z-index:-1;
+    z-index:-2;
+    overflow: initial;
 }
 .particles canvas{
-    position:absolute;
+    position: absolute;
     top:0;
-    left:0
+    left:0;
 }
 /* Style each tab content individually */
 
 #Home .Header {
     background-color: rgb (0, 0, 0, 0.1);
-    background-size: 100%;
     color: #333;
-    padding: 50px;
     text-align: center;
+    overflow: hidden;
 }
 
 #Home .Main {
+    background-color: #303135;
     color: #111;
     padding: 50px 10%;
     text-align: center;
 }
  
-.Main .box {
-  /* box-shadow: 0px 0px 4px #111, 0 0 8px #222, 0 0 16px #444;*/
-  border: 1px solid rgb(0, 132, 255);
-}
 
-.Main svg {
+ .Header svg {
     text-shadow: 4px 4px 8px #111, 0 0 25px #222, 0 0 5px #444;
-    fill: rgba(0, 132, 255,0);
-    stroke: rgb(0, 132, 255);
-    border-radius: 10px;
+    fill:  #303135;
+    stroke: #303135;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
 }
 
 #News .Header {
@@ -200,13 +199,14 @@ ul {
 }
 
 #Community .Header {
-    background-color: rgba (0, 0, 0, 0.1);
+    background-color: transparent;
     color: #333;
     padding: 50px;
     text-align: center;
 }
 
 #Community .Main {
+    background-color: #303135;
     color: #111;
     padding: 50px 10%;
     text-align: left;
@@ -214,14 +214,14 @@ ul {
 }
 
 #About .Header {
-    background-color: rgba (0, 0, 0, 0.1);
+    background-color: transparent;
     color: #333;
     padding: 50px;
     text-align: center;
 }
 
 #About .Main {
-    background-image: linear-gradient(120deg, rgb(0, 132, 255), violet);
+    background-color: #303135;
     color: #111;
     padding: 50px;
     text-align: left;
@@ -232,12 +232,13 @@ ul {
 
 #navbar {
     z-index: 2;
-    background-color: rgba(0, 0, 0,0);
+    background-color: none;
     overflow: hidden;
     justify-items: top;
     align-items: top;
     width: screen;
     transform:translate(0px,-1px);
+    transition: ease-in-out .5s;
 }
 
 #navbar button.active {
@@ -276,7 +277,7 @@ ul {
     text-decoration: none;
     float: right;
     border: none;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-weight: bold;
     transition: .5s;
 }
@@ -324,6 +325,7 @@ font-size: 3vw;
 
 .sticky p {
     display: none;
+    font-size: 16px;
 }
 
 #navbar b {
@@ -350,12 +352,20 @@ font-size: 3vw;
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 
 .sticky {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .5);
     overflow: initial;
+    font-size: 1.5vw;
     box-shadow: none;
     position: fixed;
     top: 0;
     width: 100%;
+    transition: ease-in-out .5s;
+ animation-name: slidedown;
+    animation-duration: 1s;
+    -webkit-animation-name: slidedown;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;
+    /* Safari 4.0 - 8.0 */
 }
 
 
@@ -363,11 +373,15 @@ font-size: 3vw;
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 
 .sticky+.content {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .5);
     padding-top: 60px;
+}
+#navbar .sticky button.link {
+font-size: 1.5vw;
 }
 .sticky+.p{
     display:inline;
+    font-size: 17px;
 }
 
 /* The side navigation menu */
@@ -447,6 +461,7 @@ padding: 2px 2px 2px 2px;
 #main {
     transition: margin-left 0.5s;
     width: 100%;
+    
 }
 
 
@@ -510,16 +525,27 @@ padding: 2px 2px 2px 2px;
         outline: none;
         cursor: pointer;
         display: block;
-        background-color: skyblue;
-        color: rgb(0, 132, 255);
+        background-color: transparent;
+        color: #ffffff;
         padding: 16px;
         float: left;
     }
 
     #navbar button.active:hover {
-        background-color: rgb(0, 132, 255);
+        background-color: transparent;
         color: skyblue;
         transition: 0.5s;
+    }
+}
+@keyframes slidedown {
+    0% {
+        opacity: 0;
+        top:-100;
+    }
+
+    100% {
+        opacity: 1;
+        top:0;
     }
 }
 

@@ -24,7 +24,8 @@
     <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="thumbnail" href="assets/images/favicons/favicon.ico">
 	<meta name="description" content="View live stats about TrueBlueCreativeWorks™ as well as any upcomming projects that we may have in store" />
 	<script src='assets/js/SH_UTC.js'> </script>
 </head>
@@ -36,22 +37,16 @@
         <img src="assets/images/favicons/favicon.ico" style="align-self: auto;" width="32px" height="32px" alt="HomePage" />TBI&trade;- Staffing</a>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&otimes;</a
 			>
-			<a href="#" class="link" onclick="openPage('Home' , this, 'skyblue')" id="defaultOpen"
-				><i class="fa fa-home"></i>  Home</a
-			>
-			<a href="#"  class="link" onclick="openPage('News' , this, 'skyblue')"
+			<a href="#"  class="link" onclick="openPage('News' , this, 'skyblue'); closeNav()"
 				><i class="fa fa-newspaper-o "></i>  News</a
 			>
-			<a href="#"  class="link" onclick="openPage('Jobs' , this, 'skyblue')"
-				><i class="fa fa-users"></i>  Jobs</a
-			>
-			<a href="#"  class="link" onclick="openPage('Community' , this, 'skyblue')"
+			<a href="#"  class="link" onclick="openPage('Community' , this, 'skyblue'); closeNav()"
 				><i class="fa fa-users"></i>  Community</a
 			>
-			<a href="#"  class="link" onclick="openPage('Server' , this, 'skyblue')"
+			<a href="#"  class="link" onclick="openPage('Server' , this, 'skyblue'); closeNav()"
 				><i class="fa fa-server "></i>  Server</a
 			>			
-			<a  href="#" class="link" onclick="openPage('About' , this, 'skyblue')"
+			<a  href="#" class="link" onclick="openPage('About' , this, 'skyblue'); closeNav()"
 				><i class="fa fa-support"></i>  About</a
 			>
 		</div>
@@ -59,7 +54,7 @@
 		<div class="main">
 			<div id="navbar">
 				<img src="./assets/images/favicons/favicon.ico"  width = '32vw' alt="icon">
-				<p id='logo'>QFT&trade; - </p>
+				<p id='logo'>QFT&trade; - Portal</p>
 				<button href="#" class="active" onclick="openNav()">
 					<i class="fa fa-bars"></i>
                 </button>
@@ -67,62 +62,70 @@
 				<button
 					href="#"
 					class="link"
-					onclick="openPage('About' , this, 'skyblue')"
+					onclick="openPage('About' , this, '#ffffff')"
 				>
 					<i class="fa fa-support"></i>   Contact</button
 				><button
 					href="#"
 					class="link"
-					onclick="openPage('Server' , this, 'skyblue')"
+					onclick="openPage('Server' , this, '#ffffff')"
 				>
 					<i class="fa fa-server "></i>  Server</button
 				>
 				<button
 					href="#"
 					class="link"
-					onclick="openPage('Community' , this,  'skyblue')"
+					onclick="openPage('Community' , this,  '#ffffff')"
 				>
 					<i class="fa fa-users "></i>  Community</button
 				>
 				<button
 					href="#"
 					class="link"
-					onclick="openPage('Jobs' , this,  'skyblue')"
+					onclick="openPage('Jobs' , this,  '#ffffff')"
 				>
 					<i class="fa fa-users "></i>  Jobs</button
 				>
 				<button
 					href="#"
 					class="link"
-					onclick="openPage('News' , this, 'skyblue')"
+					onclick="openPage('News' , this, '#ffffff')"
 				>
 					<i class="fa fa-newspaper-o "></i>  News</button
 				><button
 					href="#"
 					class="link"
-					onclick="openPage('Home' , this, ' skyblue')"
+					onclick="openPage('Home' , this, '#ffffff')"
 					id="defaultOpen"
 				>
 					<i class="fa fa-home"></i> Home
 				</button>
             </div>
 		<div class="heading section has-text-centered">
-
+<div id="particles-dots" class="particles"></div>
 		<p class="title has-text-white"> QuazarFutureTech&trade;</p>
+		<img src="assets/images/icon.png" width="150px">
             </header>
             <main class="has-text-centered">
 
 			
 			
 			<div id="Home" class="linkcontent">
-				<div class="Header">
-			<img src="assets/images/icon.png" width="150px">
+			<div class="Header">
+			
+			
             <p class="title is-1 has-text-white">Web Portal</p>
 			<p class="subtitle has-text-white">Welcome to our web portal. Here you can view live stats regarding all of our services as well as our communications and infrastructure.</p><br />
-			<div id="particles-dots" class="particles"></div>
+            				<svg viewBox="0 0 1023 83" color=white enable-background="new 0 0 1023 83" xml:space="preserve">
+		<path  d="M1024,27.68c0,0-109.167-28.004-221.241-28.004S511.5,27.563,511.5,27.563
+			S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"></path>
+		</svg>
+			
+
 		    </div>
 
 <div class="Main">	
+<hr>
 <div class="box  has-text-white">
    <p class="title is-1 has-text-white">Overall Status</p>
    <p class="subtitle has-text-white"> Status : <span class='is_UnderConstruction'> &bull; Under Construction</span></p>
@@ -133,10 +136,7 @@
 
 
 <div class="box">
-	<svg viewBox="0 0 1023 83" color=white enable-background="new 0 0 1023 83" xml:space="preserve">
-		<path  d="M1024,27.68c0,0-109.167-28.004-221.241-28.004S511.5,27.563,511.5,27.563
-			S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"></path>
-		</svg>
+	
 		<button class="accordion" onclick="">
 			<p class="title is-1 has-text-white">Our Guild</p>
 		</button>
@@ -167,7 +167,7 @@
 					   <button
 					href="#"
 					class="link"
-					onclick="openPage('Jobs' , this,  'skyblue')"
+					onclick="openPage('Jobs' , this,  '#ffffff')"
 				>
 					<i class="fa fa-users "></i> Jobs</button
 				>
@@ -229,181 +229,6 @@
 				</div>
 				</div> </center>
 			</div>
-
-            <div id="Jobs" class="linkcontent">
-				<div class="Header">
-				<p class="title is-1 has-text-white">Jobs</p>
-				<p class="subtitle has-text-white">Here you will find all the information about our jobs, our goals, and our overall mission</p><br />
-				</div>
-				
-				<div class="Main">
-				<div class="box">
-				<center>
-				<p class="title is-1 has-text-white">Job Status</p>
-   				<p class="subtitle has-text-white"> Status : <span class='is_Open'> &bull; Hiring</span></p>
-				<p class="subtitle has-text-white"> Desc: we are currently looking for online freelance workers until we reach a more stable position. </br> Interested? Please explore the page further to see what oppurtunities await.</p>
-				</center>
-			</div>
-					<div class=" box has-text-white"><center>
-						<button class="accordion" onclick="">
-							<p class="title is-1 has-text-white">Recruitment</p>
-						</button>
-						<div class="panel">
-							<p class="subtitle has-text-white">Since We are still fairly new we use 3rd party apps like Discord to coordinate our staff.</p> 
-							<p class="subtitle has-text-white">If you haven't already please head over to <span><a href="https://discord.com">discord.com</a></span>, get their app, and join our guild.</p> 
-							<p class="subtitle has-text-white">Upon clicking the "Apply" button you will be prompted to join our guild.</p> 
-							<p></p>
-						</div>
-
-						<button class="accordion" onclick="">
-							<p class="title is-1 has-text-white">Jobs</p>
-						</button>
-						<div class="panel">
-				        <p class="subtitle has-text-white">Here is a list of the departments that make up TBI&trade;</p>
-							<button class="accordion2" onclick="">
-							<p class="subtitle has-text-white">Devevelopment Department </br> [<span class='is_Open'> &bull; Hiring</span>] </p> 
-							</button>
-							<div class='panel'>
-								<ul>
-									<hr>
-								<li class="subtitle has-text-white">Web Developer  </br>[<span class='is_Open'> &bull; Available</span>]</li> 
-							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-								<hr>
-								<li class="subtitle has-text-white">App Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-								<hr>
-								<li class="subtitle has-text-white">Software Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-								<hr>
-								<li class="subtitle has-text-white">Game Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-								<hr>
-								<li class="subtitle has-text-white">Bot Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-								<hr>
-								<li class="subtitle has-text-white">Graphics Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-								<hr>
-								<li class="subtitle has-text-white">Audio Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-								<hr>
-								<li class="subtitle has-text-white">Production Developer  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    </br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-								<hr>
-								</ul>
-							</div>
-							
-							<button class="accordion2" onclick="">
-							<p class="subtitle has-text-white">Promotions Department <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
-							</button>
-							<div class='panel'>
-								<ul>
-									<hr>
-									<li class="subtitle has-text-white">Marketing Agent </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							        <br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-									<hr>
-									<li class="subtitle has-text-white">Events Manager  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							        <br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-									<hr>
-									<li class="subtitle has-text-white">Partnership Manager  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							        <br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-									<hr>
-									<li class="subtitle has-text-white">Partnership Scout  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    	<br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-									<hr>
-									<li class="subtitle has-text-white">Partnership Representative  </br>[<span class='is_Open'> &bull; Available</span>] </li>
-							    	<br><a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-									<hr>
-								</ul>
-							</div>
-
-							<button class="accordion2" onclick="">
-							<p class="subtitle has-text-white">Mainenence Department  <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
-							</button>
-							<div class='panel'>
-								<ul>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-								</ul>
-							</div>
-							<button class="accordion2" onclick="">
-							<p class="subtitle has-text-white">Support Department  <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
-							</button>
-							<div class='panel'>
-								<ul>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-								</ul>
-							</div>
-							<button class="accordion2" onclick="">
-							<p class="subtitle has-text-white">Security Department <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
-							</button>
-							<div class='panel'>
-								<ul>
-								<hr>
-								<hr>
-								<hr>
-								<hr>
-								<hr>
-								<hr>
-							</ul>
-						</div>
-							<button class="accordion2" onclick="">
-							<p class="subtitle has-text-white">Sales Department <br>[<span class='is_Open'> &bull; Hiring</span>]</p>
-							</button>
-							<div class='panel'> 
-								<ul>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-									<hr>
-								</ul>
-							</div>
-				            </div>
-				   
-				   
-				    <button class="accordion" onclick="">
-						<p class="title is-1 has-text-white">Temp Agents</p>
-					</button>
-					<div class=panel>
-						<p class="subtitle has-text-white">Temporary Agents </br>[<span class='is_Open'> &bull; Hiring</span>]</p>
-						<br>
-							<a href="https://discord.gg/mGTwJFG"><i class="fa fa-id-badge "></i> Apply</a>
-						<br>
-						<p class="subtitle has-text-white" style= 'margin-top: 26px;'>
-							 Looking for work without the full commitment of working for our company? 
-							 Well worry not this program is just right for you!!!
-							 Our Temporary Agency Progam allows for you to work to complete a primary objective.
-							 After completing a series of tasks you will be released from your assignment and compensated for your work.
-						</p>
-						
-					</div>
-
-					<button class="accordion" onclick="">
-						<p class="title is-1 has-text-white">Volunteering</p>
-					</button>
-					<div class=panel>
-
-					</div>
-
-
-				</center>
-					</div>		
-
-					
-					
-
-		</div></div>
 		<!------------------------------------------------- New Page------------------------------------------------------->
 		<div id="Community" class="linkcontent">
 			<div class="Header">

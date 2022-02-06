@@ -69,7 +69,9 @@ transition: ease-in-out .5s;
   background-color: #282828;
 }
 .box {
-  background-color: #00004d;
+  background-color: #303135;
+  box-shadow: 0px 0px 4px #111, 0 0 8px #222, 0 0 16px #333;
+  border: none;
   padding:8px;
 }
 .box .panel button{
