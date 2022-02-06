@@ -1,0 +1,168 @@
+.accordion2 {
+	background: #333;
+	float: right;
+	font-weight: 225;
+	width: 100%;
+	cursor: pointer;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.5s;
+	animation-name: FadeIn;
+	animation-duration: 4s;
+	-webkit-animation-name: FadeIn;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s;
+	/* Safari 4.0 - 8.0 */
+}
+
+.A2,
+.accordion2:hover {
+	float: right;
+	box-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+	/*background-color: #444;
+	backface-visibility: inherit;
+	border-radius: 20px;*/
+}
+
+
+/*Extendable Pages*/
+.accordion {
+	background-color:rgba(0, 0, 0,.1);
+	border: 1px solid rgb(0, 132, 255);
+	border-radius: 10px;
+	float: right;
+	font-weight: 225;
+	width: 100%;
+	cursor: pointer;
+	padding: 18px;
+	text-align: left;
+	outline: none;
+	transition: 0.5s;
+	animation-name: FadeIn;
+	animation-duration: 4s;
+	-webkit-animation-name: FadeIn;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s;
+	/* Safari 4.0 - 8.0 */
+}
+
+.A,
+.accordion:hover {
+	float: right;
+	box-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+	/*background-color: #444;
+	backface-visibility: inherit;
+	border-radius: 20px;*/
+}
+
+.panel {
+	max-height: 0vh;
+	padding: 0 18px;
+	overflow: hidden;
+	box-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+	transition: max-height 0.5s ease-in-out;
+	border-radius: 4px;
+    border-left: 4px solid  rgb(50, 150, 255);
+	/*opacity: 0.5;*/
+}
+
+.accordion:after {
+	 --arrow-width: 12px;
+  --arrow-height: 22px;
+	content: "+";
+	align-content: center;
+	padding: 0;
+	border-radius:50%;
+	text-shadow: 0px 0px 8px rgb(50, 150, 255), 0 0 25px rgb(50, 150, 255), 0 0 5px rgb(50, 150, 255);
+	box-shadow: 0px 0px 8px rgb(50, 150, 255), 0 0 25px rgb(50, 150, 255), 0 0 5px rgb(50, 150, 255);
+	color: rgb(50, 150, 255);
+	font-size: 24px;
+	font-weight: 225;
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	float: right;
+	transition: 0.5s;
+	animation-name: FadeIn;
+	animation-duration: 4s;
+	-webkit-animation-name: FadeIn;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s;
+	/* Safari 4.0 - 8.0 */
+}
+
+.A:after {
+	text-shadow: 0px 0px 8px rgb(255, 75, 50), 0 0 25px rgb(255, 75, 50), 0 0 5px rgb(255, 75, 50);
+	box-shadow: 0px 0px 8px rgb(255, 75, 50), 0 0 25px rgb(255, 75, 50), 0 0 5px rgb(255, 75, 50);
+	color: rgb(255, 75, 50);
+	transition: 0.5s;
+	content: "x";
+	float: right;
+	text-align: center;
+	align-content: center;
+	animation-name: FadeIn;
+	animation-duration: 4s;
+	-webkit-animation-name: FadeIn;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s;
+	/* Safari 4.0 - 8.0 */
+	transform: rotate(180deg);
+}
+
+.accordion2:after {
+	 --arrow-width: 12px;
+  --arrow-height: 22px;
+	content: "+";
+	align-content: center;
+	padding: 0;
+	border-radius:50%;
+	text-shadow: 0px 0px 8px rgb(50, 150, 255), 0 0 25px rgb(50, 150, 255), 0 0 5px rgb(50, 150, 255);
+	box-shadow: 0px 0px 8px rgb(50, 150, 255), 0 0 25px rgb(50, 150, 255), 0 0 5px rgb(50, 150, 255);
+	color: rgb(50, 150, 255);
+	font-size: 24px;
+	font-weight: 225;
+	width: 1em;
+	height: 1em;
+	text-align: center;
+	float: right;
+	transition: 0.5s;
+	animation-name: FadeIn;
+	animation-duration: 4s;
+	-webkit-animation-name: FadeIn;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s;
+	/* Safari 4.0 - 8.0 */
+	
+}
+
+.A2:after {
+	text-shadow: 0px 0px 8px rgb(255, 75, 50), 0 0 25px rgb(255, 75, 50), 0 0 5px rgb(255, 75, 50);
+	box-shadow: 0px 0px 8px rgb(255, 75, 50), 0 0 25px rgb(255, 75, 50), 0 0 5px rgb(255, 75, 50);
+	color: rgb(255, 75, 50);
+	transition: 0.5s;
+	content: "-";
+	float: right;
+	text-align: center;
+	align-content: center;
+	animation-name: FadeIn;
+	animation-duration: 4s;
+	-webkit-animation-name: FadeIn;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s;
+	/* Safari 4.0 - 8.0 */
+}
+
+@media screen and (max-width: 640px) {
+	
+	.panel {
+		/*border-radius: 28px;*/
+		max-height: 0vh;
+		padding: 0 0px;
+		overflow: hidden;
+		width: 100%;
+		transition: max-height 0.5s ease-in-out;
+		/*opacity: 0.5;*/
+	}
+	
+}

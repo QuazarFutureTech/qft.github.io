@@ -1,0 +1,128 @@
+.body-bg {
+  background-color: #000099;
+  background-image: url("../images/BG.png");
+  height: 100%;
+  box-sizing:border-box;
+	padding-top: 1px;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.footer a{
+box-sizing: border-box;
+display: block;
+text-align: center;
+align-items: center;
+align-self: center;
+align-content: center;
+width: 48;
+height: 48;
+font-size: 2em;
+padding: 0;
+border-radius: 50%;
+border: 1px solid rgb(0, 132, 255);
+transition: ease-in-out .5s;
+}
+
+.footer a:hover{
+color: seashell;
+border: 1px solid seashell;
+box-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+transition: ease-in-out .5s;
+}
+
+/*Custom Scroll Elements*/
+::-webkit-scrollbar {
+	background: #111;
+	width: 10px;
+	height: 10px;
+	top: 0%;
+	right: 0%;
+	border-radius: 28px;
+	position: fixed;
+	margin-left: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #111;
+}
+::-webkit-scrollbar-thumb {
+	background: #333;
+	top: 0%;
+	right: 0%;
+	margin-left: 10px;
+	position: fixed;
+	-webkit-transition: 1s;
+	transition: 1s;
+	border-radius: 28px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-image: linear-gradient(120deg, rgb(0, 132, 255),violet);
+	mix-blend-mode: overlay;
+	-webkit-transition: 1s;
+	transition: 1s linear;
+}
+
+.footer {
+  background-color: #282828;
+}
+.box {
+  background-color: #00004d;
+  padding:8px;
+}
+.box .panel button{
+	background-color:rgba(0, 0, 0,.1);
+	border: 1px solid rgb(0, 132, 255);
+	border-radius: 10px;
+	padding: 18px;
+	font-size: 18px;
+	color: rgba(255, 255, 255, 1.0);
+	font-family: zekton;
+	outline: none;
+	transition: ease-in-out .5s;
+}
+.box .panel button:hover{
+	background-color:rgba(0, 132, 255,.125);
+	box-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+	transition: ease-in-out .5s;
+}
+
+.box .panel a{
+	background-color:rgba(0, 0, 0,.1);
+	border: 1px solid rgb(0, 132, 255);
+	border-radius: 10px;
+	margin:4px;
+	padding: 18px;
+	font-size: 18px;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 1.0);
+	font-family: zekton;
+	outline: none;
+	transition: ease-in-out .5s;
+}
+
+.box .panel a:hover{
+	background-color:rgba(0, 132, 255,.125);
+	box-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+	transition: ease-in-out .5s;
+}
+.box .panel span a{
+border: none;
+color: rgb(0, 132, 255);
+padding: 0px;
+}
+.box .panel span a:hover{
+border: none;
+padding: 0px;
+color: rgba(255, 255, 255, 1.0);
+text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+}
+	
+p {
+  font-size: 18px;
+  /*color: rgba(255, 255, 255, 1.0);*/
+  font-family: zekton;
+}
