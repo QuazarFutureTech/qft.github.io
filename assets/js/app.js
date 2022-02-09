@@ -15,8 +15,7 @@
 					document.getElementById("main").style.marginLeft = "0";
 					document.body.style.backgroundColor = "#00004d";
 				}
-
-				function myFunction() {
+				function myFunction() { 
 					if (window.pageYOffset >= sticky) {
 						navbar.classList.add("sticky");
 						document.getElementById("logo").style.display = 'inline';
@@ -24,6 +23,9 @@
 						navbar.classList.remove("sticky");
 						document.getElementById("logo").style.display = 'none';
 					}
+					var i, box;
+					box = document.getElementById("Scrollable");
+					box.classList.add("loadUp");
 }
                 
 function openPage(pageName,elmnt,color) {
