@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>QuazarFurtureTech™</title>
+		<title>QFT&trade;</title>
 		<style>
 			html, body {
 				background-color: #1F2123;
@@ -24,14 +24,24 @@
         padding: 25px;
         box-shadow: 0 0 15px #303030;
 			}
+			.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  transform: translate(50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 		</style>
+		<meta http-equiv="Refresh" content="7; url='construction.html'" />
 	</head>
 	<body>
-		<div class="card-holder">
-			<div class="card">
-				<h1>🚧 Coming Soon 🚧</h1>
-				<p>The site is being worked on, please come again later!</p>
-			</div>
-		</div>
+    <div class="loader"></div>
 	</body>
 </html>
