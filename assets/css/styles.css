@@ -220,6 +220,7 @@ ul {
   transform: translate(0px, -1px);
   transition: ease-in-out 0.5s;
 }
+
 #navbar img {
   z-index: 2;
   background-color: none;
@@ -231,6 +232,7 @@ ul {
   transform: translate(0px, -1px);
   transition: ease-in-out 0.5s;
 }
+
 #navbar button.active {
   display: none;
   background-color: skyblue;
