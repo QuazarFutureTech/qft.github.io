@@ -1,317 +1,484 @@
 body,
 html {
-    width: 100%;
-    height: 100%;
-    /*background-color: rgb(0, 132, 255);
-    margin: 0;*/
-    scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Arial;
 }
-
 
 /* Set default styles for tab content */
 
 .linkcontent {
-    display: none;
-    position: relative;
-    animation-name: fade;
-    animation-duration: 2s;
-    -webkit-animation-name: fade;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 2s;
-    /* Safari 4.0 - 8.0 */
+  display: none;
+  position: relative;
+  animation-name: fade;
+  animation-duration: 2s;
+  -webkit-animation-name: fade;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s;
+  /* Safari 4.0 - 8.0 */
 }
-#canvas{
-    width:100%;
-}
-
-h1 {
-    font-size: 5vw;
-}
-
-h2 {
-    font-size: 4vw;
-}
-
-h3 {
-    font-size: 3vw;
+#canvas {
+  width: 100%;
 }
 
 p {
-    font-size: 2vw 1fr;
-    text-shadow: 0 0 4px #111, 0 0 8px #222, 0 0 16px #333;
+  text-shadow: 0 0 4px #111111, 0 0 8px #222222, 0 0 16px #333333;
 }
 
 li p {
-    font-size: 2vw 1fr;
-    width: 25% 1fr;
-    border-radius: 28px;
-    background-color: #28282828;
+  width: 25% 1fr;
+  border-radius: 28px;
+  background-color: #28282828;
 }
 
 ul {
-    padding: 16px;
+  padding: 16px;
 }
 
 .dot {
-    padding: 8px;
-    font-size: 20px;
-    border-radius: 28px;
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 28px;
 }
 
 .is_Offline {
-    padding: 2px;
-    font-size: 2vw;
-    border-radius: 28px;
-    border: 2px solid red;
-    box-shadow: none;
-    text-shadow: 4px 4px 8px red, 0 0 25px red, 0 0 5px red;
-    color: red;
+  padding: 2px;
+  font-size: 2vw;
+  border-radius: 28px;
+  border: 2px solid red;
+  box-shadow: none;
+  text-shadow: 4px 4px 8px red, 0 0 25px red, 0 0 5px red;
+  color: red;
 }
 
 .is_UnderConstruction {
-    padding: 2px;
-    font-size: 1rem;
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: none;
-     border: 2px solid orange;
-    text-shadow: 4px 4px 8px orange, 0 0 25px orange, 0 0 5px orange;
-    color: orange;
+  padding: 2px;
+  font-size: 1rem;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: none;
+  border: 2px solid orange;
+  text-shadow: 4px 4px 8px orange, 0 0 25px orange, 0 0 5px orange;
+  color: orange;
 }
 
 .is_Online {
-    padding: 2px;
-    font-size: 2vw;
-    border-radius: 28px;
-    box-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
-    text-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
-    color: lime;
+  padding: 2px;
+  font-size: 2vw;
+  border-radius: 28px;
+  box-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
+  text-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
+  color: lime;
 }
 
 .is_ComingSoon {
-    padding: 2px;
-    font-size: auto;
-    border-radius: 28px;
-    box-shadow: 4px 4px 8px aqua, 0 0 25px aqua, 0 0 5px aqua;
-    text-shadow: 4px 4px 8px aqua, 0 0 25px aqua, 0 0 5px aqua;
-    color: aqua;
+  padding: 2px;
+  font-size: auto;
+  border-radius: 28px;
+  box-shadow: 4px 4px 8px aqua, 0 0 25px aqua, 0 0 5px aqua;
+  text-shadow: 4px 4px 8px aqua, 0 0 25px aqua, 0 0 5px aqua;
+  color: aqua;
 }
 
 .is_Open {
-    padding: 2px;
-    text-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
-    color: lime;
+  padding: 2px;
+  text-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
+  color: lime;
 }
 
 .is_Closed {
-    padding: 2px;
-    text-shadow: 4px 4px 8px red, 0 0 25px red, 0 0 5px red;
-    color: red;
+  padding: 2px;
+  text-shadow: 4px 4px 8px red, 0 0 25px red, 0 0 5px red;
+  color: red;
 }
 
 .job_category {
-    border: 2px solid #777;
-    padding: 2px;
-    border-radius: 28px;
-    color: linear-gradient(120deg, rgb(0, 132, 255), violet);
+  border: 2px solid #777;
+  padding: 2px;
+  border-radius: 28px;
+  color: linear-gradient(120deg, rgb(0, 132, 255), violet);
 }
-#particles-dots{
-    position: absolute;
-    width:100%;
-    height:50%;
-    top:0;
-    left:0;
-    background-color:transparent;
-    z-index:-2;
-    overflow: initial;
+#particles-dots {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: -2;
+  overflow: initial;
 }
-.particles canvas{
-    position: absolute;
-    top:0;
-    left:0;
+.particles canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /* Style each tab content individually */
 
 #Home .Header {
-    background-color: rgb (0, 0, 0, 0.1);
-    color: #333;
-    text-align: center;
-    overflow: hidden;
+  background-color: rgb (0, 0, 0, 0.1);
+  color: #333333;
+  text-align: center;
+  overflow: hidden;
 }
 
 #Home .Main {
-    background-color: #303135;
-    color: #111;
-    padding: 50px 10%;
-    text-align: center;
+  background-color: #1f2123;
+  color: #111111;
+  padding: 50px 10%;
+  text-align: center;
 }
- 
 
- .Header svg {
-    text-shadow: 4px 4px 8px #111, 0 0 25px #222, 0 0 5px #444;
-    fill:  #303135;
-    stroke: #303135;
-    width: 100%;
-    margin: 0%;
-    padding: 0%;
+.Header svg {
+  text-shadow: 4px 4px 8px #111111, 0 0 25px #222222, 0 0 5px #444444;
+  fill: #1f2123;
+  stroke: #1f2123;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
 }
 
 #News .Header {
-    background-color: rgba (0, 0, 0, 0.1);
-    color: #333;
-    padding: 50px;
-    text-align: center;
+  background-color: rgba (0, 0, 0, 0.1);
+  color: #333333;
+  padding: 50px;
+  text-align: center;
 }
 
 #News .Main {
-    color: #111;
-    padding: 50px 10%;
-    text-align: left;
+  color: #111111;
+  padding: 50px 10%;
+  text-align: left;
 }
 
-
 #Server .Header {
-    background-color: rgba (0, 0, 0, 0.1);
-    color: #333;
-    padding: 50px;
-    text-align: center;
+  background-color: rgba (0, 0, 0, 0.1);
+  color: #333333;
+  padding: 50px;
+  text-align: center;
 }
 
 #Server .Main {
-    color: #111;
-    padding: 50px 10%;
-    text-align: left;
+  color: #111111;
+  padding: 50px 10%;
+  text-align: left;
 }
 
 #Jobs .Header {
-    background-color: rgba (0, 0, 0, 0.1);
-    color: #333;
-    padding: 50px;
-    text-align: center;
+  background-color: rgba (0, 0, 0, 0.1);
+  color: #333333;
+  padding: 50px;
+  text-align: center;
 }
 
 #Jobs .Main {
-    /*background-image: linear-gradient(120deg, rgb(0, 132, 255), violet);*/
-    color: #111;
-    padding: 50px 10%;
-    text-align: left;
-
+  /*background-image: linear-gradient(120deg, rgb(0, 132, 255), violet);*/
+  color: #111111;
+  padding: 50px 10%;
+  text-align: left;
 }
 
 #Community .Header {
-    background-color: transparent;
-    color: #333;
-    padding: 50px;
-    text-align: center;
+  background-color: transparent;
+  color: #333333;
+  padding: 50px;
+  text-align: center;
 }
 
 #Community .Main {
-    background-color: #303135;
-    color: #111;
-    padding: 50px 10%;
-    text-align: left;
-
+  background-color: #1f2123;
+  color: #111111;
+  padding: 50px 10%;
+  text-align: left;
 }
 
 #About .Header {
-    background-color: transparent;
-    color: #333;
-    padding: 50px;
-    text-align: center;
+  background-color: transparent;
+  color: #333333;
+  padding: 50px;
+  text-align: center;
 }
 
 #About .Main {
-    background-color: #303135;
-    color: #111;
-    padding: 50px;
-    text-align: left;
+  background-color: #303135;
+  color: #111;
+  padding: 50px;
+  text-align: left;
 }
-
 
 /* Style the navbar */
 
 #navbar {
-    z-index: 2;
-    background-color: none;
-    overflow: hidden;
-    justify-items: top;
-    align-items: top;
-    width: screen;
-    transform:translate(0px,-1px);
-    transition: ease-in-out .5s;
+  z-index: 2;
+  background-color: none;
+  overflow: hidden;
+  justify-items: top;
+  align-items: top;
+  width: screen;
+  transform: translate(0px, -1px);
+  transition: ease-in-out 0.5s;
 }
 #navbar img {
-    z-index: 2;
-    background-color: none;
-    overflow: initial;
-    padding: 14px;
-    justify-items: center;
-    align-items: center;
-    width: screen;
-    transform:translate(0px,-1px);
-    transition: ease-in-out .5s;
+  z-index: 2;
+  background-color: none;
+  overflow: initial;
+  padding: 14px;
+  justify-items: center;
+  align-items: center;
+  width: screen;
+  transform: translate(0px, -1px);
+  transition: ease-in-out 0.5s;
 }
 #navbar button.active {
-    display: none;
-    background-color: skyblue;
-    color: rgb(0, 132, 255);
-    padding: 0px;
-    float: left;
+  display: none;
+  background-color: skyblue;
+  color: rgb(0, 132, 255);
+  padding: 0px;
+  float: left;
 }
 
 #navbar p {
-    display: none;
-    color: whitesmoke;
-    text-align: center;
-    cursor: pointer;
-    overflow: initial;
-    text-decoration: none;
-    text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 0px;
+  display: none;
+  color: whitesmoke;
+  text-align: center;
+  cursor: pointer;
+  overflow: initial;
+  text-decoration: none;
+  text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px;
 }
-
 
 /* Navbar links */
 #navbar button.link {
-    background-color: rgba(0, 0, 0,0);
-    outline:none;
-    cursor: pointer;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    overflow: initial;
-    padding: 14px 16px;
-    margin-right: 2px;
-    text-decoration: none;
-    float: right;
-    border: none;
-    font-size: 1.5vw;
-    font-weight: bold;
-    transition: .5s;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  cursor: pointer;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  overflow: initial;
+  padding: 14px 16px;
+  margin-right: 2px;
+  text-decoration: none;
+  float: right;
+  border: none;
+  font-size: 1.5vw;
+  font-weight: bold;
+  transition: 0.5s;
 }
 
 #navbar button.link:hover {
-    /*border-left: 4px solid aqua;*/
-    border: none;
-    text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
-
+  /*border-left: 4px solid aqua;*/
+  border: none;
+  text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
 }
 
-#logo{ animation-name: fade;
-    animation-duration: 2s;
-    -webkit-animation-name: fade;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 2s;
-    /* Safari 4.0 - 8.0 */
-font-size: 6vw;
+#logo {
+  animation-name: fade;
+  animation-duration: 2s;
+  -webkit-animation-name: fade;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s;
+  /* Safari 4.0 - 8.0 */
+  font-size: 6vw;
 }
 
 /* Change background color of buttons on hover */
 
 #navbar g {
-    display: block;
+  display: block;
+  border-bottom: 2px solid aqua;
+  color: rgb(0, 132, 255);
+  text-align: center;
+  padding: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  float: right;
+}
+
+#navbar button.title {
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.sticky p {
+  display: none;
+  font-size: 16px;
+}
+
+#navbar b {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6px;
+  text-decoration: none;
+  font-size: 24px;
+  float: left;
+}
+
+/* Page content */
+
+.content {
+  padding: 16px;
+  transition: 0.5s;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: initial;
+  font-size: 1.5vw;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: ease-in-out 0.5s;
+  animation-name: slidedown;
+  animation-duration: 1s;
+  -webkit-animation-name: slidedown;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s;
+  /* Safari 4.0 - 8.0 */
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + .content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 60px;
+}
+.sticky + .p {
+  display: inline;
+  font-size: 128px;
+}
+
+/* The side navigation menu */
+
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 3;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #777;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .link {
+  padding: 2px 2px 2px 2px;
+}
+/* When you mouse over the navigation links, change their color */
+
+.sidenav .link:hover {
+  color: skyblue;
+  /*border-left: 4px solid aqua;*/
+  box-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+
+  transition: 0.3s;
+}
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  font-size: 32px;
+  margin-left: 50px;
+}
+
+.sidenav .closebtn:hover {
+  border-left: none;
+  text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+}
+
+.sidenav .title {
+  position: absolute;
+  top: 0;
+  left: -32px;
+  font-size: 125%;
+  margin-right: -50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+  transition: margin-left 0.5s;
+  width: 100%;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 0;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #navbar button.link {
+    display: none;
+    color: #f2f2f2;
+    text-align: center;
+    overflow: initial;
+    padding: 16px;
+    text-decoration: none;
+    float: right;
+    font-weight: bold;
+    margin-left: 50;
+  }
+
+  #navbar button.title {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: initial;
+    display: none;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+  }
+
+  #navbar g {
+    display: none;
     border-bottom: 2px solid aqua;
     color: rgb(0, 132, 255);
     text-align: center;
@@ -319,275 +486,148 @@ font-size: 6vw;
     font-weight: bold;
     text-decoration: none;
     float: right;
-}
+  }
 
-#navbar button.title {
-    display: block;
+  #navbar button:hover {
+    border-left: 4px solid aqua;
+    color: rgb(0, 132, 255);
+    transition: 0.5s;
+  }
+
+  #navbar button.active {
     border: none;
     outline: none;
     cursor: pointer;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 0px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.sticky p {
-    display: none;
-    font-size: 16px;
-}
-
-#navbar b {
     display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 6px;
-    text-decoration: none;
-    font-size: 24px;
-    float: left;
-}
-
-
-
-
-/* Page content */
-
-.content {
+    background-color: transparent;
+    color: #ffffff;
     padding: 16px;
-    transition: 0.5s;
-}
-
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-
-.sticky {
-    background-color: rgba(0, 0, 0, .5);
-    overflow: initial;
-    font-size: 1.5vw;
-    box-shadow: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: ease-in-out .5s;
- animation-name: slidedown;
-    animation-duration: 1s;
-    -webkit-animation-name: slidedown;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1s;
-    /* Safari 4.0 - 8.0 */
-}
-
-
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-
-.sticky+.content {
-    background-color: rgba(0, 0, 0, .5);
-    padding-top: 60px;
-}
-.sticky+.p{
-    display:inline;
-    font-size: 128px;
-}
-
-/* The side navigation menu */
-
-.sidenav {
-    height: 100%;
-    /* 100% Full-height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 3;
-    /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #111;
-    /* Black*/
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    padding-top: 60px;
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
-}
-
-
-/* The navigation menu links */
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #777;
-    display: block;
-    transition: 0.3s;
-}
-.sidenav .link{
-padding: 2px 2px 2px 2px;
-}
-/* When you mouse over the navigation links, change their color */
-
-.sidenav .link:hover {
-    color: skyblue;
-    /*border-left: 4px solid aqua;*/
-    box-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
-
-    transition: 0.3s;
-}
-
-
-/* Position and style the close button (top right corner) */
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 16px;
+    float: left;
     font-size: 32px;
-    margin-left: 50px;
+  }
+
+  #navbar button.active:hover {
+    background-color: transparent;
+    color: skyblue;
+    transition: 0.5s;
+    font-size: 32px;
+  }
 }
-
-.sidenav .closebtn:hover {
-    border-left: none;
-    text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
-}
-
-.sidenav .title {
-    position: absolute;
-    top: 0;
-    left: -32px;
-    font-size: 125%;
-    margin-right: -50px;
-}
-
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-
-#main {
-    transition: margin-left 0.5s;
-    width: 100%;
-    
-}
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 0;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-
-    #navbar button.link {
-        display: none;
-        color: #f2f2f2;
-        text-align: center;
-        overflow: initial;
-        padding: 16px;
-        text-decoration: none;
-        float: right;
-        font-weight: bold;
-        margin-left: 50;
-    }
-
-    #navbar button.title {
-        border: none;
-        outline: none;
-        cursor: pointer;
-        overflow: initial;
-        display: none;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 0px;
-        text-decoration: none;
-    }
-
-    #navbar g {
-        display: none;
-        border-bottom: 2px solid aqua;
-        color: rgb(0, 132, 255);
-        text-align: center;
-        padding: 16px;
-        font-weight: bold;
-        text-decoration: none;
-        float: right;
-    }
-
-    #navbar button:hover {
-        border-left: 4px solid aqua;
-        color: rgb(0, 132, 255);
-        transition: 0.5s;
-        
-    }
-
-    #navbar button.active {
-        border: none;
-        outline: none;
-        cursor: pointer;
-        display: block;
-        background-color: transparent;
-        color: #ffffff;
-        padding: 16px;
-        float: left;
-        font-size: 32px;
-    }
-
-    #navbar button.active:hover {
-        background-color: transparent;
-        color: skyblue;
-        transition: 0.5s;
-        font-size: 32px;
-    }
-}
- .loadUp {
+.loadUp {
   animation: fade_in_up 1s;
 }
 @keyframes slidedown {
-    0% {
-        opacity: 0;
-        top:-100;
-    }
+  0% {
+    opacity: 0;
+    top: -100;
+  }
 
-    100% {
-        opacity: 1;
-        top:0;
-    }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 @keyframes fade_in_up {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 @keyframes fade {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fade_out {
-    0% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
+}
+
+#arrowDown {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 3;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
 }
