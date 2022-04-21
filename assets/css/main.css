@@ -127,10 +127,6 @@ p {
   /*color: rgba(255, 255, 255, 1.0);*/
   font-family: Arial;
 }
-a{
-	text-emphasis: none;
-	text-decoration: none;
-}
 a:hover{
 	text-emphasis: none;
 	text-decoration: none;

@@ -229,7 +229,7 @@ ul {
 }
 
 /* Navbar links */
-#navbar a .link {
+#navbar a.link {
   background-color: rgba(0, 0, 0, 0);
   outline: none;
   cursor: pointer;
@@ -247,7 +247,7 @@ ul {
   transition: 0.5s;
 }
 
-#navbar a .link:hover {
+#navbar a.link:hover {
   /*border-left: 4px solid aqua;*/
   border: none;
   text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
