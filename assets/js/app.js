@@ -5,7 +5,7 @@
 				var sticky = navbar.offsetTop;
 
 				function openNav() {
-					document.getElementById("mySidenav").style.width = "250px";
+					document.getElementById("mySidenav").style.width = "100%";
 					document.getElementById("main").style.marginLeft = "250px";
 					document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 				}
@@ -18,6 +18,7 @@
 				function myFunction() { 
 					if (window.pageYOffset >= sticky) {
 						navbar.classList.add("sticky");
+						navbar.style.position = "fixed";
 						document.getElementById("logo").style.display = 'inline';
 					} else {
 						navbar.classList.remove("sticky");

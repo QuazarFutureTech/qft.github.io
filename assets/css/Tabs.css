@@ -1,0 +1,92 @@
+/* Style each tab content individually */
+
+#Home .Header {
+  background-color: rgb (0, 0, 0, 0.1);
+  color: #333333;
+  text-align: center;
+  overflow: hidden;
+}
+
+#Home .Main {
+  background-color: #1f2123;
+  color: #111111;
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.Header svg {
+  text-shadow: 4px 4px 8px #111111, 0 0 25px #222222, 0 0 5px #444444;
+  fill: #1f2123;
+  stroke: #1f2123;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+#News .Header {
+  background-color: rgba (0, 0, 0, 0.1);
+  color: #333333;
+  padding: 50px;
+  text-align: center;
+}
+
+#News .Main {
+  color: #111111;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+#Server .Header {
+  background-color: rgba (0, 0, 0, 0.1);
+  color: #333333;
+  padding: 50px;
+  text-align: center;
+}
+
+#Server .Main {
+  color: #111111;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+#Jobs .Header {
+  background-color: rgba (0, 0, 0, 0.1);
+  color: #333333;
+  padding: 50px;
+  text-align: center;
+}
+
+#Jobs .Main {
+  /*background-image: linear-gradient(120deg, rgb(0, 132, 255), violet);*/
+  color: #111111;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+#Community .Header {
+  background-color: transparent;
+  color: #333333;
+  padding: 50px;
+  text-align: center;
+}
+
+#Community .Main {
+  background-color: #1f2123;
+  color: #111111;
+  padding: 50px 10%;
+  text-align: left;
+}
+
+#About .Header {
+  background-color: transparent;
+  color: #333333;
+  padding: 50px;
+  text-align: center;
+}
+
+#About .Main {
+  background-color: #303135;
+  color: #111;
+  padding: 50px;
+  text-align: left;
+}

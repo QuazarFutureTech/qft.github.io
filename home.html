@@ -54,38 +54,33 @@
       name="description"
       content="View live stats about QuazarFurtureTech™ and all the amazing stuff we are working on!"
     />
-    <script src="assets/js/SH_UTC.js"></script>
   </head>
 
   <body class="body-bg">
-    <header>
+<header>
       <div id="mySidenav" class="sidenav">
         <a href="index.html" class="title">
-          <img
-            src="assets/images/favicons/favicon.ico"
-            style="align-self: auto"
-            alt="HomePage"
-          />QFT&trade;- Portal</a
-        >
+<img src="https://media.discordapp.net/attachments/765697291604328479/961613264775680020/unknown.png" width="125em" alt="icon" />
+          </a>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
           >&otimes;</a
         >
         <a
           href="construction.html"
           class="link"
-          onclick="openPage('Home' , this, 'skyblue'); closeNav()"
+          onclick="closeNav()"
           ><i class="fa fa-home"></i> Home</a
         >
         <a
           href="construction.html"
           class="link"
-          onclick="openPage('News' , this, 'skyblue'); closeNav()"
+          onclick="closeNav()"
           ><i class="fa fa-newspaper-o"></i> News</a
         >
         <a
           href="construction.html"
           class="link"
-          onclick="openPage('About' , this, 'skyblue'); closeNav()"
+          onclick="closeNav()"
           ><i class="fa fa-phone"></i> Contact</a
         >
       </div>
@@ -93,49 +88,48 @@
       <div class="main">
         <div id="navbar">
           <img src="https://media.discordapp.net/attachments/765697291604328479/961613264775680020/unknown.png" width="125em" alt="icon" />
-          <p id="logo">| Portal</p>
+          <p id="logo"> HQ</p>
           <button href="#" class="active" onclick="openNav()">
             <i class="fa fa-bars"></i>
           </button>
 
-          <button
+          <a 
             href="construction.html"
             class="link"
-            onclick="openPage('About' , this, '#ffffff')"
           >
             <i class="fa fa-phone"></i> Contact
-          </button>
-          <button
+          </a>
+          <a
             href="construction.html"
             class="link"
-            onclick="openPage('News' , this, '#ffffff')"
           >
-            <i class="fa fa-newspaper-o"></i> News</button
-          ><button
+            <i class="fa fa-newspaper-o"></i> News</a
+          ><a
             href="construction.html"
             class="link"
-            onclick="openPage('Home' , this, '#ffffff')"
-            id="defaultOpen"
           >
             <i class="fa fa-home"></i> Home
-          </button>
+        </a>
         </div>
-          <div id="particles-dots" class="particles"></div>
+          
       </div>
     </header>
-    <main class="has-text-centered">
-      <div id="Home" class="linkcontent">
-        <div class="Header" style="padding-top: 50px;">
+
+<section id="section-home" class="fullscreen has-text-centered bg-colored">
+          <div class="container">
+          <div class="container-fullscreen">
           <h1 class="title is-1 has-text-white">
-            QuazarFutureTech&trade;
+            Quazar Future Tech&trade;
           </h1>
+
           <h5 class="title is-5 has-text-white" style="padding-bottom: 50px;">
             Better technology, for a better future!
           </h5>
           <h1 class="title is-1 has-text-white">
             <img src="https://media.discordapp.net/attachments/765697291604328479/961619858263523409/needabedeleta.png" width="50px" id="arrowDown">
           </h1>
-          <br />
+        </div>
+        </div>
           <svg
             viewbox="0 0 1023 83"
             color="white"
@@ -147,9 +141,12 @@
 			S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"
             ></path>
           </svg>
-        </div>
+        
+          <div id="particles-dots" class="particles"></div>
+</section>        
 
-        <div class="Main">
+        <section class=" has-text-centered bg-opaque">
+          <div class="container">
           <div class="loadUP has-text-white">
                       <p class="title is-3 has-text-white">Web Portal</p>
           <p class="subtitle has-text-white">
@@ -191,13 +188,31 @@
             </div>
           </div>
           <hr />
-
+</div>
+</section>
+<section class="has-text-centered bg-parallax">
+   <div class="container">
           <div class="loadUP has-text-white">
-            <p class="title is-1 has-text-white">Services We Use</p>
+            <p class="title is-3 has-text-white">Join Us!</p>
             <div class="columns loadUP has-text-white">
-              <div class="column box loadUP">
-                <button class="accordion" onclick="">
-                  <p class="title is-1 has-text-white">Discord</p>
+              <div class="column  loadUP card">
+                <p class="subtitle has-text-white" style="margin-top: 20px">We primarily use discord to maintain and run our organization, It offers great tools and services which make it easy to host our staffing, communities, campaigns, and other operations!</p>
+              </div>
+              <div class="column  loadUP card">
+              <p class="subtitle has-text-white" style="margin-top: 20px">Join us on our discord community.</p>
+              <a
+                      href="construction.html"
+                      class="button"
+                      onclick="openPage('Jobs' , this,  '#ffffff')"
+                      style="margin-bottom: 5px"
+                    >
+                      <i class="fa fa-plus-circle"></i> Join Us
+                  </a>
+                
+              </div>
+              </div>
+              <button class="accordion" onclick="">
+                  <p class="subtitle has-text-white">Other platforms we use.</p>
                 </button>
                 <div class="panel">
                   <center>
@@ -205,54 +220,21 @@
                       We are currently hiring workers!!! To find out more please
                       visit our jobs tab.
                     </p>
-                    <button
+                    <a
                       href="construction.html"
                       class="link"
                       onclick="openPage('Jobs' , this,  '#ffffff')"
                       style="margin-bottom: 5px"
                     >
-                      <i class="fa fa-users"></i> Jobs
-                    </button>
+                      <i class="fa fa-plus-circle"></i> Join Us
+                  </a>
                   </center>
                 </div>
-              </div>
-              <!--<ul>
-						<li ><p class="subtitle has-text-white"> Status : <span class='is_Offline'> <span class='dot'>&bull;</span > Offline </span></p></li>
-					</ul>
-
-					<ul>	
-						<li ><p class="subtitle has-text-white"> Status : <span class='is_UnderConstruction'> <span class='dot'>&bull;</span > Under Construction</span></p></li>
-					</ul>
-					<ul><li ><p class="subtitle has-text-white"> Status : <span class='is_Online'> <span class='dot'>&bull;</span > Online</span></p></li></ul>
-					<ul><li ><p class="subtitle has-text-white"> Status : <span class='is_ComingSoon'> <span class='dot'>&bull;</span > Coming Soon</span></p></li></ul>-->
-              <div class="column box loadUP">
-                <button class="accordion" onclick="">
-                  <p class="title is-1 has-text-white">Google</p>
-                </button>
-                <div class="panel">
-                  <center>
-                    <p class="subtitle has-text-white"></p>
-                    <p class="has-text-white"></p>
-                    <p class="has-text-white"></p>
-                    <p class="has-text-white"></p>
-                    <p class="has-text-white"></p>
-                    <button
-                      href="construction.html"
-                      class="link"
-                      onclick="openPage('Jobs' , this,  'skyblue')"
-                      style="margin-bottom: 5px"
-                    >
-                      <i class="fa fa-users"></i> Jobs
-                    </button>
-                  </center>
-                </div>
-              </div>
             </div>
-          </div>
-
           <hr />
         </div>
       </div>
+      </section>
       <div style="box-shadow: 0 0 24px black"></div>
 
       <script src="assets/js/accordion.js"></script>
