@@ -90,3 +90,15 @@
   padding: 50px;
   text-align: left;
 }
+
+/* Set default styles for tab content */
+.linkcontent {
+  display: none;
+  position: relative;
+  animation-name: fade;
+  animation-duration: 2s;
+  -webkit-animation-name: fade;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s;
+  /* Safari 4.0 - 8.0 */
+}

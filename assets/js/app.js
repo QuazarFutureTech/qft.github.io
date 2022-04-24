@@ -1,9 +1,11 @@
 				window.onscroll = function() {
-					myFunction();
+					scrollEvent();
+					activateTopScroll();
 				};
 				var navbar = document.getElementById("navbar");
 				var sticky = navbar.offsetTop;
-
+				var scroller = document.getElementById("ScrollTop");
+				var home = document.getElementById("section-home").offsetHeight;
 				function openNav() {
 					document.getElementById("mySidenav").style.width = "100%";
 					document.getElementById("main").style.marginLeft = "250px";
@@ -15,20 +17,29 @@
 					document.getElementById("main").style.marginLeft = "0";
 					document.body.style.backgroundColor = "#00004d";
 				}
-				function myFunction() { 
+				function activateTopScroll() { 
+                    if (window.pageYOffset >= home/2){
+						scroller.classList.add("scrActive");
+						scroller.style.display = "block";
+					} else {
+						scroller.classList.remove("scrActive");
+						scroller.style.display = "none";
+					}
+				}
+
+				function scrollEvent() {
+				
 					if (window.pageYOffset >= sticky) {
 						navbar.classList.add("sticky");
 						navbar.style.position = "fixed";
 						document.getElementById("logo").style.display = 'inline';
-					} else {
+					}
+					 else {
 						navbar.classList.remove("sticky");
 						document.getElementById("logo").style.display = 'none';
 					}
-					var i, box;
-					box = document.getElementById("Scrollable");
-					box.classList.add("loadUp");
 }
-                
+       
 function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("linkcontent");

@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
+  <link rel="stylesheet" href="assets/css/modals.css">
     
     <link
       rel="apple-touch-icon"
@@ -66,7 +66,7 @@
           >&otimes;</a
         >
         <a
-          href="construction.html"
+          href="#"
           class="link"
           onclick="closeNav()"
           ><i class="fa fa-home"></i> Home</a
@@ -87,8 +87,8 @@
 
       <div class="main">
         <div id="navbar">
-          <img src="https://media.discordapp.net/attachments/765697291604328479/961613264775680020/unknown.png" width="125em" alt="icon" />
-          <p id="logo"> HQ</p>
+          <a href="#" ><img src="https://media.discordapp.net/attachments/765697291604328479/961613264775680020/unknown.png" width="125em" alt="icon" />
+          <p id="logo"></p></a>
           <button href="#" class="active" onclick="openNav()">
             <i class="fa fa-bars"></i>
           </button>
@@ -105,7 +105,7 @@
           >
             <i class="fa fa-newspaper-o"></i> News</a
           ><a
-            href="construction.html"
+            href="#"
             class="link"
           >
             <i class="fa fa-home"></i> Home
@@ -121,15 +121,15 @@
           <h1 class="title is-1 has-text-white">
             Quazar Future Tech&trade;
           </h1>
-
+          
           <h5 class="title is-5 has-text-white" style="padding-bottom: 50px;">
             Better technology, for a better future!
           </h5>
-          <h1 class="title is-1 has-text-white">
-            <img src="https://media.discordapp.net/attachments/765697291604328479/961619858263523409/needabedeleta.png" width="50px" id="arrowDown">
-          </h1>
+          <a class="b theme-white join" href="#section-join" style="margin-bottom: 5px">Join Us</a> 
+          <a class="b theme-white read" href="#section-about" style="margin-bottom: 5px">Learn More</a>
         </div>
         </div>
+        
           <svg
             viewbox="0 0 1023 83"
             color="white"
@@ -141,11 +141,10 @@
 			S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"
             ></path>
           </svg>
-        
+
           <div id="particles-dots" class="particles"></div>
 </section>        
-
-        <section class=" has-text-centered bg-opaque">
+        <section id="section-about" class=" has-text-centered bg-opaque">
           <div class="container">
           <div class="loadUP has-text-white">
                       <p class="title is-3 has-text-white">Web Portal</p>
@@ -154,12 +153,12 @@
             all of our services as well as our communications and
             infrastructure.
           </p>
-            <br />
+            <br>
             <p class="title is-3 has-text-white">About Us</p>
             <div class="columns loadUP has-text-white">
               <div class="column box loadUP">
                 <p class="title has-text-white">Who we are.</p>
-                <hr />
+                <hr>
                 <p class="subtitle has-text-white">
                   We are a next generation technology development organization.
                   We work hard to bring the future to you!
@@ -167,7 +166,7 @@
               </div>
               <div class="column box loadUP">
                 <p class="title has-text-white">Our Mission.</p>
-                <hr />
+                <hr>
                 <p class="subtitle has-text-white">
                   To create the best future... for everyone!
                 </p>
@@ -187,23 +186,24 @@
               </div>
             </div>
           </div>
-          <hr />
 </div>
 </section>
-<section class="has-text-centered bg-parallax">
+<section id="section-join" class="has-text-centered bg-parallax">
    <div class="container">
           <div class="loadUP has-text-white">
-            <p class="title is-3 has-text-white">Join Us!</p>
+            <p class="title is-3 has-text-white theme-blk_glass">Join Us!</p>
             <div class="columns loadUP has-text-white">
-              <div class="column  loadUP card">
+              <div class="column card theme-blk_glass">
                 <p class="subtitle has-text-white" style="margin-top: 20px">We primarily use discord to maintain and run our organization, It offers great tools and services which make it easy to host our staffing, communities, campaigns, and other operations!</p>
               </div>
-              <div class="column  loadUP card">
-              <p class="subtitle has-text-white" style="margin-top: 20px">Join us on our discord community.</p>
+              <div class="column  loadUP card theme-blk_glass">
+              <p class="title is-3 has-text-white" style="margin-top: 20px">Join us on discord!</p>
+              <hr>
+              <p class="subtitle has-text-white"></p>
               <a
-                      href="construction.html"
-                      class="button"
-                      onclick="openPage('Jobs' , this,  '#ffffff')"
+                      href="#"
+                      id="myBtn"
+                      class="b theme-join"
                       style="margin-bottom: 5px"
                     >
                       <i class="fa fa-plus-circle"></i> Join Us
@@ -215,109 +215,182 @@
                   <p class="subtitle has-text-white">Other platforms we use.</p>
                 </button>
                 <div class="panel">
-                  <center>
-                    <p class="subtitle has-text-white" style="margin-top: 20px">
-                      We are currently hiring workers!!! To find out more please
-                      visit our jobs tab.
-                    </p>
-                    <a
-                      href="construction.html"
-                      class="link"
-                      onclick="openPage('Jobs' , this,  '#ffffff')"
-                      style="margin-bottom: 5px"
-                    >
-                      <i class="fa fa-plus-circle"></i> Join Us
-                  </a>
-                  </center>
+                  <p>We are still in our early phases of development, as a 'start-up' organization. However rather than reinvent the wheel we happily use the resources available to us to accomplish our goals and tasks. </p>
+                  <div class="colums has-text-white">
+                    <div class="column card has-text-white theme-blk_glass">
+                      <h2><i class="fa fa-google" aria-hidden="true"></i></h2>
+                      <h3>Google</h3>
+                      <p>Google is a highly reputable data corporation that offers services that are unparallelled in their performance and uses. As a result we use these services to process data which allows us to get work done much faster.</p>
+                    </div>
+                    <div class="column card has-text-white theme-blk_glass">
+                      <h2><i class="fa fa-github" aria-hidden="true"></i></h2>
+                      <h3>GitHub</h3>
+                      <p>GitHub, is a public data hosting service, and archive. With it we are able to push & test updates to our websites, automate our software development workflows, pull issue requests (to fix bugs), and release beta editions of our prepackaged software.</p>
+                    </div>
+                    <div class="column card has-text-white theme-blk_glass">
+                      <h2><i class="fa fa-paypal" aria-hidden="true"></i></h2>
+                      <h3>PayPal</h3>
+                      <p>PayPal, is a secure payment processing center, which we use for our transactions (even if you don't have an account). As a result we use paypal for most of our daily transactions.</p>
+                    </div>
+                  </div>
+                   
                 </div>
             </div>
-          <hr />
         </div>
       </div>
       </section>
-      <div style="box-shadow: 0 0 24px black"></div>
+      <section class="bg-opaque has-text-white">
+        <h2 class=" has-text-centered">Why Choose Us?</h2>
+        <div class="container ">
+          <div class="columns ">
+            <div class="column">
+              <h2 class=" has-text-centered"><i class="fa fa-comments" aria-hidden="true"></i></h2>
+              <h3 class=" has-text-centered">Socially Responsive</h3>
+              <hr>
+              <p>We always try and respond to social media posts and hashtags. Additionally we are present on many different platforms! So tag us, tweet us, mention us, we are there!</p> 
 
-      <script src="assets/js/accordion.js"></script>
-    </main>
-    <footer class="footer has-text-white has-text-left">
-      <p style="margin: auto; text-align: center">
-        Thank you for visiting our website.
-      </p>
-      <div class="section">
-        <center>
-          <div class="columns">
-            <div class="column">
-              <div class="box has-text-white">
-                <p class="title has-text-white">Code</p>
-                <hr />
-                <p>Aeon Ryzor(Diante Littles)</p>
-                <p>David Ackerman</p>
-                <p>Dylan</p>
-              </div>
+            </div>
+              <div class="column">
+              <h2 class=" has-text-centered"><i class="fa fa-info-circle" aria-hidden="true"></i></h2>  
+              <h3 class=" has-text-centered">Transparency</h3>
+              <hr>
+              <p>Unlike many corporations, and organizations we are very transparent. We understand how important your data is. That's why we promise to keep you informed on what we are doing, how we process data, etc.</p> 
+              
             </div>
             <div class="column">
-              <div class="box has-text-white">
-                <!-- <p class="title has-text-white">Social Media Links</p>
-	<hr>-->
-              </div>
-            </div>
-            <div class="column">
-              <div class="box has-text-white">
-                <p class="title has-text-white">Social Media Links</p>
-                <hr>
-                <a
-                  href="https://www.twitch.tv/quazarfuturetech"
-                  style="
-                    margin-bottom: 10px;
-                    margin-left: 10px;
-                    display: inline-block;
-                  "
-                  ><i
-                    class="fa fa-twitch"
-                    style="margin-top: 10px"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-                <a
-                  href="https://twitter.com/QftFuture"
-                  style="
-                    margin-bottom: 10px;
-                    margin-left: 10px;
-                    display: inline-block;
-                  "
-                  ><i
-                    class="fa fa-twitter"
-                    aria-hidden="true"
-                    style="margin-top: 10px"
-                  ></i
-                ></a>
-                <a
-                  href="https://www.youtube.com/channel/UCdfsghnsgszHDJCtGaAt_Pg/featured"
-                  style="
-                    display: inline-block;
-                    margin-bottom: 10px;
-                    margin-left: 10px;
-                  "
-                  ><i
-                    class="fa fa-youtube-play"
-                    style="margin-top: 10px"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </div>
+              <h2 class=" has-text-centered"><i class="fa fa-clock-o" aria-hidden="true"></i></h2>  
+              <h3 class=" has-text-centered">24/7 Availability!</h3>
+              <hr>
+              <p>Though we are based in Florida, we mainly operate online. As a result we are available across multiple timezones and are able to assist with a 24/7 uptime!(some holidays may not be included)</p> 
+              
             </div>
           </div>
-        </center>
-      </div>
-    </footer>
+        </div>
+        <div class="container ">
+          <div class="columns ">
+            <div class="column">
+              <h2 class=" has-text-centered"><i class="fa fa-server" aria-hidden="true"></i></h2>
+              <h3 class=" has-text-centered">Quality Performance</h3>
+              <hr>
+              <p>Our staff team is highly responsive, and dedicated to their craft, resulting in quality service and tailor built custom solutions that are rarely seen elsewhere</p>
+            </div>
+              <div class="column">
+              <h2 class=" has-text-centered"><i class="fa fa-globe" aria-hidden="true"></i></h2>  
+              <h3 class=" has-text-centered">Resourceful & Adaptive</h3>
+              <hr>
+              <p>We work to build custom solutions, however we also fill in the gaps by utilizing all available resources. Allowing us to grow & adapt to your needs at a moments notice!</p> 
+              
+            </div>
+            <div class="column">
+              <h2 class=" has-text-centered"><i class="fa fa-users" aria-hidden="true"></i></h2>  
+              <h3 class=" has-text-centered">Welcoming Community</h3>
+              <hr>
+              <p>We have a <a href = "#section-join">community</a> of people who are friendly and supportive, we are always there to make things simple and easy for you (and maybe even a little fun)!</p> 
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-opaque has-text-white"><h2 class="theme-blk_glass">More Coming Soon!...</h2></section>
+      <div style="box-shadow: 0 0 24px black"></div>
+      <script src="assets/js/accordion.js"></script>
+    <!-- The Modal -->
+<div id="modalBeta" class="modal-style has-text-centered">
+  <!-- Modal content -->
+  <div class="modal-container">
+    <div class="modal-head">
+      <span class="close">&times;</span>
+      <h2 class="has-text-white has-text-centered subtitle is-3">Beta Disclaimer</h2>
+    </div>
+    <div class="modal-body">
+      <p class="has-text-white ">Hello, visitor!<br> We are delighted to have you visit our website! This is just to inform you that the website
+        is still under construction and you might find some bugs or glitches here and there. If you do, it is our
+        humble request that you report them on the <a href="https://github.com/QuazarFutureTech/qft.github.io/issues">GitHub
+            repository</a> of this website.</p>
+    </div>
+    <div class="modal-foot">
+      <h3 class="has-text-centered is-5">Thank you for visiting</h3>
+    </div>
+  </div>
+</div>
+  <div id="modalJoin" class="modal-style has-text-centered">
+  <!-- Modal content -->
+  <div class="modal-container">
+    <div class="modal-head">
+      <span class="close">&times;</span>
+      <h2 class="has-text-white has-text-centered subtitle is-3">Are you Ready?</h2>
+    </div>
+    <div class="modal-body">
+      <p class="has-text-white ">All Done Here?<br> You are about to be sent to our discord server! (which may prompt you to create an account if you don't already have one.) We look forwards to seeing you there! </p>
+    <a href="https://discord.gg/qft" class="b theme-join">Join Now</a>
+    <p class="has-text-white ">Link not working? try <a href="https://discord.gg/VpTDz3JrQC">this one</a></p>
+     </div>
+    <div class="modal-foot">
+      <h3 class="has-text-centered is-5">Thanks for visiting us!</h3>
+    </div>
+  </div>
+
+</div>  
+    </main>
+    <footer>
+       <div class= "container">
+        <div class ="sec aboutus">
+        <img src="assets/images/logo.png" alt="Logo">
+        <p>QFT&trade; | QuazarFutureTech&trade; - Better Technology For a Better Future! <br>We are a next-genreation technology development organization based in Florida [U.S.A.] <br> Our main goal is to create new technologies, and challenge the impossible!</p>
+            <ul class="sci"> 
+            <li><a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+        </ul>     
+        </div>
+        
+        <div class="sec quicklinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Jobs <span>- We're hiring!</span></a> </li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+       <div class="sec contact">
+        <h2>Contact Info</h2>
+        <ul class="info">
+            <li> 
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                <span>9100 SW 27th Ave <br>Ocala, FL 34476, <br> USA</span>
+            </li>
+            <li> 
+                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <p><a href="tel:13527275820">+1(352)727-5820</a></p>
+            </li>
+            <li> 
+                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <p><a href="mailto:quazarfuturetech@gmail.com ">quazarfuturetech@gmail.com</a></p>
+            </li>
+        </ul>
+       </div>
+       </div> 
+    </footer>  
+     <div class="copyright">&copy; QuazarFutureTech&trade; 2022 - All Rights Reserved </div>
+     <a href="#section-home" id="ScrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     <script src="src/plugins/particles/particles.js"></script>
+    <script src="assets/js/modals.js"></script>
     <script src="src/plugins/particles/particles-dots.js"></script>
     <script src="assets/js/app.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-      new Crate({
-          server: '722753546033954876', // ????????� � Support
-          channel: '762668955646558208' // #web-support
-      })
+    const button = new Crate({
+    server: '722753546033954876',
+    channel: '762668955646558208',
+    glyph:
+  ['https://cdn.discordapp.com/attachments/929406105459761222/929487974729666610/com_jiochat_jiochatapp.png', '100%']
+  })
+
+  button.notify('__Need Help?__\n```js\n Leave us a message.\n```')
     </script>
+    
   </body>
 </html>
