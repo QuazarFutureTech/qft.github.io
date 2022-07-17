@@ -32,7 +32,7 @@ margin-left:50%;
 margin-top:1%;
 margin-bottom:1%;
 transform: translateX(-50%);
-width: 50%;
+width: 25%;
 border: 1px solid rgb(50, 150, 255);
 }
 p a {
@@ -239,7 +239,7 @@ transition: ease-in-out .5s;
   padding-top: 10%;
   padding-bottom: 10px;
   box-sizing: border-box;
-  background-image: url("../images/1610827863786.png");
+  background-image: url("https://cdn.discordapp.com/attachments/929406105459761222/968539104994279425/QFT_MainBanner.gif");
  	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
