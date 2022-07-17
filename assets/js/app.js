@@ -8,14 +8,18 @@
 				var home = document.getElementById("section-home").offsetHeight;
 				function openNav() {
 					document.getElementById("mySidenav").style.width = "100%";
+					document.getElementById("mySidenav").style.height = "100%";
 					document.getElementById("main").style.marginLeft = "250px";
 					document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+					document.body.style.overflowY = "hidden";
 				}
 
 				function closeNav() {
 					document.getElementById("mySidenav").style.width = "0";
+					document.getElementById("mySidenav").style.height = "0";
 					document.getElementById("main").style.marginLeft = "0";
 					document.body.style.backgroundColor = "#00004d";
+					
 				}
 				function activateTopScroll() { 
                     if (window.pageYOffset >= home/2){
@@ -26,7 +30,25 @@
 						scroller.style.display = "none";
 					}
 				}
+				    window.addEventListener('scroll', reveal);
 
+    function reveal(){
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 100;
+
+        if(revealtop < windowheight - revealpoint){
+          reveals[i].classList.add('loadUp');
+        }
+        else{
+          reveals[i].classList.remove('loadUP');
+        }
+      }
+    }					
 				function scrollEvent() {
 				
 					if (window.pageYOffset >= sticky) {

@@ -1,5 +1,6 @@
 .body-bg {
-  padding-top: 1px;
+  padding-top:1px;
+  
   height: 100%;
   box-sizing:border-box;
 	/* Create the parallax scrolling effect */
@@ -281,7 +282,7 @@ a:hover{
 	text-emphasis: none;
 	text-decoration: none;
 }
-hr {
+section .column hr {
   border: 1px solid white;
   border-radius: 15px;
 }
