@@ -283,6 +283,7 @@ a:hover{
 	text-decoration: none;
 }
 section .column hr {
-  border: 1px solid white;
-  border-radius: 15px;
+    border: 1px solid white;
+    width: 75%;
+    margin-bottom: 16px;
 }

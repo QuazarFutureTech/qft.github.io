@@ -56,7 +56,7 @@
     />
   </head>
 
-  <body class="body-bg">
+  <body class="body-bg bg-colored">
 <header>
       <div id="mySidenav" class="sidenav theme-blk_glass">
         <a href="index.html" class="title ">
@@ -159,21 +159,40 @@
       </div>
     </header>
 
-<section id="section-home" class="fullscreen has-text-centered bg-colored">
+<section id="section-home" class="fullscreen has-text-centered ">
           <div class="container">
           <div class="container-fullscreen">
-          <h1 class="title is-1 has-text-white">
+          <h1 class="title is-1 ">
             Quazar Future Tech&trade;
           </h1>
-          
+          <hr>
           <h5 class="title is-5 has-text-white" style="padding-bottom: 50px;">
             Better technology, for a better future!
           </h5>
-          <a class="b theme-white join" href="#section-join" style="margin-bottom: 5px">Join Us</a> 
-          <a class="b theme-white read" href="#section-about" style="margin-bottom: 5px">Learn More</a>
-        </div>
-        </div>
+
+          <div class="columns">
+              <div class = "column card theme-blk_glass">
+              <p class = "subtitle has-text-centered has-text-white"> Join Our Community</p>
+              <a class="b theme-white" href="#section-join" style="margin-bottom: 5px">Join</a>
+            </div>
+            <div class = "column card theme-blk_glass">
+              <p class = "subtitle has-text-centered has-text-white"> Read About Us</p>
+              <a class="b theme-white" href="#section-about" style="margin-bottom: 5px">Read</a> 
+            </div>
+             <div class = "column card theme-blk_glass">
+              <p class = "subtitle has-text-centered has-text-white"> View Our Shop</p>
+              <a class="b theme-white" href="#section-join" style="margin-bottom: 5px">Shop</a>
+            </div>  
+
+
+          </div>
+         
+          
         
+        </div>
+
+        </div>
+        <div id="particles-dots" class="particles"></div>
           <svg
             viewbox="0 0 1023 83"
             color="white"
@@ -186,7 +205,7 @@
             ></path>
           </svg>
 
-          <div id="particles-dots" class="particles"></div>
+          
 </section>        
         <section id="section-about" class="has-text-centered bg-opaque">
           <div class="container">
@@ -200,14 +219,14 @@
             <br>
             <h2 class="title is-3 has-text-white reveal">About Us <hr></h2>
             <div class="columns has-text-white">
-              <div class="column reveal">
+              <div class="column reveal card theme-blk_glass" data-animate-delay="300">
                 <p class="title has-text-white "><i class="fa fa-users-cog" aria-hidden="true"></i> Who we are.</p>
                 <hr>
                 <p class="subtitle has-text-white">
                   We are a technology development organization. More than a business, or a brand; We are a group of passionate individuals who are dedicated to putting our talents to good use!
                 </p>
               </div>
-              <div class="column reveal">
+              <div class="column reveal card theme-blk_glass" data-animate-delay="600">
                 <p class="title has-text-white"> <i class="fa fa-wrench" aria-hidden="true"></i> What we do!</p>
                 <hr>
                 <p class="subtitle has-text-white">
@@ -218,7 +237,7 @@
                 </p>
                 <p class="has-text-white">[Disclaimer:] A few of these services are still under development. We will update our site with more details soon.</p>
               </div>
-              <div class="column reveal">
+              <div class="column reveal card theme-blk_glass" data-animate-delay="900">
                 <p class="title has-text-white"><i class="fa fa-briefcase" aria-hidden="true"></i>  Our Mission.</p>
                 <hr>
                 <p class="subtitle has-text-white">

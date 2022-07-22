@@ -4,9 +4,9 @@ setTimeout(function () {
       number: { value: 80, density: { enable: true, value_area: 800 } },
       color: { value: "#a7c5d9" },
       shape: {
-        type: "edge",
+        type: "polygon",
         stroke: { width: 0, color: "#a7c5d9" },
-        polygon: { nb_sides: 5 },
+        polygon: { nb_sides: 6 },
       },
       opacity: {
         value: 0.5,
@@ -14,7 +14,7 @@ setTimeout(function () {
         anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
       },
       size: {
-        value: 3,
+        value: 2,
         random: true,
         anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
       },
@@ -44,8 +44,8 @@ setTimeout(function () {
         resize: true,
       },
       modes: {
-        grab: { distance: 231.44271031594977, line_linked: { opacity: 1 } },
-        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+        grab: { distance: 231.44271031594977, line_linked: { opacity: .5 } },
+        bubble: { distance: 400, size: 40, duration: 100, opacity: 8, speed: 5 },
         repulse: { distance: 200, duration: 0.4 },
         push: { particles_nb: 4 },
         remove: { particles_nb: 2 },
