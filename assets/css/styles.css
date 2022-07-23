@@ -23,6 +23,7 @@ html {
   background-color: #ede7f6;
   flex-wrap: nowrap;
 }
+
 .column {
     display: flex;
     flex-basis: 0;
@@ -43,9 +44,10 @@ section h2 hr{
 margin-left:50%;
 margin-top:1%;
 margin-bottom:1%;
-transform: translateX(-50%);
+transform: translate(-50%,-50%);
 width: 25%;
 border: 1px solid rgb(50, 150, 255);
+box-shadow: 0 0 8px rgb(50, 150, 255);
 }
 p a {
   color: rgb(50, 150, 255);
@@ -79,62 +81,23 @@ ul {
   font-size: 20px;
   border-radius: 28px;
 }
-
-.is_Offline {
-  padding: 2px;
-  border-radius: 28px;
-  border: 2px solid red;
-  box-shadow: none;
-  text-shadow: 0 0 25px red;
-  color: red;
+.has-delay-1{
+  transition-duration: 300ms;
 }
-
-.is_UnderConstruction {
-  padding: 2px;
-  font-size: 1rem;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: none;
-  border: 2px solid orange;
-  text-shadow: 4px 4px 8px orange, 0 0 25px orange, 0 0 5px orange;
-  color: orange;
+.has-delay-2{
+  transition-duration: 600ms;
 }
-
-.is_Online {
-  padding: 2px;
-  font-size: 2vw;
-  border-radius: 28px;
-  box-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
-  text-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
-  color: lime;
+.has-delay-3{
+  transition-duration: 900ms;
 }
-
-.is_ComingSoon {
-  padding: 2px;
-  font-size: auto;
-  border-radius: 28px;
-  box-shadow: 4px 4px 8px aqua, 0 0 25px aqua, 0 0 5px aqua;
-  text-shadow: 4px 4px 8px aqua, 0 0 25px aqua, 0 0 5px aqua;
-  color: aqua;
+.has-delay-4{
+  transition-duration: 1200ms;
 }
-
-.is_Open {
-  padding: 2px;
-  text-shadow: 4px 4px 8px lime, 0 0 25px lime, 0 0 5px lime;
-  color: lime;
+.has-delay-5{
+  transition-duration: 1500ms;
 }
-
-.is_Closed {
-  padding: 2px;
-  text-shadow: 4px 4px 8px red, 0 0 25px red, 0 0 5px red;
-  color: red;
-}
-
-.job_category {
-  border: 2px solid #777;
-  padding: 2px;
-  border-radius: 28px;
-  color: linear-gradient(120deg, rgb(0, 132, 255), violet);
+.has-delay-6{
+  transition-duration: 1800ms;
 }
 #particles-dots {
   position: absolute;
@@ -171,6 +134,7 @@ ul {
     flex-grow:1;
     margin-top:0px;
     margin-bottom:0px;
+    
 }
 
 .fullscreen .container-fullscreen{
@@ -182,18 +146,27 @@ ul {
     z-index: 2;
     border-radius: 10px;
     background-color:rgba(0,0,0,.5);
+    animation-name: fade;
+    -webkit-animation-name: fade;
+    animation-duration 1s;
+    animation-iteration-count: 1;
   }
 
 .fullscreen .container-fullscreen h1{
-background-color:rgb(255,255,255); 
-color: black;
 border-radius: 10px 10px 0 0;
-height:100%;
+margin-bottom:0;
+-webkit-animation-name: text-spand;
+-webkit-animation-iteration-count:1;
+-webkit-animation-duration:3s;
+animation-name: text-spand;
+animation-iteration-count:1;
+animation-duration:3s;
 }
 .fullscreen .container-fullscreen h5{
 color: #777;
 padding: 4px;
 margin: 4px;
+margin-bottom:0;
 }
 
 .fullscreen svg{
@@ -213,6 +186,16 @@ h1, h2, h3, h4, h5{
     z-index: 3;
     font-family: zekton; 
 }
+.theme-btn-dark{
+transition: ease-in-out .5s;
+background-color:  #555; 
+color: rgb(0, 132, 255);
+}
+.theme-btn-dark:hover{
+transition: ease-in-out .5s;
+background-color: #333;  
+color: rgb(0, 100, 255);
+}
 .theme-white{
 transition: ease-in-out .5s;
 background-color:  #fff; 
@@ -222,6 +205,25 @@ color: rgb(0, 132, 255);
 transition: ease-in-out .5s;
 background-color: #999;  
 color: rgb(0, 100, 255);
+}
+
+.theme-sec-head-light{
+background-color:rgb(255,255,255); 
+color: black;
+
+}
+@keyframes text-spand{
+  0%{
+  opacity:0%;    
+  letter-spacing:-25;
+  }
+  50%{
+  opacity:100%;  
+  letter-spacing:-25;  
+  }
+  100%{
+  letter-spacing:0;
+  }
 }
 
 .theme-join{
@@ -250,7 +252,7 @@ transition: ease-in-out .5s;
 }
 
 .bg-opaque{
-  padding-top: 10px;
+  padding-top: 10%;
   background-color: #1f2123;
   box-sizing: border-box;
   padding-bottom: 10px; 
@@ -279,13 +281,11 @@ transition: ease-in-out .5s;
 
 /* Style the navbar */
 
-#navbar {
+#navbar {position:absolute;
   padding-top:1px;
-  position: absolute;
   margin: 0%;
   z-index: 4;
   background-color: none;
-  overflow: hidden;
   justify-items: top;
   align-items: top;
   width: 100%;
@@ -299,7 +299,7 @@ transition: ease-in-out .5s;
   padding: 14px 16px;
   justify-items: center;
   align-items: center;
-  width: screen;
+  width: 120px;
   transform: translate(0px, -1px);
   transition: ease-in-out 0.5s;
 }
@@ -320,34 +320,90 @@ transition: ease-in-out .5s;
   overflow: initial;
   text-decoration: none;
   text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   padding: 0px;
 }
 
 /* Navbar links */
 #navbar a.link {
-  outline: none;
-  cursor: pointer;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  overflow: initial;
-  padding: 14px 16px;
-  margin-right: 2px;
-  text-decoration: none;
-  float: right;
-  border-bottom:  2px solid rgba(0,0,0,0);
-  font-size: 1vw;
-  font-weight: bold;
-  transition: 0.5s;
+outline: none; 
+cursor: pointer; 
+display: block; 
+color: #f2f2f2; 
+text-align: center; 
+overflow: initial; 
+padding: 14px 16px; 
+margin-right: 2px; 
+text-decoration: none; 
+float: right; 
+border-bottom:  2px solid rgba(0,0,0,0); 
+font-size: 16px;
+font-weight: bold; 
+transition: 0.5s;
 }
-
 #navbar a.link:hover {
   /*border-left: 4px solid aqua;*/
   color: skyblue;
   border-bottom:  2px solid skyblue;
+  transition: 0.5s;
 }
+ .hov-drpdwn{
+  float: right;
+  overflow: hidden;
+}
+ .hov-drpdwn .hov-drpbtn {
+  font-size: 16px;
+  font-weight: bold; 
+  border: none;
+  outline: none;
+  text-align: center; 
+  color: white;
+  background:inherit;
+  padding: 14px 16px;
+  border-bottom:  2px solid rgba(0,0,0,0); 
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  transition: 0.5s;
+}
+.hov-drpbtn:hover{
+color: skyblue;  
+border-bottom:  2px solid skyblue;
+transition: 0.5s;
+}
+ .hov-drpdwn-content a{
+  text-align: center; 
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-left:  2px solid rgba(0,0,0,0); 
+  display: block;
+}
+ .hov-drpdwn-content a:hover{
+  color: skyblue;
+  border-left:  2px solid rgba(0,0,0,0); 
+  transition: 0.5s;
+}
+
+/* Dropdown content (hidden by default) */
+ .hov-drpdwn-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 5;
+  border-radius: 10px;
+  transition: 1s all ease-in-out;
+  opacity:0%;
+}
+/* Show the dropdown menu on hover */
+.hov-drpdwn:hover .hov-drpdwn-content {
+  display: block;
+  opacity:100%;
+  transition: 0.5s;
+}
+
 
 #logo {
   animation-name: fade;
@@ -361,17 +417,6 @@ transition: ease-in-out .5s;
 
 /* Change background color of buttons on hover */
 
-#navbar g {
-  display: block;
-  border-bottom: 2px solid aqua;
-  color: rgb(0, 132, 255);
-  text-align: center;
-  padding: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  float: right;
-}
-
 #navbar button.title {
   display: block;
   border: none;
@@ -384,20 +429,6 @@ transition: ease-in-out .5s;
   font-size: 17px;
 }
 
-.sticky p {
-  display: none;
-  font-size: 16px;
-}
-
-#navbar b {
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 6px;
-  text-decoration: none;
-  font-size: 24px;
-  float: left;
-}
 #ScrollTop{
     display: none;
     background-color: rgb(0, 132, 255);
@@ -445,12 +476,10 @@ transition: ease-in-out .5s;
 .sticky {
   background-color: rgba(0, 0, 0, .5);
   backdrop-filter: blur(5px);
-  overflow: initial;
   font-size: 1.5vw;
   box-shadow: none;
   position: fixed;
   top: 0;
-  width: 100%;
   transform: translateY(-1px);
   transition: ease-in-out 0.5s;
   animation-name: slidedown;
@@ -561,7 +590,7 @@ transition: ease-in-out .5s;
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 860px) {
   .fullscreen .container-fullscreen{
   width:75%;
   }
@@ -599,6 +628,9 @@ transition: ease-in-out .5s;
  #navbar a.link{
   display:none;
  }
+  .hov-drpdwn .hov-drpbtn {
+    display:none;
+  }
  .fullscreen svg{
   display:none;
   transition: ease-in-out .5s;
@@ -642,6 +674,7 @@ transition: ease-in-out .5s;
     padding: 16px;
     float: left;
     font-size: 32px;
+    z-index:6;
   }
 
   #navbar button.active:hover {
@@ -657,10 +690,21 @@ transition: ease-in-out .5s;
   opacity: 0;
   transition: all 2s ease;
 }
-
 .reveal.loadUP{
   transform: translateY(0px);
   opacity: 1;
+}
+.sec-head{
+position: relative;
+letter-spacing:-25;
+width:0%;
+opacity: 0;
+transition: all 2s ease;
+}
+.sec-head.Expand{
+letter-spacing:0;
+width:100%;
+opacity: 1;
 }
 @keyframes slidedown {
   0% {

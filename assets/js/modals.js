@@ -28,6 +28,7 @@ join_modal.style.display = "block";
 join_modal.style.animation = fade;
 join_modal.style.animationDuration = "1s";
 };
+// When the user clicks the button, open the modal 
 
 window.onclick = function(event) {
   if (event.target == beta_modal) {
@@ -35,5 +36,4 @@ window.onclick = function(event) {
   }   else if (event.target == join_modal) {
     join_modal.style.display = "none";
   }
-
 };

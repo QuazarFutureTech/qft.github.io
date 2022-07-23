@@ -2,10 +2,11 @@
 					scrollEvent();
 					activateTopScroll();
 				};
+				var windowheight = window.innerHeight;
 				var navbar = document.getElementById("navbar");
 				var sticky = navbar.offsetTop;
 				var scroller = document.getElementById("ScrollTop");
-				var home = document.getElementById("section-home").offsetHeight;
+				var home = document.getElementById("Top").offsetHeight;
 				function openNav() {
 					document.getElementById("mySidenav").style.width = "100%";
 					document.getElementById("mySidenav").style.height = "100%";
@@ -31,13 +32,14 @@
 					}
 				}
 				    window.addEventListener('scroll', reveal);
+					window.addEventListener('scroll', SecHeadExp);
 
     function reveal(){
       var reveals = document.querySelectorAll('.reveal');
 
       for(var i = 0; i < reveals.length; i++){
 
-        var windowheight = window.innerHeight;
+        
         var revealtop = reveals[i].getBoundingClientRect().top;
         var revealpoint = 50;
 
@@ -45,7 +47,23 @@
           reveals[i].classList.add('loadUp');
         }
         else{
-          reveals[i].classList.remove('loadUP');
+          reveals[i].classList.remove('loadUp');
+        }
+      }
+    }
+	function SecHeadExp(){
+      var SecHeads = document.querySelectorAll('.sec-head');
+
+      for(var i = 0; i < SecHeads.length; i++){
+
+        var SecHeadstop = SecHeads[i].getBoundingClientRect().top;
+        var SecHeadspoint = 50;
+
+        if(SecHeadstop < windowheight - SecHeadspoint){
+          SecHeads[i].classList.add('Expand');
+        }
+        else{
+          SecHeads[i].classList.remove('Expand');
         }
       }
     }					
