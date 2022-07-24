@@ -106,7 +106,7 @@
           
       </div>
       
-      <section class="fullscreen has-text-black has-text-centered bg-parallax top">
+      <section id = "Top" class="fullscreen has-text-black has-text-centered bg-parallax top">
         <div class="container reveal">
          <div class="card theme-white_glass reveal">
           <center><img src="../assets/images/favicons/icon.png" width = 25% alt=""></center>
@@ -116,11 +116,10 @@
           
       </div>
         </section>
-        <div id = "Top"></div>
         <section class=" has-text-black has-text-centered bg-parallax">
         <div class="container reveal">
          <div class="card theme-white_glass">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkBSMqweV_bUjGwgBAcFJCTRQ4Hqwfo9WnUMhR9b6sFbxN0g/viewform?embedded=true" width="640" height="3904" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkBSMqweV_bUjGwgBAcFJCTRQ4Hqwfo9WnUMhR9b6sFbxN0g/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
          </div>
           
       </div>
@@ -131,15 +130,14 @@
   <div class="beta_modal-content">
     <div class="beta_modal-head theme-testing">
       <span class="close">&times;</span>
-      <h2 class="has-text-white theme-testing subtitle is-3"> Page Under Construction</h2>
+      <h2 class="has-text-white theme-testing subtitle is-3"><i class="fa fa-level-down" aria-hidden="true"></i> Page Under Construction</h2>
     </div>
     <div class="beta_modal-body theme-lt">
       <h4 class = "has-text-centered"><i class = "fa fa-warning"></i> Warning <i class = "fa fa-warning"></i></h4>
-      <p>
-        This page is still under construction, and is currently undergoing testing.</p>
+      <p>This page is still under construction, and is currently undergoing testing.</p>
       <p>As a result many features and functionality of this page may be limited. <br> We highly recommend revisiting later!</p>
       
-      <a href="#" class = "b theme-btn-dark"><i class="fa fa-caret-right" aria-hidden="true" onclick="closeBetaModal()"></i> Proceed</a>
+      <a href="#" class = "b theme-btn-dark" onclick="closeBetaModal()"><i class="fa fa-forward" aria-hidden="true"></i> Proceed</a>
       <a href="../index.html" class = "b theme-btn-dark"><i class="fa fa-backward" aria-hidden="true"></i> Go back</a>
 
     </div>
@@ -189,11 +187,10 @@
        </div> 
     </footer>  
      <div class="copyright">&copy; QuazarFutureTech&trade; 2022 - All Rights Reserved </div>
+     <a href="#" id="ScrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/modals.js"></script>
-   <a href="#" id="ScrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    <script src="src/plugins/particles/particles.js"></script>
-    <script src="src/plugins/particles/particles-dots.js"></script>
+   
     <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
     const button = new Crate({
     server: '722753546033954876',

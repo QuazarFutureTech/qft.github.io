@@ -23,6 +23,8 @@ join_modal_close.onclick = function() {
 
 };
 
+
+
 btn.onclick = function(){
 join_modal.style.display = "block";
 join_modal.style.animation = fade;
@@ -36,4 +38,8 @@ window.onclick = function(event) {
   }   else if (event.target == join_modal) {
     join_modal.style.display = "none";
   }
+};
+
+function closeBetaModal(){
+span.click();
 };

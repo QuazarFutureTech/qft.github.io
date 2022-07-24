@@ -52,61 +52,48 @@
     <meta name="thumbnail" href="assets/images/favicons/favicon.ico" />
     <meta
       name="description"
-      content="View live stats about QuazarFurtureTechâ„¢ and all the amazing stuff we are working on!"
+      content="View live stats about QuazarFurtureTech and all the amazing stuff we are working on!"
     />
   </head>
 
   <body class="body-bg bg-colored">
 <header>
-      <div id="mySidenav" class="sidenav theme-blk_glass">
+      <div id="mySidenav" class="sidenav bg-opaque">
         <a href="index.html" class="title ">
 <img src="https://media.discordapp.net/attachments/765697291604328479/961613264775680020/unknown.png" width="125em" alt="icon" />
           </a>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
           >&otimes;</a
         >
-        <a
-          href="#"
-          class="link"
-          onclick="closeNav()"
-          ><i class="fa fa-home"></i> Home</a
-        >
-        <a
-          href="construction.html"
-          class="link"
-          onclick="closeNav()"
-          ><i class="fa fa-shopping-cart"></i> Shop</a
-        >
-        <a
-          href="#"
-          class="link"
-          onclick="closeNav()"
-          ><i class="fa fa-download"></i> Downloads</a
-        >
-        <a
-          href="construction.html"
-          class="link"
-          onclick="closeNav()"
-          ><i class="fa fa-users"></i> Campaigns</a
-        >
-        <a
-          href="construction.html"
-          class="link"
-          onclick="closeNav()"
-          ><i class="fa fa-gears"></i> Projects</a
-        >
-        <a
-          href="pages/jobs.html"
-          class="link"
-          onclick="closeNav()"
-          ><i class="fa fa-briefcase"></i> Careers</a
-        >
-        <a
-          href="construction.html"
-          class="link"
-          onclick="closeNav()"
-          ><i class="fa fa-envelope-o"></i> Contact Us</a
-        >
+  <button class="side_dropdown-btn"><i class="fa fa-home"></i> Home
+  </button>
+  <div class="side_dropdown-container">
+    <a href="#section-about" onclick="closeNav()"><i class="fa fa-file" aria-hidden="true"></i> About Us</a>
+    <a href="#section-join" onclick="closeNav()"><i class="fa fa-users" aria-hidden="true"></i> Join Us</a>
+    <a href="#section-pledge" onclick="closeNav()"><i class="fa fa-globe" aria-hidden="true"></i> Our Pledge</a>
+    <a href="pages/shop.html" onclick="closeNav()"><i class="fa fa-shopping-cart"></i> Shop</a>
+    <hr>
+  </div>
+
+        <button class="side_dropdown-btn"><i class="fa fa-folder-o" aria-hidden="true"></i> Resources</button>
+        <div class="side_dropdown-container">
+        <a href="#"  onclick="closeNav()"><i class="fa fa-download"></i> Downloads</a>
+        <a href="#section-about"><i class="fa fa-question"></i> FAQs </a>
+        <a href="#section-join"><i class="fa fa-gears"></i> Projects</a>
+        <a href="pages/status.html"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
+        </div>
+        <button class="side_dropdown-btn"><i class="fa fa-users" aria-hidden="true"></i> People
+  </button>
+  <div class="side_dropdown-container"><a href="pages/jobs.html"><i class="fa fa-briefcase"></i> Careers</a> <a href="#section-about"><i class="fa fa-users" aria-hidden="true"></i> Communities</a><hr>
+  </div>
+          <button class="side_dropdown-btn"><i class="fa fa-envelope-o"></i> Contact Us
+  </button>
+  <div class="side_dropdown-container">
+    <a href="#section-about" onclick="closeNav()"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
+    <a href="#section-join" onclick="closeNav()"><i class="fa fa-shield" aria-hidden="true"></i>Security</a>
+    <a href="#section-pledge" onclick="closeNav()"><i class="fa fa-book" aria-hidden="true"></i> Directory</a>
+    <hr>
+  </div>
       </div>
 
       <div class="main">
@@ -144,11 +131,11 @@
       <a href="#section-about"><i class="fa fa-download"></i> Downloads </a>
       <a href="#section-about"><i class="fa fa-question"></i> FAQs </a>
       <a href="#section-join"><i class="fa fa-gears"></i> Projects</a>
-      <a href="#section-pledge"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
+      <a href="pages/status.html"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
     </div>
         </div>
           <a
-          href="construction.html"
+          href="pages/shop.html"
           class="link"
           ><i class="fa fa-shopping-cart"></i> Shop</a
         >
@@ -165,7 +152,7 @@
       </div>
     </header>
 
-<section id="section-home" class="fullscreen has-text-centered">
+<section id="Top" class="fullscreen has-text-centered">
           <div class="container">
           <div class="container-fullscreen">
           <h1 class="title is-1 theme-sec-head-light">
@@ -210,7 +197,6 @@
 			S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"
             ></path>
           </svg>
-<div id = "Top"></div>
           
 </section>        
         <section id="section-about" class="has-text-centered bg-opaque">
@@ -275,9 +261,9 @@
                           <a
                       href="#"
                       id="myBtn"
-                      class=" theme-join"
+                      class="b theme-join"
                       style="margin-bottom: 5px"
-                    >
+                    ><i class="fa fa-plus-circle" aria-hidden="true"></i>
                      Join Us
                   </a>
                   <button class="accordion" onclick="">
@@ -405,7 +391,7 @@
   <div class="beta_modal-content">
     <div class="beta_modal-head theme-beta">
       <span class="close">&times;</span>
-      <h2 class="has-text-white theme-beta subtitle is-3">Beta Disclaimer</h2>
+      <h2 class="has-text-white theme-beta subtitle is-3"><i class="fa fa-wrench" aria-hidden="true"></i> Beta Disclaimer</h2>
     </div>
     <div class="beta_modal-body theme-dk">
       <p class="has-text-white ">Hello, visitor!<br> We are delighted to have you visit our website! This is just to inform you that the website
@@ -423,15 +409,15 @@
   <div class="modal-container">
     <div class="modal-head">
       <span class="close">&times;</span>
-      <h2 class="has-text-white has-text-centered subtitle is-3">Are you Ready?</h2>
+      <h2 class="has-text-white has-text-centered subtitle is-3 theme-beta">Are you Ready?</h2>
     </div>
-    <div class="modal-body">
+    <div class="modal-body theme-dk">
       <p class="has-text-white ">All Done Here?<br> You are about to be sent to our discord server! (which may prompt you to create an account if you don't already have one.) We look forwards to seeing you there! </p>
 	  <a href="https://discord.gg/qft" class="b theme-join">Join Now</a>
     <p class="has-text-white ">Link not working? try <a href="https://discord.gg/VpTDz3JrQC">this one</a></p>
      </div>
-    <div class="modal-foot">
-      <h3 class="has-text-centered is-5">Thanks for visiting us!</h3>
+    <div class="modal-foot theme-beta">
+      <h3 class="has-text-white has-text-centered is-5">Thanks for visiting us!</h3>
     </div>
   </div>
 </div>  
@@ -458,7 +444,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Jobs <span style="color: #43b581;">- We're hiring!</span></a> </li>
+                <li><a href="pages/jobs.html">Jobs <span style="color: #43b581;">- We're hiring!</span></a> </li>
                 <li><a href="#">Status</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>

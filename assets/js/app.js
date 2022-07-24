@@ -8,19 +8,17 @@
 				var scroller = document.getElementById("ScrollTop");
 				var home = document.getElementById("Top").offsetHeight;
 				function openNav() {
-					document.getElementById("mySidenav").style.width = "100%";
+					document.getElementById("mySidenav").style.opacity = "100%";
 					document.getElementById("mySidenav").style.height = "100%";
-					document.getElementById("main").style.marginLeft = "250px";
-					document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+					document.getElementById("mySidenav").style.width = "100%";
 					document.body.style.overflowY = "hidden";
 				}
 
 				function closeNav() {
-					document.getElementById("mySidenav").style.width = "0";
+					document.getElementById("mySidenav").style.opacity = "0";
 					document.getElementById("mySidenav").style.height = "0";
-					document.getElementById("main").style.marginLeft = "0";
-					document.body.style.backgroundColor = "#00004d";
-					
+					document.getElementById("mySidenav").style.width = "0";
+					document.body.style.overflowY = "initial";
 				}
 				function activateTopScroll() { 
                     if (window.pageYOffset >= home/2){
@@ -99,5 +97,22 @@ function openPage(pageName,elmnt,color) {
 	elmnt.style.color = color;
   }
   
-  // Get the element with id="defaultOpen" and click on it
+
+var side_dropdown = document.getElementsByClassName("side_dropdown-btn");
+var i;
+
+for (i = 0; i < side_dropdown.length; i++) {
+  side_dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("side_drpdwn_active");
+    var side_dropdownContent = this.nextElementSibling;
+    if (side_dropdownContent.style.display === "block") {
+      side_dropdownContent.style.display = "none";
+	  side_dropdownContent.style.maxHeight ="0vh";
+    } else {
+      side_dropdownContent.style.display = "block";
+	  side_dropdownContent.style.maxHeight = side_dropdownContent.scrollHeight + "vh";
+    }
+  });
+} 
+ // Get the element with id="defaultOpen" and click on it
 if(document.getElementById("defaultOpen").style.display != 'none') { document.getElementById("defaultOpen").click(); }

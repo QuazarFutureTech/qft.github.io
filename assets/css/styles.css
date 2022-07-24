@@ -501,24 +501,77 @@ transition: 0.5s;
 }
 
 /* The side navigation menu */
+/* Style the sidenav links and the dropdown button */
+
+.sidenav a{font-family: zekton; text-align: center;}
+.sidenav hr {
+    border: 1px solid white;
+    box-shadow: 0 0 8px white;
+}
+.sidenav .side_dropdown-container  a{
+   font-size: 20px;
+   padding: 16px;
+}
+.side_dropdown-btn {
+ text-align: left;
+ padding: 8px;
+}
+.side_dropdown-container a, .side_dropdown-btn {
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  color: white;
+  
+  cursor: pointer;
+  outline: none;
+  border-bottom:  1px solid #999;
+  font-family: zekton;
+  font-size: 25px;
+  transition: 0.5s;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.side_main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.side_drpdwn_active {
+box-shadow: 0 0 8px white;
+background-color:rgb(255,255,255); 
+color: black;
+
+  transition: 0.5s;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.side_dropdown-container {
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
 
 .sidenav {
-  height: 0;
-  /* 100% Full-height */
-  width: 0;
-  /* 0 width - change this with JavaScript */
+  height: 0%;
+  width: 0%;
+  opacity:0;
   position: fixed;
-  /* Stay in place */
   z-index: 5;
-  /* Stay on top */
   top: 0;
   left: 0;
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   padding-top: 60px;
-  /* Place content 60px from the top */
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
@@ -592,7 +645,7 @@ transition: 0.5s;
 
 @media screen and (max-width: 860px) {
   .fullscreen .container-fullscreen{
-  width:75%;
+  width:100%;
   }
 
   .scrActive{
