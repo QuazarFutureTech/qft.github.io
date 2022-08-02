@@ -162,10 +162,6 @@ ul {
     z-index: 2;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, .5);
-    animation-name: fade;
-    -webkit-animation-name: fade;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
 }
 
 .fullscreen .container-fullscreen h1 {
