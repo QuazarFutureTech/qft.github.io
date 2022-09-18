@@ -283,7 +283,8 @@ h5 {
 }
 
 .bg-colored {
-    background-color: rgb(0, 132, 255);
+    /*background-color: rgb(0, 132, 255);*/
+    background-image: url("../images/1595102311497.png");
 }
 
 .bg-parallax {

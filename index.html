@@ -47,28 +47,37 @@
     <a href="#section-about" onclick="closeNav()"><i class="fa fa-file" aria-hidden="true"></i> About Us</a>
             <a href="#section-join" onclick="closeNav()"><i class="fa fa-users" aria-hidden="true"></i> Join Us</a>
             <a href="#section-pledge" onclick="closeNav()"><i class="fa fa-globe" aria-hidden="true"></i> Our Pledge</a>
-            <a href="pages/shop.html" onclick="closeNav()"><i class="fa fa-shopping-cart"></i> Shop</a>
             <hr>
         </div>
-
+        <button class="side_dropdown-btn"><i class="fa fa-shopping-cart"></i> Shop
+  </button>
+        <div class="side_dropdown-container">
+            <a href="pages/Products.html" onclick="closeNav()"><i class="fa fa-boxes" aria-hidden="true"></i> Products </a>
+            <a href="pages/Services.html" onclick="closeNav()"><i class="fa fa-toolbox" aria-hidden="true"></i> Services</a>
+            <hr>
+        </div>
         <button class="side_dropdown-btn"><i class="fa fa-folder-o" aria-hidden="true"></i> Resources</button>
         <div class="side_dropdown-container">
-            <a href="#" onclick="closeNav()"><i class="fa fa-download"></i> Downloads</a>
-            <a href="#section-about"><i class="fa fa-question"></i> FAQs </a>
-            <a href="#section-join"><i class="fa fa-gears"></i> Projects</a>
+            <a href="pages/Downloads.html" onclick="closeNav()"><i class="fa fa-download"></i> Downloads</a>
+            <a href="pages/FAQs.Html"><i class="fa fa-question"></i> FAQs</a>
+            <a href="pages/Projects.html"><i class="fa fa-gears"></i> Projects</a>
             <a href="pages/status.html"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
         </div>
         <button class="side_dropdown-btn"><i class="fa fa-users" aria-hidden="true"></i> People
   </button>
-        <div class="side_dropdown-container"><a href="pages/jobs.html"><i class="fa fa-briefcase"></i> Careers</a> <a href="#section-about"><i class="fa fa-users" aria-hidden="true"></i> Communities</a>
+        <div class="side_dropdown-container">
+            <a href="#section-about"><i class="fa fa-users" aria-hidden="true"></i> Communities</a>
+            <a href="pages/jobs.html"><i class="fa fa-briefcase"></i> Careers</a>
+            <a href="pages/Affiliates.html"><i class="fa fa-hand-holding"></i> Affiliates</a>
+            <a href="pages/OurTeam.html"><i class="fa fa-briefcase"></i> Our Team</a>
             <hr>
         </div>
         <button class="side_dropdown-btn"><i class="fa fa-envelope-o"></i> Contact Us
   </button>
         <div class="side_dropdown-container">
-            <a href="#section-about" onclick="closeNav()"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
-            <a href="#section-join" onclick="closeNav()"><i class="fa fa-shield" aria-hidden="true"></i>Security</a>
-            <a href="#section-pledge" onclick="closeNav()"><i class="fa fa-book" aria-hidden="true"></i> Directory</a>
+            <a href="pages/support.html" onclick="closeNav()"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
+            <a href="pages/Security.html" onclick="closeNav()"><i class="fa fa-shield" aria-hidden="true"></i> Security</a>
+            <a href="pages/Directory.html" onclick="closeNav()"><i class="fa fa-book" aria-hidden="true"></i> Directory</a>
             <hr>
         </div>
         </div>
@@ -87,9 +96,9 @@
                     <button class="hov-drpbtn"> <i class="fa fa-envelope-o"></i> Contact Us
     </button>
                     <div class="hov-drpdwn-content theme-blk_glass">
-                        <a href="#"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
-                        <a href="#"><i class="fa fa-shield" aria-hidden="true"></i> Security</a>
-                        <a id="PopBtn" href="#"><i class="fa fa-book" aria-hidden="true"></i> Directory</a>
+                        <a href="pages/support.html"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
+                        <a href="pages/Security.html"><i class="fa fa-shield" aria-hidden="true"></i> Security</a>
+                        <a id="PopBtn" href="pages/Directory.html"><i class="fa fa-book" aria-hidden="true"></i> Directory</a>
                     </div>
                 </div>
 
@@ -97,33 +106,41 @@
                     <button class="hov-drpbtn"> <i class="fa fa-users" aria-hidden="true"></i> People
         </button>
                     <div class="hov-drpdwn-content theme-blk_glass">
+                        <a href="pages/OurTeam.html"><i class="fa fa-briefcase"></i> Our Team</a>
+                        <a href="pages/Affiliates.html"><i class="fa fa-hand-holding"></i> Affilates</a>
                         <a href="pages/jobs.html"><i class="fa fa-briefcase"></i> Careers</a>
-                        <a href="#section-about"><i class="fa fa-users" aria-hidden="true"></i> Communities</a>
+                        <a href="pages/Communities.html"><i class="fa fa-users" aria-hidden="true"></i> Communities</a>
                     </div>
                 </div>
                 <div class="hov-drpdwn">
                     <button class="hov-drpbtn"> <i class="fa fa-folder-o" aria-hidden="true"></i> Resources
         </button>
                     <div class="hov-drpdwn-content theme-blk_glass">
-                        <a href="#section-about"><i class="fa fa-download"></i> Downloads </a>
-                        <a href="#section-about"><i class="fa fa-question"></i> FAQs </a>
-                        <a href="#section-join"><i class="fa fa-gears"></i> Projects</a>
+                        <a href="pages/Downloads.html"><i class="fa fa-download"></i> Downloads </a>
+                        <a href="pages/FAQs.Html"><i class="fa fa-question"></i> FAQs </a>
+                        <a href="pages/Projects.html"><i class="fa fa-gears"></i> Projects</a>
                         <a href="pages/status.html"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
                     </div>
                 </div>
-                <a href="pages/shop.html" class="link"><i class="fa fa-shopping-cart"></i> Shop</a
-        >
-        <div class="hov-drpdwn">    
-        <button class="hov-drpbtn"> <i class="fa fa-home"></i> Home
+                <div class="hov-drpdwn">
+                    <button class="hov-drpbtn"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop
         </button>
-        <div class="hov-drpdwn-content theme-blk_glass">
-      <a href="#section-about"><i class="fa fa-file" aria-hidden="true"></i> About Us</a>
-                <a href="#section-join"><i class="fa fa-plus-circle" aria-hidden="true"></i> Join Us</a>
-                <a href="#section-pledge"><i class="fa fa-globe" aria-hidden="true"></i> Our Pledge</a>
-            </div>
-        </div>
+                    <div class="hov-drpdwn-content theme-blk_glass">
+                        <a href="pages/Products.html"><i class="fa fa-boxes"></i> Products </a>
+                        <a href="pages/Services.html"><i class="fa fa-toolbox"></i> Services </a>
+                    </div>
+                </div>
+                <div class="hov-drpdwn">
+                    <button class="hov-drpbtn"> <i class="fa fa-home"></i> Home
+        </button>
+                    <div class="hov-drpdwn-content theme-blk_glass">
+                        <a href="#section-about"><i class="fa fa-file" aria-hidden="true"></i> About Us</a>
+                        <a href="#section-join"><i class="fa fa-plus-circle" aria-hidden="true"></i> Join Us</a>
+                        <a href="#section-pledge"><i class="fa fa-globe" aria-hidden="true"></i> Our Pledge</a>
+                    </div>
+                </div>
 
-        </div>
+            </div>
     </header>
 
     <section id="Top" class="fullscreen has-text-centered">
@@ -137,22 +154,16 @@
                     Better technology, for a better future!
                 </h5>
 
-                <div class="columns">
-                    <div class="column card theme-blk_glass">
-                        <p class="subtitle has-text-centered has-text-white"> Join Our Community</p>
-                        <a class="b theme-white" href="#section-join" style="margin-bottom: 5px">Join</a>
-                    </div>
-                    <div class="column card theme-blk_glass">
-                        <p class="subtitle has-text-centered has-text-white"> Read About Us</p>
-                        <a class="b theme-white" href="#section-about" style="margin-bottom: 5px">Read</a>
-                    </div>
-                    <div class="column card theme-blk_glass">
-                        <p class="subtitle has-text-centered has-text-white"> View Our Shop</p>
-                        <a class="b theme-white" href="#section-join" style="margin-bottom: 5px">Shop</a>
-                    </div>
 
-
+                <div class="card theme-blk_glass">
+                    <p class="title has-text-centered has-text-white"> Join Our Community</p>
+                    <p class="subtitle has-text-centered has-text-white"> Be a part of our epic organization before our launch to get awesome perks and deals before everyone else does!</p>
+                    <a class="b theme-join" href="#section-join" style="margin-bottom: 5px">Join</a>
                 </div>
+
+
+
+
 
 
 
@@ -409,12 +420,12 @@
             <div class="sec quicklinks">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#section-about">About</a></li>
+                    <li><a href="pages/FAQs.Html">FAQ</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="pages/jobs.html">Jobs <span style="color: #43b581;">- We're hiring!</span></a> </li>
-                    <li><a href="#">Status</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="pages/status.html">Status</a></li>
+                    <li><a href="pages/support.html">Contact</a></li>
                 </ul>
             </div>
             <div class="sec contact">
@@ -440,8 +451,8 @@
     <script src="assets/js/modals.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
         const button = new Crate({
-            server: '722753546033954876',
-            channel: '762668955646558208',
+            server: '708119280582918267',
+            channel: '1020697610899701920',
             glyph: ['https://cdn.discordapp.com/attachments/929406105459761222/929487974729666610/com_jiochat_jiochatapp.png', '100%']
         })
 
