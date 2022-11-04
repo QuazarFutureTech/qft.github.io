@@ -182,7 +182,7 @@ ul {
     margin-bottom: 0;
 }
 
-.fullscreen svg {
+.fullscreen .wave {
     position: absolute;
     bottom: 0;
     transform: translate(0px, 2px);
@@ -202,6 +202,20 @@ h4,
 h5 {
     z-index: 3;
     font-family: zekton;
+}
+
+.theme-btn-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: ease-in-out .5s;
+}
+
+.theme-btn-outline:hover {
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 0 8px white;
+    transition: ease-in-out .5s;
 }
 
 .theme-btn-dark {
@@ -256,6 +270,7 @@ h5 {
 
 .theme-join:hover {
     background-color: #43b581;
+    box-shadow: 0 0 8px #43b581;
     color: #fff;
     transition: ease-in-out .5s;
 }
@@ -276,7 +291,7 @@ h5 {
 }
 
 .bg-opaque {
-    padding-top: 10%;
+    padding-top: 10px;
     background-color: #1f2123;
     box-sizing: border-box;
     padding-bottom: 10px;
@@ -288,7 +303,7 @@ h5 {
 }
 
 .bg-parallax {
-    padding-top: 10%;
+    padding-top: 10px;
     padding-bottom: 10px;
     box-sizing: border-box;
     background-image: url("https://cdn.discordapp.com/attachments/929406105459761222/968539104994279425/QFT_MainBanner.gif");
@@ -304,6 +319,11 @@ h5 {
     margin: 16px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 1);
     border-left: 4px solid rgb(50, 150, 255);
+}
+
+section .container {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 
@@ -348,7 +368,7 @@ h5 {
     cursor: pointer;
     overflow: initial;
     text-decoration: none;
-    text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+    text-shadow: 0 0 8px white;
     font-size: 12px;
     font-weight: bold;
     padding: 0px;
@@ -376,9 +396,10 @@ h5 {
 
 #navbar a.link:hover {
     /*border-left: 4px solid aqua;*/
-    color: skyblue;
-    border-bottom: 2px solid skyblue;
+    color: black;
+    background: white;
     transition: 0.5s;
+    box-shadow: 0 0 8px white;
 }
 
 .hov-drpdwn {
@@ -404,8 +425,9 @@ h5 {
 }
 
 .hov-drpbtn:hover {
-    color: skyblue;
-    border-bottom: 2px solid skyblue;
+    color: black;
+    background: white;
+    box-shadow: 0 0 8px white;
     transition: 0.5s;
 }
 
@@ -418,10 +440,14 @@ h5 {
     font-weight: bold;
     border-left: 2px solid rgba(0, 0, 0, 0);
     display: block;
+    border-radius: 10px;
 }
 
 .hov-drpdwn-content a:hover {
-    color: skyblue;
+    color: black;
+    background: white;
+    box-shadow: 0 0 8px white;
+    border-radius: 10px;
     border-left: 2px solid rgba(0, 0, 0, 0);
     transition: 0.5s;
 }
@@ -685,7 +711,8 @@ h5 {
 
 .sidenav .closebtn:hover {
     border-left: none;
-    text-shadow: 0px 0px 4px aqua, 0 0 8px blue, 0 0 16px violet;
+    color: black;
+    text-shadow: 0px 0px 8px white;
 }
 
 .sidenav .title {
@@ -719,6 +746,9 @@ h5 {
 @media screen and (max-width: 860px) {
     .fullscreen .container-fullscreen {
         width: 100%;
+    }
+    .mobile_hidden {
+        display: none;
     }
     .scrActive {
         display: inline-block;
@@ -755,10 +785,6 @@ h5 {
     }
     .hov-drpdwn .hov-drpbtn {
         display: none;
-    }
-    .fullscreen svg {
-        display: none;
-        transition: ease-in-out .5s;
     }
     #navbar button.title {
         border: none;
