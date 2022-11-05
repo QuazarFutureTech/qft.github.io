@@ -17,7 +17,8 @@
     <script src="https://kit.fontawesome.com/4f45a84be8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/modals.css">
-
+    <link rel="stylesheet" href="assets/css/Carosel.css">
+    <link rel="stylesheet" href="assets/css/Views.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
@@ -44,12 +45,11 @@
   <button class="side_dropdown-btn"><i class="fa fa-home"></i> Home
   </button>
   <div class="side_dropdown-container">
-    <a href="#section-about" onclick="closeNav()"><i class="fa fa-file" aria-hidden="true"></i> About Us</a>
-            <a href="#section-join" onclick="closeNav()"><i class="fa fa-users" aria-hidden="true"></i> Join Us</a>
-            <a href="#section-pledge" onclick="closeNav()"><i class="fa fa-globe" aria-hidden="true"></i> Our Pledge</a>
+    <a href="#section-portal" onclick="closeNav()"><i class="fa fa-dashboard" aria-hidden="true"></i> Portal</a>
+            <a href="#section-about" onclick="closeNav()"><i class="fa fa-users" aria-hidden="true"></i> About Us</a>
             <hr>
         </div>
-        <button class="side_dropdown-btn"><i class="fa fa-shopping-cart"></i> Shop
+        <button class="side_dropdown-btn" style="display: none;"><i class="fa fa-shopping-cart"></i> Shop
   </button>
         <div class="side_dropdown-container">
             <a href="pages/Products.html" onclick="closeNav()"><i class="fa fa-boxes" aria-hidden="true"></i> Products </a>
@@ -58,21 +58,20 @@
         </div>
         <button class="side_dropdown-btn"><i class="fa fa-folder-o" aria-hidden="true"></i> Resources</button>
         <div class="side_dropdown-container">
-            <a href="pages/Downloads.html" onclick="closeNav()"><i class="fa fa-download"></i> Downloads</a>
+            <a href="pages/Downloads.html" style="display: none;" onclick="closeNav()"><i class="fa fa-download"></i> Downloads</a>
             <a href="https://sites.google.com/view/qft-faqs/faqs"><i class="fa fa-question"></i> FAQs</a>
-            <a href="pages/Projects.html"><i class="fa fa-gears"></i> Projects</a>
-            <a href="pages/status.html"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
+            <a href="pages/Projects.html" style="display: none;"><i class="fa fa-gears"></i> Projects</a>
+            <a href="pages/status.html" style="display: none;"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
         </div>
         <button class="side_dropdown-btn"><i class="fa fa-users" aria-hidden="true"></i> People
   </button>
         <div class="side_dropdown-container">
-            <a href="#section-about"><i class="fa fa-users" aria-hidden="true"></i> Communities</a>
-            <a href="pages/jobs.html"><i class="fa fa-briefcase"></i> Careers</a>
-            <a href="pages/Affiliates.html"><i class="fa fa-hand-holding"></i> Affiliates</a>
-            <a href="pages/OurTeam.html"><i class="fa fa-briefcase"></i> Our Team</a>
+            <a href="pages/Community.html"><i class="fa fa-users" aria-hidden="true"></i> Community</a>
+            <a href="pages/jobs.html" style="display: none;"><i class="fa fa-briefcase"></i> Careers</a>
+            <a href="pages/Affiliates.html" style="display: none;"><i class="fa fa-hand-holding"></i> Affiliates</a>
             <hr>
         </div>
-        <button class="side_dropdown-btn"><i class="fa fa-envelope-o"></i> Contact Us
+        <button class="side_dropdown-btn" style="display: none;"><i class="fa fa-envelope-o"></i> Contact Us
   </button>
         <div class="side_dropdown-container">
             <a href="pages/support.html" onclick="closeNav()"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
@@ -92,7 +91,7 @@
           </button>
 
 
-                <div class="hov-drpdwn">
+                <div class="hov-drpdwn" style="display: none;">
                     <button class="hov-drpbtn"> <i class="fa fa-envelope-o"></i> Contact Us
     </button>
                     <div class="hov-drpdwn-content theme-blk_glass">
@@ -106,23 +105,22 @@
                     <button class="hov-drpbtn"> <i class="fa fa-users" aria-hidden="true"></i> People
         </button>
                     <div class="hov-drpdwn-content theme-blk_glass">
-                        <a href="pages/OurTeam.html"><i class="fa fa-briefcase"></i> Our Team</a>
-                        <a href="pages/Affiliates.html"><i class="fa fa-hand-holding"></i> Affilates</a>
-                        <a href="pages/jobs.html"><i class="fa fa-briefcase"></i> Careers</a>
-                        <a href="pages/Communities.html"><i class="fa fa-users" aria-hidden="true"></i> Communities</a>
+                        <a href="pages/Affiliates.html" style="display: none;"><i class="fa fa-hand-holding"></i> Affilates</a>
+                        <a href="pages/jobs.html" style="display: none;"><i class="fa fa-briefcase"></i> Careers</a>
+                        <a href="pages/Community.html"><i class="fa fa-users" aria-hidden="true"></i> Community</a>
                     </div>
                 </div>
                 <div class="hov-drpdwn">
                     <button class="hov-drpbtn"> <i class="fa fa-folder-o" aria-hidden="true"></i> Resources
         </button>
                     <div class="hov-drpdwn-content theme-blk_glass">
-                        <a href="pages/Downloads.html"><i class="fa fa-download"></i> Downloads </a>
+                        <a href="pages/Downloads.html" style="display: none;"><i class="fa fa-download"></i> Downloads </a>
                         <a href="https://sites.google.com/view/qft-faqs/faqs"><i class="fa fa-question"></i> FAQs </a>
-                        <a href="pages/Projects.html"><i class="fa fa-gears"></i> Projects</a>
-                        <a href="pages/status.html"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
+                        <a href="pages/Projects.html" style="display: none;"><i class="fa fa-gears"></i> Projects</a>
+                        <a href="pages/status.html" style="display: none;"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
                     </div>
                 </div>
-                <div class="hov-drpdwn">
+                <div class="hov-drpdwn" style="display: none;">
                     <button class="hov-drpbtn"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop
         </button>
                     <div class="hov-drpdwn-content theme-blk_glass">
@@ -134,9 +132,8 @@
                     <button class="hov-drpbtn"> <i class="fa fa-home"></i> Home
         </button>
                     <div class="hov-drpdwn-content theme-blk_glass">
-                        <a href="#section-about"><i class="fa fa-file" aria-hidden="true"></i> About Us</a>
-                        <a href="#section-join"><i class="fa fa-plus-circle" aria-hidden="true"></i> Join Us</a>
-                        <a href="#section-pledge"><i class="fa fa-globe" aria-hidden="true"></i> Our Pledge</a>
+                        <a href="#section-portal"><i class="fa fa-dashboard" aria-hidden="true"></i> Portal</a>
+                        <a href="#section-about"><i class="fa fa-users" aria-hidden="true"></i> About Us</a>
                     </div>
                 </div>
 
@@ -144,165 +141,195 @@
     </header>
 
     <section id="Top" class="fullscreen has-text-centered">
-        <div class="container">
-            <div class="container-fullscreen">
-                <h1 class="title is-1 theme-sec-head-light">
+
+        <div class="desktop_view ">
+            <img src="assets/images/favicons/icon.png" alt="QFT-Icon">
+            <div class="card theme-white_glass " style=" animation-name: text-spand; animation-duration: 1.5s;">
+                <h2 class="title is-1 has-text-white theme-grad_text-1"> The #1 Future Technology Hub</h2>
+                <div class="columns">
+                    <div class="column has-text-white">
+
+                        <h1 class="title is-3 has-text-white theme-grad_text-2">
+                            Quazar Future Tech&trade;
+
+                        </h1>
+                        <hr>
+                        <h5 class="title is-5 has-text-white">
+                            "Better technology, for a better future!"
+                        </h5>
+                        <p> We specialize in digital media, software development, and future technology development. <br> Unlike other tech companies. We are driven by our passion for creation! but don't just take our word for it. Explore our site and see
+                            for your self</p>
+                        <a href="#section-portal" class="b theme-main_cta"><i class="fa fa-star" aria-hidden="true"></i> Get Started!</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="headlinks card theme-white_glass">
+                <a href="https://tinyurl.com/QFTYoutube"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/QftFuture"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://reddit.com/r/quazarfuturetech"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="mobile_view">
+            <div class="card theme-white_glass " style=" animation-name: text-spand; animation-duration: 1.5s;">
+                <h2 class="title is-1 has-text-white theme-grad_text-1"> The #1 Future Technology Hub</h2>
+                <img src="assets/images/favicons/icon.png" alt="QFT-Icon">
+                <h1 class="title is-3 has-text-white theme-grad_text-2">
                     Quazar Future Tech&trade;
+
                 </h1>
                 <hr>
-                <h5 class="title is-5 has-text-white" style="padding-bottom: 50px;">
-                    Better technology, for a better future!
+                <h5 class="title is-5 has-text-white">
+                    "Better technology, for a better future!"
                 </h5>
+                <p class="has-text-white"> We specialize in digital media, software development, and future technology development. <br> Unlike other tech companies. We are driven by our passion for creation! but don't just take our word for it. Explore our site and see for your
+                    self
+                </p>
+                <div class="columns">
+                    <div class="column has-text-white">
+                        <a href="#section-portal" class="b theme-main_cta"><i class="fa fa-star" aria-hidden="true"></i> Get Started!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="particles-dots" class="particles mobile_hidden"></div>
 
-                <div class="card theme-blk_glass">
-                    <p class="title has-text-centered has-text-white"> Join Our Community</p>
-                    <p class="subtitle has-text-centered has-text-white"> Be a part of our epic organization before our launch to get awesome perks and deals before everyone else does!</p>
-                    <div class="columns has-text-white">
-                        <div class="column">
-                            <a class="b theme-join" href="#section-join" style="margin-bottom: 5px"><i class="fa fa-user-plus" aria-hidden="true"></i> Join Us</a>
-                        </div>
-                        <div class="column">
-                            <a class="b theme-btn-outline" href="#section-about"> <i class="fa fa-book-open" aria-hidden="true"></i> Learn more</a>
-                        </div>
+
+    </section>
+    <section id="section-portal" class="has-text-centered" style="padding-top: 72px;">
+        <div class="has-text-white reveal">
+
+            <div class="slideshow-container ">
+
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <div class=" reveal card theme-white_glass" data-animate-delay="900">
+                        <p class="title has-text-white"><i class="fa fa-fire" aria-hidden="true"></i> Blazing Deals</p>
+                        <hr>
+                        <p class="subtitle has-text-white">
+                            Save up to 50% off all purchaces and subscriptions when you join our discord server!
+                        </p>
+                        <a class="b theme-btn-outline" href="pages/Community.html"><i class="fa fa-external-link" aria-hidden="true"></i> Find out how!</a>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <div class=" reveal card theme-white_glass" data-animate-delay="900">
+                        <p class="title has-text-white"><i class="fa fa-users" aria-hidden="true"></i> Want to know more?</p>
+                        <hr>
+                        <p class="subtitle has-text-white">
+                            Click below to find out more about our story, as well as our overall mission!
+                        </p>
+                        <a class="b theme-btn-outline" href="#section-about"><i class="fa fa-book" aria-hidden="true"></i> Learn more</a>
+                    </div>
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <div class=" reveal card theme-white_glass" data-animate-delay="900">
+                        <p class="title has-text-white"><i class="fa fa-briefcase" aria-hidden="true"></i> Got Questions?</p>
+                        <hr>
+                        <p class="subtitle has-text-white">
+                            Check out our FAQs page for more answers
+                        </p>
+                        <a class="b theme-btn-outline" href="https://sites.google.com/view/qft-faqs/faqs"><i class="fa fa-external-link"  aria-hidden="true"></i> Take me there</a>
+                    </div>
+
+                </div>
+
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <h2 class="title has-text-centered has-text-white reveal">Services we use
+                <hr>
+            </h2>
+            <div class="container">
+                <div class="columns">
+                    <div class="column card theme-white_glass has-text-white reveal">
+                        <h2><i class="fa fa-google" aria-hidden="true"></i></h2>
+                        <h3>Google</h3>
+                        <hr>
+                        <p>Google is a highly reputable data corporation that offers services that are unparallelled in their performance and uses. As a result we use these services to process data which allows us to get work done much faster.</p>
+                    </div>
+                    <div class="column card theme-white_glass has-text-white reveal">
+                        <h2><i class="fa fa-github" aria-hidden="true"></i></h2>
+                        <h3>GitHub</h3>
+                        <hr>
+                        <p>GitHub, is a public data hosting service, and archive. With it we are able to push & test updates to our websites, automate our software development workflows, pull issue requests (to fix bugs), and release beta editions of our
+                            prepackaged software.
+                        </p>
+                    </div>
+                    <div class="column card theme-white_glass has-text-white reveal">
+                        <h2><i class="fa fa-paypal" aria-hidden="true"></i></h2>
+                        <h3>PayPal</h3>
+                        <hr>
+                        <p>PayPal, is a secure payment processing center, which we use for our transactions (even if you don't have an account). As a result we use paypal for most of our daily transactions.</p>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <div id="arrowDown" class="title is-3 has-text-white reveal">
+                <i class="fa fa-caret-down "></i>
+            </div>
 
-        <div id="particles-dots" class="particles mobile_hidden"></div>
-        <svg class="wave mobile_hidden" viewbox="0 0 1023 83" color="white" enable-background="new 0 0 1023 83" xml:space="preserve">
+            <svg class="wave mobile_hidden" viewbox="0 0 1023 83" color="white" enable-background="new 0 0 1023 83" xml:space="preserve">
             <path
               d="M1024,27.68c0,0-109.167-28.004-221.241-28.004S511.5,27.563,511.5,27.563
-			S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"
+            S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"
             ></path>
           </svg>
     </section>
-    <section id="section-about" class="has-text-centered bg-opaque">
-        <div class="container">
-            <div class="has-text-white reveal">
-                <h2 class="title is-3 theme-sec-head-light sec-head">Web Portal
-                </h2>
-                <p class="subtitle has-text-white reveal">
-                    Welcome to our web portal. Here you can view live stats regarding all of our services as well as our communications and infrastructure.
-                </p>
-                <br>
-                <h2 class="title is-3 has-text-white reveal">About Us
-                    <hr>
-                </h2>
-                <div class="columns has-text-white">
-                    <div class="column reveal card theme-blk_glass" data-animate-delay="300">
-                        <p class="title has-text-white "><i class="fa fa-users-cog" aria-hidden="true"></i> Who we are.</p>
-                        <hr>
-                        <p class="subtitle has-text-white">
-                            We are a technology development organization. More than a business, or a brand; We are a group of passionate individuals who are dedicated to putting our talents to good use!
-                        </p>
-                    </div>
-                    <div class="column reveal card theme-blk_glass" data-animate-delay="600">
-                        <p class="title has-text-white"> <i class="fa fa-wrench" aria-hidden="true"></i> What we do!</p>
-                        <hr>
-                        <p class="subtitle has-text-white">
-                            We are working on developing the following:
-                        </p>
-                        <p class="subtitle has-text-white">
-                            New Technology. Digital Media. & Custom Solutions.
-                        </p>
-                        <p class="has-text-white">[Disclaimer:] A few of these services are still under development. We will update our site with more details soon.</p>
-                    </div>
-                    <div class="column reveal card theme-blk_glass" data-animate-delay="900">
-                        <p class="title has-text-white"><i class="fa fa-briefcase" aria-hidden="true"></i> Our Mission.</p>
-                        <hr>
-                        <p class="subtitle has-text-white">
-                            To create amazing new technology and make the world a better place!
-                        </p>
-                        <p class="subtitle has-text-white">
-                            We plan to become the #1 Technology Developers within the next few years, and we believe that it is our passion and drive that will make that a reality.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="arrowDown" class="title is-3 has-text-white reveal">
-                <i class="fa fa-caret-down "></i>
-            </div>
-
-
-        </div>
-    </section>
-    <section id="section-join" class="has-text-centered bg-parallax">
-        <div class="container theme-blk_glass">
-            <h2 class="title is-2 theme-sec-head-light sec-head"><i class="fa fa-users"></i> Community
-            </h2>
-            <hr>
-            <p class="subtitle has-text-white reveal">We have estabilshed a network of communities present on social media. Follow, Subscribe or Join Us to stay updated. (and possibly get some epic perks in return)</p>
-            <div class="card reveal">
-                <p class="title is-3 has-text-white" style="margin-top: 20px">Join us on discord!</p>
-                <hr>
-                <p class="subtitle has-text-white" style="margin-top: 20px">We primarily use discord to maintain and run our organization, It offers great tools and services which make it easy to host our staffing, communities, campaigns, and other operations!</p>
-                <a href="#" id="myBtn" class="b theme-join" style="margin-bottom: 5px"><i class="fa fa-user-plus" aria-hidden="true"></i>
-                     Join Us
-                  </a>
-                <button class="accordion mobile_hidden" onclick="">
-                  <p class="subtitle has-text-white"> <i class="fa fa-desktop"></i> Preview Our HQ (Works best on Desktop)</p>
-                </button>
-                <div class="panel">
-                    <widgetbot server="708119280582918267" channel="944661371340075028" width="100%" height="600"></widgetbot>
-                    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-                </div>
-            </div>
-            <h2 class="title is-3  theme-sec-head-light sec-head" style="margin-top: 20px">Our other platforms</h2>
-            <div class="columns  has-text-white">
-
-                <div class="column card reveal ">
-                    <p class="title has-text-centered is-3 has-text-white"><i class="fa fa-twitter" aria-hidden="true"></i></h2>
-                        <h3 class="subtitle is-3 has-text-white" style="margin-top: 20px">Follow us on Twitter!</h3>
-                        <hr>
-                        <p class="subtitle has-text-white" style="margin-top: 20px">We use Twitter to send quick updates and other fun messages</p>
-                        <a class="twitter-timeline" href="https://twitter.com/QftFuture?ref_src=twsrc%5Etfw">Tweets by QftFuture</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <div class="column card reveal has-delay-1">
-
-                    <p class="title has-text-centered is-3 has-text-white"><i class="fa fa-youtube-play" aria-hidden="true"></i></h2>
-                        <h3 class="subtitle is-3 has-text-white" style="margin-top: 20px">Subscribe to our Channel!</h3>
-                        <hr>
-                        <p class="subtitle has-text-white" style="margin-top: 20px">Subscribe to our channel for more news and other videos</p>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/a1p0FXMUvgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div id="arrowDown" class="title is-3 has-text-white reveal">
-                <i class="fa fa-caret-down "></i>
-            </div>
-        </div>
 
 
     </section>
-    <section id="section-pledge" class="bg-opaque has-text-white">
-        <h2 class="title is-3 has-text-centered has-text-white reveal">Services we use
-            <hr>
-        </h2>
+    <section id="section-about" class="bg-opaque has-text-white">
         <div class="container has-text-centered ">
+            <h2 class="title has-text-centered has-text-white reveal">About Us.
+                <hr>
+            </h2>
+
             <div class="columns">
                 <div class="column has-text-white reveal">
-                    <h2><i class="fa fa-google" aria-hidden="true"></i></h2>
-                    <h3>Google</h3>
-                    <hr>
-                    <p>Google is a highly reputable data corporation that offers services that are unparallelled in their performance and uses. As a result we use these services to process data which allows us to get work done much faster.</p>
+                    <h2 class="title has-text-centered has-text-white reveal">Our Story
+                        <hr>
+                    </h2>
+                    <p class="has-text-white">
+                        It all started back in December of 2019...<br> Our Founder; Aeon(Diante Littles) finally decided to start his dream!
+                        <br> His vision; "A world where everyone has access to outstanding technologies". It took some time, and after a lot of trial and error. Aeon began building a network, one that would soon blossum into the organization that we are
+                        today!
+                    </p>
+
+                    <p class="subtitle has-text-white is-5"> Where are we now?</p>
+                    <p class=" has-text-white"> Though, we still have a long way to go we are beginning to rapidly expand. With tons of outstanding (yet practical) ideas on the way, our founder's vision is soon to be realized!<br> And you won't want to miss what happens next!</p>
                 </div>
+
                 <div class="column has-text-white reveal">
-                    <h2><i class="fa fa-github" aria-hidden="true"></i></h2>
-                    <h3>GitHub</h3>
-                    <hr>
-                    <p>GitHub, is a public data hosting service, and archive. With it we are able to push & test updates to our websites, automate our software development workflows, pull issue requests (to fix bugs), and release beta editions of our prepackaged
-                        software.
+                    <h2 class="title has-text-centered has-text-white reveal">Our Mission.
+                        <hr>
+                    </h2>
+                    <p class="has-text-white">
+                        To create amazing new technology and make the world a better place!
+                    </p>
+                    <p class="has-text-white">
+                        We plan to become the #1 Technology Developers within the next few years, and we believe that it is our passion and drive that will make that a reality.
                     </p>
                 </div>
-                <div class="column has-text-white reveal">
-                    <h2><i class="fa fa-paypal" aria-hidden="true"></i></h2>
-                    <h3>PayPal</h3>
-                    <hr>
-                    <p>PayPal, is a secure payment processing center, which we use for our transactions (even if you don't have an account). As a result we use paypal for most of our daily transactions.</p>
-                </div>
+
+
             </div>
         </div>
         <h2 class=" has-text-centered reveal">Why Choose Us?
@@ -377,38 +404,18 @@
             repository</a> of this website.</p>
             </div>
             <div class="beta_modal-foot theme-beta">
-                <h3 class="has-text-white is-5 ">Thank you for visiting our site</h3>
-            </div>
-        </div>
-    </div>
-    <div id="modalJoin" class="modal-style has-text-centered">
-        <!-- Modal content -->
-        <div class="modal-container">
-            <div class="modal-head">
-                <span class="close">&times;</span>
-                <h2 class="has-text-white has-text-centered subtitle is-3 theme-beta">Are you Ready?</h2>
-            </div>
-            <div class="modal-body theme-dk">
-                <p class="has-text-white ">All Done Here?<br> You are about to be sent to our discord server! (which may prompt you to create an account if you don't already have one.) We look forwards to seeing you there! </p>
-                <a href="https://discord.gg/qft" class="b theme-join">Join Now</a>
-                <p class="has-text-white ">Link not working? try <a href="https://discord.gg/VpTDz3JrQC">this one</a></p>
-            </div>
-            <div class="modal-foot theme-beta">
-                <h3 class="has-text-white has-text-centered is-5">Thanks for visiting us!</h3>
+                <h3 class="has-text-white is-5 ">QuazarFutureTech</h3>
             </div>
         </div>
     </div>
 
 
-    </main>
+
     <footer>
         <div class="container">
             <div class="sec aboutus">
                 <img src="assets/images/logo.png" alt="Logo" class="mb-3">
                 <hr style="background-color: rgb(0, 132, 255); border-color: rgb(0, 132, 255); border-radius: 0px; height: 1px;" />
-                <p>QFT&trade; | QuazarFutureTech&trade; - Better Technology For a Better Future! <br>We are a next-genreation technology development organization based in Florida [U.S.A.] <br> Our main goal is to create new technologies, and challenge the
-                    impossible!
-                </p>
                 <ul class="sci">
                     <li><a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -449,6 +456,7 @@
     <script src="src/plugins/particles/particles-dots.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/modals.js"></script>
+    <script src="assets/js/Carosel.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
         const button = new Crate({
             server: '708119280582918267',

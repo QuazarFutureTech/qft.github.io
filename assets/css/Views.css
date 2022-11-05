@@ -1,0 +1,111 @@
+.mobile_view {
+    display: none;
+}
+
+.desktop_view {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 16px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.desktop_view .card {
+    z-index: 2;
+    padding: 48px;
+}
+
+a.dwnbtn {
+    position: absolute;
+    width: 50%;
+    bottom: 50%;
+    font-size: 32px;
+}
+
+.desktop_view img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 50vw;
+    animation-name: floating;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(-25%, 0%);
+    }
+    50% {
+        transform: translate(-25%, -2%);
+    }
+    100% {
+        transform: translate(-25%, 0%);
+    }
+}
+
+.desktop_view .headlinks {
+    display: flex;
+    z-index: 2;
+    padding: 16px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.desktop_view .card hr {
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0 0 8px white;
+    margin-bottom: 16px;
+}
+
+.headlinks a {
+    display: inline-flex;
+    border: 1px solid white;
+    color: white;
+    padding: 8px;
+    margin: 8px;
+    font-size: 32px;
+    border-radius: 50%;
+    transition: ease-in-out .5s;
+}
+
+.headlinks a:hover {
+    transition: ease-in-out .5s;
+    color: black;
+    box-shadow: 0 0 8px white;
+    background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    .mobile_view {
+        display: flex;
+        height: 75vh;
+        width: 100vw;
+        padding: 64px 0 0 0;
+    }
+    .mobile_view img {
+        display: block;
+        align-self: center;
+        position: relative;
+        width: 25vw;
+    }
+    .mobile_view .card {
+        padding: 16px;
+    }
+    .mobile_view .card hr {
+        color: white;
+        border: 1px solid white;
+        box-shadow: 0 0 8px white;
+        margin-bottom: 16px;
+    }
+    .desktop_view {
+        display: none;
+    }
+}
