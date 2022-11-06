@@ -90,7 +90,8 @@
 
 /* The Close Button */
 
-.close {
+.beta_close,
+.join_close {
     color: white;
     float: right;
     padding: 8px;
@@ -98,8 +99,10 @@
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.beta_close:hover,
+.join_close:hover,
+.beta_close:focus,
+.join_close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

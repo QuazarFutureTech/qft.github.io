@@ -69,6 +69,7 @@ a.dwnbtn {
     display: inline-flex;
     border: 1px solid white;
     color: white;
+    justify-content: center;
     padding: 8px;
     margin: 8px;
     font-size: 32px;
