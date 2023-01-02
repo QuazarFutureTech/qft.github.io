@@ -46,13 +46,24 @@ section {
 }
 
 section h2 hr {
-    margin-left: 50%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    transform: translate(-50%, -50%);
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 25%;
     border: 1px solid rgb(50, 150, 255);
     box-shadow: 0 0 8px rgb(50, 150, 255);
+}
+
+section h2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 img {
+    width: 64px;
 }
 
 p a {
@@ -266,12 +277,14 @@ h5 {
     background: linear-gradient( to right, #f32170, #ff6b08, #cf23cf, #eedd44);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .theme-grad_text-2 {
     background: linear-gradient( 45deg, #fff, rgb(0, 132, 255), rgb(0, 132, 255), #fff);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .theme-main_cta {
@@ -649,6 +662,21 @@ section .container {
     transition: 0.5s;
 }
 
+.faq .columns {
+    margin: 0;
+    padding: 32px;
+}
+
+.faq .column {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
 
 /* On mouse-over */
 
@@ -781,6 +809,10 @@ section .container {
     .mobile_hidden {
         display: none;
     }
+    .mySlides .card {
+        margin: 10%;
+        padding: 16px;
+    }
     .scrActive {
         display: inline-block;
         width: 48px;
@@ -896,6 +928,18 @@ section .container {
     100% {
         opacity: 1;
         top: 0;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(-25%, 0%);
+    }
+    50% {
+        transform: translate(-25%, -2%);
+    }
+    100% {
+        transform: translate(-25%, 0%);
     }
 }
 

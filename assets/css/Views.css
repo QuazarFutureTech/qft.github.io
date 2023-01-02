@@ -1,8 +1,4 @@
-.mobile_view {
-    display: none;
-}
-
-.desktop_view {
+.flex_view {
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -14,7 +10,7 @@
     flex-direction: row;
 }
 
-.desktop_view .card {
+.flex_view .card {
     z-index: 2;
     padding: 48px;
 }
@@ -26,7 +22,7 @@ a.dwnbtn {
     font-size: 32px;
 }
 
-.desktop_view img {
+.flex_view img {
     display: block;
     position: absolute;
     left: 50%;
@@ -37,19 +33,7 @@ a.dwnbtn {
     animation-iteration-count: infinite;
 }
 
-@keyframes floating {
-    0% {
-        transform: translate(-25%, 0%);
-    }
-    50% {
-        transform: translate(-25%, -2%);
-    }
-    100% {
-        transform: translate(-25%, 0%);
-    }
-}
-
-.desktop_view .headlinks {
+.flex_view .headlinks {
     display: flex;
     z-index: 2;
     padding: 16px;
@@ -58,7 +42,7 @@ a.dwnbtn {
     flex-direction: column;
 }
 
-.desktop_view .card hr {
+.flex_view .card hr {
     color: white;
     border: 1px solid white;
     box-shadow: 0 0 8px white;
@@ -85,28 +69,25 @@ a.dwnbtn {
 }
 
 @media only screen and (max-width: 800px) {
-    .mobile_view {
+    .flex_view {
         display: flex;
         height: 100vh;
         width: 100vw;
         padding: 64px 0 0 0;
     }
-    .mobile_view img {
-        display: block;
+    .flex_view img {
+        display: none;
         align-self: center;
         position: relative;
         width: 25vw;
     }
-    .mobile_view .card {
+    .flex_view .card {
         padding: 16px;
     }
-    .mobile_view .card hr {
+    .flex_view .card hr {
         color: white;
         border: 1px solid white;
         box-shadow: 0 0 8px white;
         margin-bottom: 16px;
-    }
-    .desktop_view {
-        display: none;
     }
 }
