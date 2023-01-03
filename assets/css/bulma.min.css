@@ -3495,14 +3495,6 @@ fieldset[disabled] .button {
     font-size: 1.5rem
 }
 
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem
-}
-
 .icon.is-small {
     height: 1rem;
     width: 1rem
@@ -6431,11 +6423,6 @@ print {
     .level-right {
         display: flex
     }
-}
-
-.list {
-    border-radius: 4px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1)
 }
 
 .list-item {

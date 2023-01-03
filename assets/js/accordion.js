@@ -8,7 +8,7 @@ for (i = 0; i < acc.length; i++) {
         if (panel.style.maxHeight > "0vh") {
             panel.style.maxHeight = "0vh";
         } else {
-            panel.style.maxHeight = panel.scrollHeight + "vh";
+            panel.style.maxHeight = "100vh";
         }
     });
 }

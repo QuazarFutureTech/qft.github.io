@@ -68,6 +68,7 @@
 }
 
 .panel {
+    width: 100%;
     background-color: white;
     box-shadow: 0 0 4px white;
     color: black;
@@ -167,6 +168,11 @@
     color: rgb(50, 150, 255);
     outline: none;
     transition: ease-in-out 0.5s;
+}
+
+.panel iframe {
+    width: 100%;
+    height: 100vh;
 }
 
 .panel a:hover {

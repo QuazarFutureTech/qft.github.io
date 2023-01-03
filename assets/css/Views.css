@@ -82,12 +82,20 @@ a.dwnbtn {
         width: 25vw;
     }
     .flex_view .card {
+        min-height: 70vh;
+        display: flex;
         padding: 16px;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 16px;
     }
     .flex_view .card hr {
         color: white;
         border: 1px solid white;
         box-shadow: 0 0 8px white;
         margin-bottom: 16px;
+    }
+    .flex_view .headlinks {
+        display: none;
     }
 }
