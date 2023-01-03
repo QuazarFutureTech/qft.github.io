@@ -716,7 +716,7 @@ section .container {
 
 .sidenav {
     height: 0%;
-    width: 0%;
+    width: 100%;
     opacity: 0;
     position: fixed;
     z-index: 5;
