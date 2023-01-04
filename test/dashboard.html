@@ -35,6 +35,36 @@
 <body class="body-bg bg-colored">
 
     <header>
+        <div id="mySidenav" class="sidenav bg-opaque">
+            <a href="index.html" class="title ">
+                <img src="https://media.discordapp.net/attachments/765697291604328479/961613264775680020/unknown.png" width="125em" alt="icon" />
+            </a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&otimes;</a
+        >
+  <button class="side_dropdown-btn"><i class="fa fa-home"></i> Home
+  </button>
+  <div class="side_dropdown-container">
+    
+            <a href="#section-about" onclick="closeNav()"><i class="fa fa-users" aria-hidden="true"></i> About Us</a>
+            <hr>
+        </div>
+        <a href="#section-portal" class="link" onclick="closeNav()"><i class="fa fa-dashboard" aria-hidden="true"></i> Portal</a>
+        <button class="side_dropdown-btn"><i class="fa fa-users" aria-hidden="true"></i> People
+  </button>
+        <div class="side_dropdown-container">
+            <a href="Community.html"><i class="fa fa-users" aria-hidden="true"></i> Community</a>
+            <a href="jobs.html"><i class="fa fa-briefcase"></i> Careers</a>
+            <a href="Affiliates.html"><i class="fa fa-hand-holding"></i> Affiliates</a>
+            <hr>
+        </div>
+        <button class="side_dropdown-btn"><i class="fa fa-envelope-o"></i> Contact
+  </button>
+        <div class="side_dropdown-container">
+            <a href="pages/support.html" onclick="closeNav()"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
+            <a href="pages/Security.html" onclick="closeNav()"><i class="fa fa-shield" aria-hidden="true"></i> Security</a>
+            <hr>
+        </div>
+        </div>
         <nav id="navbar">
             <a href="#"><img src="https://media.discordapp.net/attachments/765697291604328479/961613264775680020/unknown.png" width="125em" alt="icon" />
                 <p id="logo"></p>
@@ -42,6 +72,10 @@
             <button href="#" class="active" onclick="openNav()">
             <i class="fa fa-bars"></i>
           </button>
+
+            <a href="../index.html" class="link">
+                <i class="fa fa-backward" aria-hidden="true"></i> Back to Home Page
+            </a>
         </nav>
 
 
@@ -51,8 +85,9 @@
 
             <section id="News" class="linkcontent">
                 <div class="Header">
-                    <p class="title is-1 has-text-white">News</p>
-                    <p class="subtitle has-text-white">"Your source for reliable, up-to-date news regarding our organization"</p><br/>
+                    <h2 class="title is-1 has-text-white">News
+                    </h2>
+                    <p class="subtitle has-text-white">Your source for reliable, up-to-date news regarding our organization!</p>
                 </div>
                 <div class="Main">
                     <button class="accordion A"><p class="is_3 "><i class="fa fa-sticky-note" aria-hidden="true"></i> Patch Notes</p></button>
@@ -63,79 +98,65 @@
             </section>
             <section id="Community" class="linkcontent">
                 <div class="Header">
-                    <img src="../assets/images/favicons/icon.png" alt="QFT-Icon">
-                    <div class="card " style=" animation-name: text-spand; animation-duration: 1.5s;">
-                        <div class="columns">
-                            <div class="column has-text-white">
-
-                                <h2 class="title is-3 has-text-white theme-grad_text-2">
-                                    Join Our Community
-
-                                </h2>
-                                <hr>
-                                <p class="has-text-white">
-                                    Become a part of our growing community today and gain access to VIP perks, Discounts & More! <br> Don't wait! Join us today!
-                                </p>
-                                <a href="#" id="myBtn" class="b theme-join" style="margin-bottom: 5px"><i class="fa fa-user-plus" aria-hidden="true"></i>
-                     Join Us
-                  </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="Main"></div>
-                <d class="container has-text-centered ">
-
-                    <h2 class="title is-2 has-text-white">Why Join Us?
-                        <hr>
+                    <h2 class="title is-1 has-text-white">Community
                     </h2>
+                    <p class="subtitle has-text-white">Bringing people together, one connection at a time.</p>
 
-                    <div class="container has-text-centered">
-                        <div class="columns ">
-                            <div class="column card theme-white_glass  has-text-white reveal">
-                                <h2 class=" has-text-centered"><i class="fa fa-comments" aria-hidden="true"></i></h2>
-                                <h3 class=" has-text-centered">Socially Responsive</h3>
-                                <hr>
-                                <p>We always try and respond to social media posts and we are present on many different platforms!</p>
+                </div>
+                <div class="Main">
+                    <div class="container has-text-centered ">
 
-                            </div>
-                            <div class="column card theme-white_glass  has-text-white reveal">
-                                <h2 class=" has-text-centered"><i class="fa fa-info-circle" aria-hidden="true"></i></h2>
-                                <h3 class=" has-text-centered">Transparency</h3>
-                                <hr>
-                                <p>We understand how important your data is. That's why we promise to keep you informed on how we process data.</p>
+                        <h2 class="title is-2 has-text-white">Why Join Us?
+                            <hr>
+                        </h2>
 
-                            </div>
-                            <div class="column card theme-white_glass  has-text-white reveal">
-                                <h2 class=" has-text-centered"><i class="fa fa-clock-o" aria-hidden="true"></i></h2>
-                                <h3 class=" has-text-centered">Availability!</h3>
-                                <hr>
-                                <p>We mainly operate online, and as a result we are available across multiple timezones and are able to assist with any issues within 24hrs</p>
+                        <div class="container has-text-centered">
+                            <div class="columns ">
+                                <div class="column card theme-white_glass  has-text-white reveal">
+                                    <h2 class=" has-text-centered"><i class="fa fa-comments" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Socially Responsive</h3>
+                                    <hr>
+                                    <p>We always try and respond to social media posts and we are present on many different platforms!</p>
 
+                                </div>
+                                <div class="column card theme-white_glass  has-text-white reveal">
+                                    <h2 class=" has-text-centered"><i class="fa fa-info-circle" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Transparency</h3>
+                                    <hr>
+                                    <p>We understand how important your data is. That's why we promise to keep you informed on how we process data.</p>
+
+                                </div>
+                                <div class="column card theme-white_glass  has-text-white reveal">
+                                    <h2 class=" has-text-centered"><i class="fa fa-clock-o" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Availability!</h3>
+                                    <hr>
+                                    <p>We mainly operate online, and as a result we are available across multiple timezones and are able to assist with any issues within 24hrs</p>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container">
-                        <div class="columns ">
-                            <div class="column card theme-white_glass has-text-white reveal">
-                                <h2 class=" has-text-centered"><i class="fa fa-server" aria-hidden="true"></i></h2>
-                                <h3 class=" has-text-centered">Quality Performance</h3>
-                                <hr>
-                                <p>We are driven by the passion of our employees in shaping the future of technology for our customers.</p>
-                            </div>
-                            <div class="column card theme-white_glass has-text-white  reveal">
-                                <h2 class=" has-text-centered"><i class="fa fa-globe" aria-hidden="true"></i></h2>
-                                <h3 class=" has-text-centered">Resourceful & Adaptive</h3>
-                                <hr>
-                                <p>We work to build custom solutions, however we also fill in the gaps by utilizing all available resources. Allowing us to grow & adapt to your needs at a moments notice!</p>
+                        <div class="container">
+                            <div class="columns ">
+                                <div class="column card theme-white_glass has-text-white reveal">
+                                    <h2 class=" has-text-centered"><i class="fa fa-server" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Quality Performance</h3>
+                                    <hr>
+                                    <p>We are driven by the passion of our employees in shaping the future of technology for our customers.</p>
+                                </div>
+                                <div class="column card theme-white_glass has-text-white  reveal">
+                                    <h2 class=" has-text-centered"><i class="fa fa-globe" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Resourceful & Adaptive</h3>
+                                    <hr>
+                                    <p>We work to build custom solutions, however we also fill in the gaps by utilizing all available resources. Allowing us to grow & adapt to your needs at a moments notice!</p>
 
-                            </div>
-                            <div class="column card theme-white_glass has-text-white reveal">
-                                <h2 class=" has-text-centered"><i class="fa fa-users" aria-hidden="true"></i></h2>
-                                <h3 class=" has-text-centered">Welcoming Community</h3>
-                                <hr>
-                                <p>We have a <a href="#">community</a> of people who are friendly and supportive, we are always there to make things simple and easy for you (and maybe even a little fun)!</p>
+                                </div>
+                                <div class="column card theme-white_glass has-text-white reveal">
+                                    <h2 class=" has-text-centered"><i class="fa fa-users" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Welcoming Community</h3>
+                                    <hr>
+                                    <p>We have a <a href="#">community</a> of people who are friendly and supportive, we are always there to make things simple and easy for you (and maybe even a little fun)!</p>
 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -169,13 +190,19 @@
                         <p>We're Sorry, but this page is still under construction.</p>
                         <img src="./assets/images/construction.jpg" alt="">
                     </div>
+
+
+                </div>
+                <div class="Main">
+                    <widgetbot server="708119280582918267" channel="1020697610899701920"></widgetbot>
+                    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
                 </div>
             </section>
+            </div>
+
+
+
         </div>
-
-
-
-    </div>
     </div>
 
 

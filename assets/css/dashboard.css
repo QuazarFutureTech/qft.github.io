@@ -5,17 +5,21 @@
     position: absolute;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    min-width: 80vw;
-    left: 12.5%;
+    min-width: 100%;
     min-height: 100%;
     overflow: hidden;
-    margin: 64px 0 64px;
     padding: 16px;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+}
+
+widgetbot {
+    min-width: 100%;
+    min-height: 100vh;
+    height: 100vh;
 }
 
 .indicator {
@@ -120,7 +124,7 @@
         min-height: 90vh;
         left: 0;
         margin: 0 6.125% 0 0;
-        padding: 16px;
+        padding: 0 0 64px 0;
         overflow-y: auto;
         flex-wrap: wrap;
         align-content: center;
