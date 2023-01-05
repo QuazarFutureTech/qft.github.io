@@ -152,7 +152,8 @@ ul {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    min-height: 100vh
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .fullscreen .container,
@@ -809,6 +810,25 @@ section .container {
 #main {
     transition: margin-left 0.5s;
     width: 100%;
+}
+
+.construction-card {
+    background-image: url(../images/horizon.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    text-shadow: 0 0 8px white;
+    letter-spacing: 16px;
+    font-family: zekton;
 }
 
 

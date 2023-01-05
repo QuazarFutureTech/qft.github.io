@@ -9,14 +9,12 @@
 }
 
 #Home .Header {
-    background-color: rgb (0, 0, 0, 0.1);
     color: #333333;
     text-align: center;
     overflow: hidden;
 }
 
 #Home .Main {
-    background-color: #1f2123;
     color: #111111;
     padding: 50px 10%;
     text-align: center;
@@ -33,7 +31,6 @@
 
 #News .Header {
     min-width: 80vw;
-    background-color: rgba (0, 0, 0, 0.1);
     color: #333333;
     padding: 50px 0;
     text-align: center;
@@ -47,7 +44,6 @@
 }
 
 #Shop .Header {
-    background-color: rgba (0, 0, 0, 0.1);
     color: #333333;
     padding: 50px;
     text-align: center;
@@ -74,14 +70,12 @@
 }
 
 #Community .Header {
-    background-color: transparent;
     color: #333333;
     padding: 50px;
     text-align: center;
 }
 
 #Community .Main {
-    background-color: #1f2123;
     color: #111111;
     padding: 50px 10%;
     text-align: left;
@@ -89,7 +83,6 @@
 
 #Contact .Header {
     min-width: 80vw;
-    background-color: transparent;
     color: #333333;
     padding: 50px;
     text-align: center;
@@ -98,7 +91,6 @@
 #Contact .Main {
     min-width: 80vw;
     min-height: 80vh;
-    background-color: #303135;
     color: #111;
     padding: 50px;
     text-align: left;
@@ -120,13 +112,11 @@
 
 @media screen and (max-width: 640px) {
     #Home .Header {
-        background-color: rgb (0, 0, 0, 0.1);
         color: #333333;
         text-align: center;
         overflow: hidden;
     }
     #Home .Main {
-        background-color: #1f2123;
         color: #111111;
         padding: 50px 10%;
         text-align: center;
@@ -141,7 +131,6 @@
     }
     #News .Header {
         min-width: 80vw;
-        background-color: rgba (0, 0, 0, 0.1);
         color: #333333;
         padding: 50px 0;
         text-align: center;
@@ -153,7 +142,6 @@
         text-align: left;
     }
     #Shop .Header {
-        background-color: rgba (0, 0, 0, 0.1);
         color: #333333;
         padding: 50px;
         text-align: center;
@@ -164,7 +152,6 @@
         text-align: left;
     }
     #Resources .Header {
-        background-color: rgba (0, 0, 0, 0.1);
         color: #333333;
         padding: 50px;
         text-align: center;
@@ -182,14 +169,12 @@
         text-align: center;
     }
     #Community .Main {
-        background-color: #1f2123;
         color: #111111;
         padding: 50px 10%;
         text-align: left;
     }
     #Contact .Header {
         min-width: 100%;
-        background-color: #303135;
         color: #333333;
         padding: 50px;
         text-align: center;
@@ -197,7 +182,6 @@
     #Contact .Main {
         min-width: 100%;
         min-height: 100%;
-        background-color: #303135;
         color: #111;
         padding: 0;
         text-align: left;
