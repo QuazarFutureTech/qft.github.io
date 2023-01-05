@@ -4,6 +4,9 @@
 <head>
     <title>🌐〢🆀🅵🆃&trade;</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <script src="https://kit.fontawesome.com/4f45a84be8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/font-awesome.min.css" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <style>
         html,
@@ -22,46 +25,29 @@
             box-sizing: border-box;
         }
         
-        .card-holder {
-            display: block;
-            position: absolute;
-            width: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-65%, -50%);
-            box-sizing: border-box;
+        .construction-card {
+            letter-spacing: 16px;
+            font-family: zekton;
         }
         
-        .card {
-            background-color: rgba(0, 0, 0, .5);
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
-            height: 100%;
-            width: 100%;
-            place-content: center;
-            padding: 15% 15% 15% 15%;
-            box-shadow: 0 0 15px #222222;
+        .button {
+            margin: 5%;
+            font-family: zekton;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 16px;
+            color: white;
+            border: 1px solid white;
+            background-color: transparent;
+            transition: 0.5s ease;
+            border-radius: 16px;
         }
         
-        .card h2 {
-            font-size: 2vw;
-        }
-        
-        .card p {
-            font-size: 2vw;
-        }
-        
-        .loader {
-            box-shadow: inset 0 0 15px rgba(255, 165, 0, .5);
-            border: 4px solid rgba(50, 50, 50, .5);
-            /* Light grey */
-            border-top: 4px solid orange;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: inline-block;
-            animation: spin 2s linear infinite;
-            margin: 0 25%;
+        .button:hover {
+            transition: 0.5s ease;
+            color: black;
+            box-shadow: 0 0 4px white;
+            background-color: white;
         }
         
         @keyframes spin {
@@ -73,20 +59,15 @@
             }
         }
     </style>
-    <meta http-equiv="Refresh" content="7; url='index.html'" />
+
 </head>
 
 <body>
-    <section>
-        <div class="card-holder">
-            <div class="card">
-                <h1>🚧 Under Construction 🚧</h1>
-                <p>We're Sorry, but this page is still under construction.</p>
-                <div class="loader"></div>
-                <p>We are going to send you back to our Home Page now (should take about 10s)</p>
-                <img src="./assets/images/construction.jpg" alt="">
-            </div>
-        </div>
+    <section style="display: flex;height: 100vh;width: 100vw;flex-direction: column;flex-wrap: nowrap;justify-content: flex-end;align-items: center;align-content: center;">
+
+        <h1 class="construction-card">Coming soon... </h1>
+        <a href="index.html" class="button"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back to home</a>
+
     </section>
     <footer>
         <div style="display: block; width: 100%; left: 0; bottom: 0; position: absolute; background-color:rgba(0, 0, 0, .5)">
