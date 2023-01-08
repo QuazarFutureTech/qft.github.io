@@ -1,10 +1,39 @@
 var beta_modal = document.getElementById("modalBeta");
 var join_modal = document.getElementById("modalJoin");
+var frame_modal = document.getElementById("modalFrame");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("beta_close")[0];
 var join_modal_close = document.getElementsByClassName("join_close")[0];
+var join_modal_close = document.getElementsByClassName("frame_close")[0];
 
+if (frame_modal) {
+    				function openFrame(pageName, elmnt) {
+				    var i, framecontent, framelinks;
+				    framecontent = document.getElementsByClassName("frame-content");
+				    for (i = 0; i < framecontent.length; i++) {
+				        framecontent[i].style.display = "none";
+				    }
+				    framelinks = document.getElementsByClassName("frame-link");
+				    for (i = 0; i < framelinks.length; i++) {
 
+				    }
+                    frame_modal.style.display = "flex";
+                            frame_modal.style.animation = "fade";
+        frame_modal.style.animationDuration = "1s";
+				    document.getElementById(pageName).style.display = "flex";
+				}
+ join_modal_close.onclick = function() {
+        frame_modal.style.animation = "fade_out";
+        frame_modal.style.animationDuration = "1s";
+        frame_modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == join_modal) {
+            frame_modal.style.display = "none";
+        }
+    };
+}
 if (beta_modal) {
 
     window.onload = function() {

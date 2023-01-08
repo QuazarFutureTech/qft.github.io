@@ -89,7 +89,7 @@
                     </h2>
                     <p class="subtitle has-text-white">Your source for reliable, up-to-date news regarding our organization!</p>
                 </div>
-                <div class="Main">
+                <div class="Main  container">
                     <button class="accordion A"><p class="is_3 "><i class="fa fa-sticky-note" aria-hidden="true"></i> Patch Notes</p></button>
                     <div class="panel" style="max-height: 100vh;">
                         <iframe src="https://docs.google.com/document/d/e/2PACX-1vT-RM0tFXSsihMUf62kvAxZKxBU4ASvJovjdCQW2bWhAAbXhPMbcYryM8qJWE67V545gLONMUq-0rT9/pub?embedded=true"></iframe>
@@ -105,11 +105,6 @@
                 </div>
                 <div class="Main">
                     <div class="container has-text-centered ">
-
-                        <h2 class="title is-2 has-text-white">
-                            <hr>
-                        </h2>
-
                         <div class="container has-text-centered">
                             <div class="columns ">
                                 <div class="column card theme-white_glass  has-text-white reveal">
@@ -121,39 +116,15 @@
 
                                 </div>
                                 <div class="column card theme-white_glass  has-text-white reveal">
-                                    <h2 class=" has-text-centered"><i class="fa fa-info-circle" aria-hidden="true"></i></h2>
-                                    <h3 class=" has-text-centered"></h3>
+                                    <h2 class=" has-text-centered"><i class="fa fa-hand-grab-o" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Affilates</h3>
                                     <hr>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eveniet omnis magnam dolorum, cumque quis deleniti, hic quaerat aliquam obcaecati optio a sequi, qui ea consequuntur ducimus et nobis numquam?</p>
+                                    <p></p>
 
                                 </div>
                                 <div class="column card theme-white_glass  has-text-white reveal">
-                                    <h2 class=" has-text-centered"><i class="fa fa-clock-o" aria-hidden="true"></i></h2>
-                                    <h3 class=" has-text-centered"></h3>
-                                    <hr>
-                                    <p></p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="columns ">
-                                <div class="column card theme-white_glass has-text-white reveal">
-                                    <h2 class=" has-text-centered"><i class="fa fa-server" aria-hidden="true"></i></h2>
-                                    <h3 class=" has-text-centered"></h3>
-                                    <hr>
-                                    <p></p>
-                                </div>
-                                <div class="column card theme-white_glass has-text-white  reveal">
-                                    <h2 class=" has-text-centered"><i class="fa fa-globe" aria-hidden="true"></i></h2>
-                                    <h3 class=" has-text-centered"></h3>
-                                    <hr>
-                                    <p></p>
-
-                                </div>
-                                <div class="column card theme-white_glass has-text-white reveal">
-                                    <h2 class=" has-text-centered"><i class="fa fa-users" aria-hidden="true"></i></h2>
-                                    <h3 class=" has-text-centered"></h3>
+                                    <h2 class=" has-text-centered"><i class="fa fa-briefcase" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Careers</h3>
                                     <hr>
                                     <p></p>
 
@@ -164,32 +135,34 @@
             </section>
             <section id="Shop" class="linkcontent">
                 <div class="Header">
-                    <div class="construction-card card has-text-white">
-
-                        <h2>🚧 Under Construction 🚧</h2>
-                        <p>We're Sorry, but this page is still under construction.</p>
-                        <img src="./assets/images/construction.jpg" alt="">
-
+                    <div class="construction-card has-text-white">
+                        <h2>Coming Soon...</h2>
                     </div>
+                </div>
+                <div class="Main">
+                    <div class="columns ">
+                                <div class="column card theme-white_glass  has-text-white reveal">
+                                    <h2 class=" has-text-centered"><i class="fa fa-shopping-cart" aria-hidden="true"></i></h2>
+                                    <h3 class=" has-text-centered">Discord Shop</h3>
+                                    <hr>
+                                    <p> Check out our Shop and get exlcusive perks found only on our server!</p>
+                                    <a href="#" class="b theme-join" onclick="openFrame('discordShop' , this)"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Open Shop</a>
+                                </div>
+                            </div>
+
                 </div>
             </section>
             <section id="Resources" class="linkcontent">
                 <div class="Header">
-                    <div class="card has-text-white">
-                        <h2>🚧 Under Construction 🚧</h2>
-                        <p>We're Sorry, but this page is still under construction.</p>
-
-                        <img src="./assets/images/construction.jpg" alt="">
-
+                    <div class="construction-card has-text-white">
+                        <h2>Coming Soon...</h2>
                     </div>
                 </div>
             </section>
             <section id="Contact" class="linkcontent">
                 <div class="Header">
-                    <div class="card has-text-white">
-                        <h2>🚧 Under Construction 🚧</h2>
-                        <p>We're Sorry, but this page is still under construction.</p>
-                        <img src="./assets/images/construction.jpg" alt="">
+                    <div class="construction-card has-text-white">
+                        <h2>Coming Soon...</h2>
                     </div>
 
 
@@ -228,7 +201,7 @@
             </li>
             <li class="list">
                 <a href="#" class="link" onclick="openPage('Resources', this)">
-                    <span class="icon"><i class="fa fa-download" aria-hidden="true"></i></span>
+                    <span class="icon"><i class="fa fa-folder-o" aria-hidden="true"></i></span>
                     <span class="text">Resources</span></a>
             </li>
             <li class="list">
@@ -239,7 +212,11 @@
 
         </ul>
     </div>
+    <div id="modalFrame" class="modal has-text-centered" style="display: flex;">
+        <span class="frame_close"> &times; </span>
+        <div id="discordShop" class="frame-content"><iframe src="https://upgrade.chat/708119280582918267/upgrades" height=800px></iframe></div>
 
+    </div>
     <div id="modalBeta" class="modal has-text-centered">
         <!-- Modal content -->
         <div class="beta_modal-content">

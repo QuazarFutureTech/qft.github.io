@@ -8,6 +8,10 @@
 				var scroller = document.getElementById("ScrollTop");
 				var home = document.getElementById("Top").offsetHeight;
 
+				async function pause(duration) {
+				    return new Promise(resolve => setTimeout(resolve, duration));
+				}
+
 				function openNav() {
 				    if (window.innerWidth <= 640) {
 				        document.getElementById("mySidenav").style.width = "100%";
@@ -36,7 +40,7 @@
 				window.addEventListener('scroll', reveal);
 				window.addEventListener('scroll', SecHeadExp);
 
-				function reveal() {
+				async function reveal() {
 				    var reveals = document.querySelectorAll('.reveal');
 
 				    for (var i = 0; i < reveals.length; i++) {
@@ -47,7 +51,7 @@
 
 				        if (revealtop < windowheight - revealpoint) {
 				            reveals[i].classList.add('loadUp');
-
+				            await pause(100);
 				        } else {
 				            reveals[i].classList.remove('loadUp');
 
