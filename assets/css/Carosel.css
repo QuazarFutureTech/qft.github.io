@@ -1,10 +1,11 @@
 .mySlides {
     display: none;
-min-width:100%;
+    min-width: 100%;
     flex-flow: column wrap;
     align-items: center;
-    place-content: center;
     margin: 0 0 10% 0;
+    place-content: space-between center;
+    flex-direction: column;
 }
 
 img {
@@ -15,7 +16,7 @@ img {
 /* Slideshow container */
 
 .slideshow-container {
-display: flex;
+    display: flex;
     min-width: 100%;
     position: relative;
     flex-direction: row;
@@ -30,7 +31,7 @@ display: flex;
 
 .prev,
 .next {
-cursor: pointer;
+    cursor: pointer;
     width: 48px;
     height: 48px;
     display: flex;
@@ -50,15 +51,13 @@ cursor: pointer;
 }
 
 
-
 /* On hover, add a black background color with a little bit see-through */
 
 .prev:hover,
 .next:hover {
     background-color: #fff;
-    color:#000;
+    color: #000;
     box-shadow: 0 0 4px #fff;
-
 }
 
 
@@ -93,6 +92,7 @@ cursor: pointer;
 
 
 /* The dots/bullets/indicators */
+
 .dots {
     display: flex;
     flex-direction: column;
@@ -135,17 +135,5 @@ cursor: pointer;
     .next,
     .text {
         font-size: 16px
-    }
-    .prev,
-    .next,
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.25);
-    }
-    .next {
-        transform: translate(0px, 16px);
-    }
-    .prev {
-        transform: translate(0px, 16px);
     }
 }
