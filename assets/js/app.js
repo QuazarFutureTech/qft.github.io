@@ -18,6 +18,7 @@
 				        document.body.style.overflowY = "hidden";
 				    }
 				    if (window.innerWidth > 640) {
+						document.body.style.marginLeft = "25%";
 				        document.getElementById("mySidenav").style.width = "25%";
 				    }
 
@@ -25,6 +26,7 @@
 
 				function closeNav() {
 				    document.getElementById("mySidenav").style.width = "0";
+					document.body.style.marginLeft = "0";
 				    document.body.style.overflowY = "initial";
 				}
 
