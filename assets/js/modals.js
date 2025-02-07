@@ -17,6 +17,7 @@ if (frame_modal) {
 				    for (i = 0; i < framelinks.length; i++) {
 
 				    }
+                    document.body.style.overflowY = "hidden";
                     frame_modal.style.display = "flex";
                             frame_modal.style.animation = "fade";
         frame_modal.style.animationDuration = "1s";
@@ -26,6 +27,7 @@ if (frame_modal) {
         frame_modal.style.animation = "fade_out";
         frame_modal.style.animationDuration = "1s";
         frame_modal.style.display = "none";
+        document.body.style.overflowY = "initial";
     };
 
     window.onclick = function(event) {

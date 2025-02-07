@@ -49,14 +49,13 @@
             <a href="#section-faq" onclick="closeNav()"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQs</a>
             <hr>
         </div>
-        <a href="dashboard.html" onclick="closeNav()" class="link"><i class="fa fa-dashboard" aria-hidden="true"></i> Portal</a>
-
-
+        <!-- <a href="dashboard.html" onclick="closeNav()" class="hidden link"><i class="fa fa-dashboard" aria-hidden="true"></i> Portal</a>-->
         <button class="side_dropdown-btn"><i class="fa fa-envelope-o"></i> Contact Us</button>
 
         <div class="side_dropdown-container">
-            <a href="pages/support.html" onclick="closeNav()"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
-            <a href="pages/Security.html" onclick="closeNav()"><i class="fa fa-shield" aria-hidden="true"></i> Security</a>
+            <a href="#" onclick="openFrame('leadForm' , this), closeNav()"><i class="fa fa-money" aria-hidden="true"></i> Sales</a>
+            <a href="#" onclick="openFrame('contactForm' , this), closeNav()"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a>
+            <!--<a href="pages/Security.html" onclick="closeNav()"><i class="fa fa-shield" aria-hidden="true"></i> Security</a>-->
             <hr>
         </div>
         </div>
@@ -69,7 +68,7 @@
                 <button href="#" class="active" onclick="openNav()">
             <i class="fa fa-bars"></i>
           </button>
-                <a href="#" class="link"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
+                <a href="#" class="hidden"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
 
             </div>
     </header>
@@ -92,9 +91,8 @@
 
                     <div class="mySlides fade">
 
-                        <p class="emphasis"> Our company specializes in software development and advanced technologies.</p>
-
-                        <a href="dashboard.html" class="b theme-main_cta"><i class="fa fa-dashboard" aria-hidden="true"></i> Go to portal</a>
+                        <p class="emphasis subtitle has-text-white"> Our company specializes in rapid prototyping & digital asset development. </p>
+                        <a href="#" class="b theme-main_cta" onclick="openFrame('leadForm' , this)"><i class="fa fa-money" aria-hidden="true"></i> Contact Us</a>
                     </div>
                     <div class="mySlides fade">
 
@@ -131,7 +129,7 @@
             <div class=" mobile_hidden head-links">
                 <a href="https://tinyurl.com/QFTYoutube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                 <a href="https://twitter.com/QftFuture"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://reddit.com/r/quazarfuturetech"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/groups/quazarfuturetech"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             </div>
 
 
@@ -151,8 +149,56 @@
 
 
     </section>
+    <section id="section-3dPrint" class="bg-opaque has-text-white">
+        <div class="container has-text-centered ">
+            <h2 class="title has-text-centered has-text-white reveal">Rapid Prototyping
+                <hr>
+            </h2>
+            <div class="columns">
+                <div class="column has-text-white reveal">
+                   <img src="assets/images/3dPrint.jpg"> 
+                   <div class="overlay">
+                    <h2 class="title has-text-white"> 3d Printing. <hr> </h2>  <p class="has-text-white">  We create and render custom 3d parts and designs upon request.</p>
+                    <a href="#" class="b theme-main_cta" onclick="openFrame('leadForm' , this)"><i class="fa fa-money" aria-hidden="true"></i> Get Started</a>
+                </div>
+                 
+                </div>
+                <div class="column has-text-white reveal">
+                    <img src="assets/images/Milling.webp"> 
+                    <div class="overlay">
+                     <h2 class="title has-text-white"> CNC Milling. <hr> </h2>  <h2 class="theme-blk_glass has-text-centered"> Coming Soon</h2>
+                    </div>
+                 </div>
+            </div>
+            <div id="arrowDown" class="title is-3 has-text-white reveal">
+                <i class="fa fa-caret-down "></i>
+            </div>
+    </section>
+    <section id="section-assets" class="bg-opaque has-text-white">
+        <div class="container has-text-centered ">
+            <h2 class="title has-text-centered has-text-white reveal">Digital Asset Development
+                <hr>
+            </h2>
+            <div class="columns">
+                <div class="column has-text-white reveal">
+                   <img src="assets/images/GraphicDesign.webp"> 
+                   <div class="overlay">
+                    <h2 class="title has-text-white"> Graphic Design. <hr> </h2>  <p class="has-text-white">  Banners, Icons, Logos, Overlays... You name it, we will make it!</p>
+                    <a href="#" class="b theme-main_cta" onclick="openFrame('leadForm' , this)"><i class="fa fa-money" aria-hidden="true"></i> Get Started!</a>   
+                </div>
+                </div>
+                <div class="column has-text-white reveal">
+                    <img src="assets/images/Code.jpg"> 
+                    <div class="overlay">
+                     <h2 class="title has-text-white"> Bot Development. <hr> </h2>  <h2 class="theme-blk_glass has-text-centered"> Coming Soon</h2>
+                    </div>
+                 </div>
+        </div>
+        <div id="arrowDown" class="title is-3 has-text-white reveal">
+            <i class="fa fa-caret-down "></i>
+        </div>
+    </section>
     <section id="section-about" class="bg-opaque has-text-white">
-
 
         <div class="container has-text-centered ">
             <h2 class="title has-text-centered has-text-white reveal">About Us.
@@ -165,8 +211,7 @@
                         <hr>
                     </h2>
                     <p class="has-text-white">
-                        Our company was founded in December 2019 with the mission of providing universal access to advanced technologies. Despite encountering challenges along the way, we have succeeded in establishing a thriving organization. As we continue to grow and evolve,
-                        we remain dedicated to achieving our founder's vision of a world in which everyone has access to the best technologies. We are excited to see what the future holds for our company.</p>
+                        Our organization was founded in March 2023. Since then we have been passionately working to build ourselves up. We research and develop new technologies, and work with existing tech to create custom solutions for our clients.</p>
                 </div>
 
                 <div class="column has-text-white reveal">
@@ -188,6 +233,8 @@
             <i class="fa fa-caret-down "></i>
         </div>
     </section>
+
+
     <section id="section-faq" class="bg-opaque">
         <div class="container faq">
             <h2 class="title has-text-centered has-text-white reveal">FAQs
@@ -198,19 +245,19 @@
                     <div class="reveal">
                         <button class="accordion"><p class="is_3 ">Q.) What does your organization do?</p></button>
                         <div class="panel">
-                            <p>a.) We make software, apps, games & more! <br> Feel free to check us out for more info!</p>
+                            <p>a.) We create 3d models, design banners,icons & other graphics, as well as creating parts and developing bots.</p>
                         </div>
                     </div>
                     <div class="reveal">
                         <button class="accordion"><p class="is_3">Q.) Where is QuazarFutureTech located?</p></button>
                         <div class="panel">
-                            <p>a.) We mainly operate online, through social media (including <span><a href="https://discord.com">Discord</a></span>)</p>
+                            <p>a.) We are located in sunny Florida. We also have a presence through social media (including <span><a href="https://discord.com">Discord</a></span>)</p>
                         </div>
                     </div>
                     <div class="reveal">
-                        <button class="accordion"><p class="is_3 ">Q.) What are the main benefits of using your products?</p></button>
+                        <button class="accordion"><p class="is_3 ">Q.) What are the main benefits of choosing QFT?</p></button>
                         <div class="panel">
-                            <p> a.) Our products can help you with tasks like automating work and hosting bots. We have many options to choose from to help make your work easier and more efficient.</p>
+                            <p> a.) At QFT we always take pride in developing solutions for our clients. We also strongly believe in keeping our planet green! Which is why we use Eco-Friendly materials to develop a lot of our products.</p>
                         </div>
                     </div>
                 </div>
@@ -224,7 +271,7 @@
                     <div class="reveal">
                         <button class="accordion"><p class="is_3 ">Q.) Why should I use your services?</p></button>
                         <div class="panel">
-                            <p>a.) We are the only company that makes the products we offer. We are very good at what we do and are confident that our products are the best available.</p>
+                            <p>a.) We are very passionate about our work! and we take great pride in creating custom solutions to fit your needs</p>
                         </div>
                     </div>
                     <div class="reveal">
@@ -290,9 +337,16 @@ app.listen(port, () => {
             </div>
         </div>
     </div>
-
-
-
+    <div id="modalFrame" class="modal has-text-centered">
+        <div class="close-containter"><span class="frame_close"> &times; </span></div>
+        <div id="discordShop" class="frame-content"><iframe src="https://upgrade.chat/708119280582918267/upgrades" height=800px></iframe></div>
+        <div id="leadForm" class="frame-content"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNAmVBU5ZIe_9pi_AQuEO6igszi5p55d2Dzgh-6WSI9HMMsQ/viewform?embedded=true">Loading…</iframe></div>
+        <div id="contactForm" class="frame-content"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeEO5O6F7m94iS9zRQ4-hsltSoHquW8kRd3IXk_SW49hia1dw/viewform?embedded=true">Loading…</iframe></div>
+        <div id="webSupport" class="frame-content">
+            <widgetbot server="708119280582918267" channel="1020697610899701920"></widgetbot>
+            <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+        </div>
+    </div>
     <footer>
         <div class="container">
             <div class="sec aboutus">
@@ -312,7 +366,7 @@ app.listen(port, () => {
                     <li><a href="#section-about">About</a></li>
                     <li><a href="https://sites.google.com/view/qft-faqs/faqs">FAQ</a></li>
                     <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="jobs.html">Jobs <span style="color: #43b581;">- We're hiring!</span></a> </li>
+                    <span class="hidden"><li><a href="jobs.html" >Jobs <span style="color: #43b581;">- We're hiring!</span></a> </li></span>
                     <li><a href="status.html">Status</a></li>
                     <li><a href="support.html">Contact</a></li>
                 </ul>
@@ -322,7 +376,7 @@ app.listen(port, () => {
                 <ul class="info">
                     <li>
                         <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                        <p><a href="tel:13527275820">+1(352)727-5820</a></p>
+                        <p><a href="tel:13525175375">+1(352)517-5375</a></p>
                     </li>
                     <li>
                         <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
@@ -332,7 +386,7 @@ app.listen(port, () => {
             </div>
         </div>
     </footer>
-    <div class="copyright">&copy; QuazarFutureTech&trade; 2022 - All Rights Reserved </div>
+    <div class="copyright">&copy; QuazarFutureTech&trade; 2025 - All Rights Reserved </div>
     <a href="#" id="ScrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     <script src="src/plugins/particles/particles.js"></script>
     <script src="src/plugins/particles/particles-dots.js"></script>
@@ -342,8 +396,8 @@ app.listen(port, () => {
 
     <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
         const button = new Crate({
-            server: '708119280582918267',
-            channel: '1020697610899701920',
+        server: '1219314376985546872', // 🌐〢🆀🅵🆃™ • Client Portal
+        channel: '1245872336369090570', // #╠🌐・web-chat
             glyph: ["assets/images/favicons/Support.png", '100%']
         })
 
