@@ -306,5 +306,6 @@ section .column hr {
     border: 1px solid white;
     box-shadow: 0 0 8px white;
     width: 75%;
-    margin-bottom: 16px;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }

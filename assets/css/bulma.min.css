@@ -6809,9 +6809,8 @@ a.list-item {
 
 .modal-card,
 .modal-content {
-    margin: 0 20px;
     max-height: calc(100vh - 160px);
-    overflow: auto;
+    overflow: hidden;
     position: relative;
     width: 100%
 }

@@ -4,7 +4,7 @@ var frame_modal = document.getElementById("modalFrame");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("beta_close")[0];
 var join_modal_close = document.getElementsByClassName("join_close")[0];
-var join_modal_close = document.getElementsByClassName("frame_close")[0];
+var frame_modal_close = document.getElementsByClassName("frame_close")[0];
 
 if (frame_modal) {
     				function openFrame(pageName, elmnt) {
@@ -23,7 +23,7 @@ if (frame_modal) {
         frame_modal.style.animationDuration = "1s";
 				    document.getElementById(pageName).style.display = "flex";
 				}
- join_modal_close.onclick = function() {
+ frame_modal_close.onclick = function() {
         frame_modal.style.animation = "fade_out";
         frame_modal.style.animationDuration = "1s";
         frame_modal.style.display = "none";
@@ -57,6 +57,11 @@ if (beta_modal) {
     };
 }
 if (join_modal) {
+    function openJoin(){
+        join_modal.style.display = "flex";
+        join_modal.style.animation = "fade";
+        join_modal.style.animationDuration = "1s";
+    }
     btn.onclick = function() {
         join_modal.style.display = "flex";
         join_modal.style.animation = "fade";
@@ -69,10 +74,10 @@ if (join_modal) {
         join_modal.style.animationDuration = "1s";
         join_modal.style.display = "none";
     };
-
     window.onclick = function(event) {
         if (event.target == join_modal) {
-            join_modal.style.display = "flex";
+            join_modal.style.display = "none";
         }
     };
+
 }
