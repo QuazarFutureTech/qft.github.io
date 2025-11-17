@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="assets/css/Carosel.css">
     <link rel="stylesheet" href="assets/css/Views.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon.ico" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
     <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
     <link rel="shortcut icon" href="assets/images/favicons/favicon.ico" />
@@ -38,16 +38,20 @@
 <body class="body-bg bg-colored">
     
         <div id="mySidenav" class="sidenav bg-opaque">
+            <div class="desktop_hidden">
+
+            
             <a href="index.html" class="title ">
                 <img src="assets/images/favicons/QFT_Logo.png" width="125em" alt="icon" />
             </a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&otimes;</a
         >
+        </div>
   <button class="side_dropdown-btn"><i class="fa fa-home"></i> Home
   </button>
   <div class="side_dropdown-container">
-            <a href="#section-3dPrint" onclick="closeNav()"><i class="fa fa-box" aria-hidden="true"></i> Prototyping</a>
-            <a href="#section-assets" onclick="closeNav()"><i class="fa fa-ruler" aria-hidden="true"></i> Development</a>
+            <a href="#section-overview" onclick="closeNav()"><i class="fa fa-ruler" aria-hidden="true"></i> Our Vision</a>
+            <a href="#section-services" onclick="closeNav()"><i class="fa fa-box" aria-hidden="true"></i> Services</a>
             <a href="#section-about" onclick="closeNav()"><i class="fa fa-users" aria-hidden="true"></i> About Us</a>
             <a href="#section-faq" onclick="closeNav()"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQs</a>
             <hr>
@@ -74,149 +78,249 @@
                 <a href="#">  <img src="assets/images/favicons/QFT_Logo.png" width="125em" alt="icon" />
                     <p id="logo"></p>
                 </a>
-                <button href="#" class="active" onclick="openNav()">
-            <i class="fa fa-bars"></i>
+
+
+                <button href="#" class="active">
+                <div class="menu_icon mobile_hidden has-text-white" onclick="menuToggle(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<div class="desktop_hidden" onclick="openNav()"><i class="fa fa-bars "></i> </div>
           </button>
                 <a href="#" class="hidden"><i class="fa fa-warning" aria-hidden="true"></i> Status</a>
-                <a href="#"  id="myBtn" class="link" onclick="closeNav()"><i class="fa fa-user-plus" aria-hidden="true"></i> Join Us</a>
+                <a href="#"  id="myBtn" class="link " onclick="closeNav()"><i class="fa fa-user-plus" aria-hidden="true"></i> Join Us</a>
             </div>
     </header>
     
     <section id="Top" class="fullscreen">
-
-        <div class="landing">
-
-            <div class="head-title">
-                <h1 class="title is-1 has-text-centered has-text-white theme-grad_text-1" style=" animation-name: text-spand; animation-duration: 1.5s;">
-                    Quazar Future Tech&trade;
-
-                </h1>
-                <hr>
-                <h5 class="title is-5  has-text-centered has-text-white">
-                    "Better technology, for a better future!"
-                </h5>
-                <div class="head-slides slideshow-container ">
-
-
-                    <div class="mySlides fade">
-
-                        <p class="emphasis subtitle has-text-white"> Our company specializes in rapid prototyping & digital asset development. </p>
-                        <a href="#" class="b theme-main_cta" onclick="openFrame('leadForm' , this)"><i class="fa fa-money" aria-hidden="true"></i> Contact Sales</a>
-                    </div>
-                    <div class="mySlides fade">
-
-                        <p class="emphasis subtitle has-text-white">
-                            Click below to find out more about our story, as well as our overall mission!
-                        </p>
-                        <a class="b theme-btn-outline" href="#section-about"><i class="fa fa-book" aria-hidden="true"></i> Learn more</a>
-
-
-                    </div>
-
-                    <div class="mySlides fade">
-
-                        <p class="emphasis subtitle has-text-white">
-                            Check out our FAQs page for more answers.
-                        </p>
-                        <a class="b theme-btn-outline" href="https://sites.google.com/view/qft-faqs/faqs"><i class="fa fa-external-link"  aria-hidden="true"></i> Take me there</a>
-
-
-                    </div>
-
-                    <a href="#" class="prev" onclick="plusSlides(-1)">❮</a>
-
-
-                    <div style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
-                    <a href="#" class="next" onclick="plusSlides(1)">❯</a>
-                </div>
+  <div class="landing">
+    <div class="head-slides slideshow-container">
+      <div class="slides">
+        <!-- Slide 1 -->
+        <div class="mySlides slide-1">
+          <div class="head-title">
+            <h1 class="title is-1 has-text-centered has-text-white theme-grad_text-1 text-reveal">
+              3D Printing Solutions built just for you!
+            </h1>
+            <hr>
+            <p class="emphasis subtitle has-text-white text-reveal">
+              Discover how QuazarFutureTech&trade; can bring your ideas to life with our rapid prototyping services.
+            </p>
+            <div class="columns">
+              <div class="column">
+                <a href="javascript:void(0)" class="b theme-main_cta fade" onclick="openFrame('leadForm', this)">
+                  <i class="fa fa-envelope" aria-hidden="true"></i> Contact Us
+                </a>
+              </div>
+              <div class="column">
+                <a class="b theme-btn-outline fade" href="#section-services">
+                  <i class="fa fa-book" aria-hidden="true"></i> Learn more
+                </a>
+              </div>
             </div>
-            <img src="assets/images/favicons/icon.png" alt="QFT-Icon">
-            <div class=" mobile_hidden head-links">
-                <a href="https://tinyurl.com/QFTYoutube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/QftFuture"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/groups/quazarfuturetech"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            </div>
-
-
-
-            <div id="scrollPush" class="head-ScrPush title is-3 has-text-white reveal">
-                <a href="#section-3dPrint"> <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-            </div>
+          </div>
+          <div class=" bg-layer BG-1"></div>
         </div>
-        <svg class="wave mobile_hidden" viewbox="0 0 1023 83" color="white" enable-background="new 0 0 1023 83" xml:space="preserve">
+
+        <!-- Slide 2 -->
+        <div class="mySlides slide-2">
+            <div class="mobile_hidden bg-layer BG-2"></div>
+          <div class="head-title">
+           <h1 class="title is-1 has-text-centered has-text-white theme-grad_text-1 text-reveal">
+              Your Gateway to Innovation!
+            </h1>
+            <hr>
+            <p class="emphasis subtitle has-text-white text-reveal">
+              Join our discord community to connect, live chat, and build your projects together.
+            </p>
+            <div class="columns">
+              <div class="column">
+            <a class="b theme-join fade" onclick="openJoin()" href="#">
+              <i class="fa fa-user-plus" aria-hidden="true"></i> Join us
+            </a>
+              </div>
+              </div>
+          </div>
+          
+        </div>
+
+        <!-- Slide 3 -->
+<div class="mySlides slide-3">
+  <div class="head-title">
+    <h1 class="title is-1 has-text-centered has-text-white theme-grad_text-1 text-reveal">
+      Driven by Design, Powered by Purpose
+    </h1>
+    <hr>
+    <p class="emphasis subtitle has-text-white text-reveal">
+      Discover the vision, values, and people behind QuazarFutureTech™.
+    </p>
+    <a class="b theme-btn-outline fade" href="#section-overview">
+      <i class="fa fa-arrow-down" aria-hidden="true"></i> Explore Our Vision
+    </a>
+  </div>
+  <div class="bg-layer BG-3"></div>
+</div>
+      </div>
+
+<!-- Navigation -->
+<div class="controls mobile_hidden">
+  <a href="javascript:void(0)" class="prev" aria-label="Previous slide">
+    <span class="arrow-text">❮</span>
+  </a>
+  <a href="javascript:void(0)" class="next" aria-label="Next slide">
+    <span class="arrow-text">❯</span>
+  </a>
+</div>
+
+<!-- Scroll Push -->
+<div id="scrollPush" class="head-ScrPush title is-3 has-text-white fade">
+  <a href="#section-overview">
+    <span class="scroll-text">Scroll</span>
+    <span class="scroll-icon">
+      ⮟
+    </span>
+  </a>
+</div>
+
+
+      <!-- Dots -->
+<div class="mobile_hidden dots title " style="text-align:center">
+  <span class="dot" data-num="1"></span>
+  <span class="dot" data-num="2"></span>
+  <span class="dot" data-num="3"></span>
+</div>
+      <!-- Social Links -->
+      <div class="mobile_hidden head-links">
+        <a href="https://tinyurl.com/QFTYoutube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/QftFuture"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/groups/quazarfuturetech"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+    </section>
+    <section id="section-overview" class=" has-text-white">
+    
+    <!-- Particles -->
+        <div class="container has-text-centered ">
+            <div class="watermark"></div>
+            <div id="particles-dots" class="particles mobile_hidden"></div>
+            <h1 class="title is-1 has-text-centered theme-grad_text-1 text-reveal">
+              Quazar Future Tech&trade;
+            </h1>
+            <h2 class="hero-text is-3" > "Better Technology for a Better Future" <hr></h2>
+            <div class="columns">
+<div class="column has-text-white reveal">
+    <div class="card theme-white_glass">
+    <p class="has-text-white emphasis">
+        At QuazarFutureTech™ we specialize in turning bold ideas into reality through our advanced <strong>3D Printing solutions</strong>. From rapid prototyping to custom product design, we help clients bring concepts to life with precision, speed, and creativity.
+    </p>
+</div>
+</div>
+
+<div class="column has-text-white reveal">
+    <div class="card theme-white_glass">
+    <p class="has-text-white">
+        Beyond fabrication, our team delivers cutting‑edge <strong>App and Software Development</strong> as well as impactful <strong>Graphic Design</strong>. Whether you need a tailored digital platform or visually striking brand assets, we provide end‑to‑end solutions that empower your business to grow and stand out.
+    </p>
+</div>
+
+
+</div>
+
+          
+        </div>
+       
+        <div id="arrowDown" class="title is-3 has-text-white reveal">
+            <i class="fa fa-caret-down "></i>
+        </div>
+        </div>
+           <svg class="wave mobile_hidden" viewbox="0 0 1023 83" color="white" enable-background="new 0 0 1023 83" xml:space="preserve">
             <path
               d="M1024,27.68c0,0-109.167-28.004-221.241-28.004S511.5,27.563,511.5,27.563
             S364.931,51.268,251.447,51.268S-1,27.5-1,27.5V83h1024.5L1024,27.68z"
             ></path>
           </svg>
-        <div id="particles-dots" class="particles mobile_hidden"></div>
     </section>
+    <section id="section-services" class="bg-opaque">
+    <div class="container has-text-centered">
+  <h1 class="title is-2 theme-grad_text-1 text-reveal">Our Services</h1>
+  <hr>
 
+    <div class="qft-ring-carousel services-carousel">
+        <!-- Inside .qft-ring-carousel or .slide-carousel -->
+<div class="swipe-arrow swipe-left">‹</div>
+<div class="swipe-arrow swipe-right">›</div>
 
-    </section>
-    <section id="section-3dPrint" class="bg-opaque has-text-white">
-        <div class="container has-text-centered ">
-            <h2 class="title has-text-centered has-text-white reveal">Rapid Prototyping
-                <hr>
-            </h2>
-            <div class="columns">
-                <div class="column has-text-white reveal">
-                   <img src="assets/images/3dPrint.jpg"> 
-                   <div class="overlay">
-                    <h2 class="title has-text-white"> 3d Printing. <hr> </h2>  <p class="has-text-white">  We create and render custom 3d parts and designs upon request.</p>
-                    <a href="#" class="b theme-main_cta" onclick="openFrame('leadForm' , this)"><i class="fa fa-money" aria-hidden="true"></i> Get a Quote.</a>
+        <div class="qft-carousel-track carousel-track">
+            
+            <div class="qft-service-card service-card">
+                <div class="qft-card-inner card-inner">
+                    <h2> 3D Printing</h2>
+                    <hr>
+                    <p>From prototypes to production, we bring ideas into physical form.</p>
                 </div>
-                 
-                </div>
-                <span class="hidden"><div class="column has-text-white reveal">
-                    <img src="assets/images/Milling.webp"> 
-                    <div class="overlay">
-                     <h2 class="title has-text-white"> CNC Milling. <hr> </h2>  <h2 class="theme-blk_glass has-text-centered"> Coming Soon</h2>
-                    </div>
-                 </div></span>
             </div>
-            <div id="arrowDown" class="title is-3 has-text-white reveal">
-                <i class="fa fa-caret-down "></i>
+            <div class="qft-service-card service-card">
+                <div class="qft-card-inner card-inner">
+                    <h2>App &amp; Software Development</h2>
+                    <hr>
+                    <p>Custom digital solutions tailored to your business needs.</p>
+                </div>
             </div>
-    </section>
-    <section id="section-assets" class="bg-opaque has-text-white">
-        <div class="container has-text-centered ">
-            <h2 class="title has-text-centered has-text-white reveal">Asset Development
-                <hr>
-            </h2>
-            <div class="columns">
-                <div class="column has-text-white reveal">
-                   <img src="assets/images/GraphicDesign.webp"> 
-                   <div class="overlay">
-                    <h2 class="title has-text-white"> Graphic Design. <hr> </h2>  <p class="has-text-white">  Banners, Icons, Logos, Overlays... You name it, we will make it!</p>
-                    <a href="#" class="b theme-main_cta" onclick="openFrame('leadForm' , this)"><i class="fa fa-money" aria-hidden="true"></i> Get a Quote.</a>   
+            <div class="qft-service-card service-card">
+                <div class="qft-card-inner card-inner">
+                    <h2>Graphic Design</h2>
+                    <hr>
+                    <p>Creative visuals that communicate your brand's story effectively.</p>
                 </div>
+            </div>
+            <div class="qft-service-card service-card">
+                <div class="qft-card-inner card-inner">
+                    <h2>Systems Architecture</h2>
+                    <hr>
+                    <p>Designing robust and scalable IT infrastructures for your business.</p>
                 </div>
-                <span class="hidden"><div class="column has-text-white reveal">
-                    <img src="assets/images/Code.jpg"> 
-                    <div class="overlay">
-                     <h2 class="title has-text-white"> Bot Development. <hr> </h2>  <h2 class="theme-blk_glass has-text-centered"> Coming Soon</h2>
-                    </div>
-                 </div></span>
+            </div>
         </div>
-        <div id="arrowDown" class="title is-3 has-text-white reveal">
+
+<div class="qft-carousel-controls carousel-controls">
+  <button class="qft-prev prev_card" type="button" aria-label="Previous">
+    <span class="arrow-text">‹</span>
+  </button>
+  <button class="qft-next next_card" type="button" aria-label="Next">
+    <span class="arrow-text">›</span>
+  </button>
+</div>
+
+        <!-- original markup (kept for rollback):
+        <div class="carousel-track">
+            <div class="service-card">3D Printing</div>
+            <div class="service-card">App & Software Development</div>
+            <div class="service-card">Graphic Design</div>
+            <div class="service-card">Systems Architecture</div>
+        </div>
+        <div class="carousel-controls">
+            <button class="prev_card" type="button">‹</button>
+            <button class="next_card" type="button">›</button>
+        </div>
+        -->
+    </div>
+                      <div id="arrowDown" class="title is-3 has-text-white reveal">
             <i class="fa fa-caret-down "></i>
         </div>
+    </div>
     </section>
-    <section id="section-about" class="bg-opaque has-text-white">
+    <section id="section-about" class=" bg-opaque has-text-white">
+                <div class="container has-text-centered">
 
-        <div class="container has-text-centered ">
-            <h2 class="title has-text-centered has-text-white reveal">About Us.
+                <h2 class="title has-text-centered has-text-white reveal">About Us.
                 <hr>
             </h2>
 
             <div class="columns">
                 <div class="column has-text-white reveal">
-                    <h2 class="title has-text-centered has-text-white">Our Story
+                    <h2 class="title has-text-centered has-text-white text-reveal">Our Story
                         <hr>
                     </h2>
                     <p class="has-text-white">
@@ -224,7 +328,7 @@
                 </div>
 
                 <div class="column has-text-white reveal">
-                    <h2 class="title has-text-centered has-text-white">Our Mission.
+                    <h2 class="title has-text-centered has-text-white text-reveal">Our Mission.
                         <hr>
                     </h2>
                     <p class="has-text-white">
@@ -235,13 +339,11 @@
                     </p>
                 </div>
             </div>
-        </div>
-        <div id="arrowDown" class="title is-3 has-text-white reveal">
+                    <div id="arrowDown" class="title is-3 has-text-white reveal">
             <i class="fa fa-caret-down "></i>
         </div>
+            </div>
     </section>
-
-
     <section id="section-faq" class="bg-opaque">
         <div class="container faq">
             <h2 class="title has-text-centered has-text-white reveal">FAQs
@@ -291,13 +393,9 @@
             </div>
             <div class=" has-text-centered">
                 <div class="card theme-white_glass">
-                    <p class="has-text-white">Want to know more about us? Feel free to visit our official FAQ page!</p> <a class="b theme-btn-outline is-centered" href="https://sites.google.com/view/qft-faqs/faqs"><i class="fa fa-external-link"  aria-hidden="true"></i> Visit our FAQ page!</a></div>
+                    <p class="has-text-white">Want to know more about us? Feel free to visit our official FAQ page!</p> <a class="b theme-btn-outline is-centered" href="https://faqs.quazarfuturetech.com"><i class="fa fa-external-link"  aria-hidden="true"></i> Visit our FAQ page!</a></div>
 
             </div>
-        </div>
-
-        <div id="arrowDown" class="title is-3 has-text-white reveal">
-            <i class="fa fa-caret-down "></i>
         </div>
     </section>
     <div style="box-shadow: 0 0 24px black"></div>
@@ -322,23 +420,6 @@ app.listen(port, () => {
 });
     </script>
     <script src="assets/js/accordion.js"></script>
-    <!-- The Modal -->
-    <div id="modalBeta" class="modal has-text-centered">
-        <!-- Modal content -->
-        <div class="beta_modal-content">
-            <div class="beta_modal-head theme-beta">
-                <span class="beta_close">&times;</span>
-                <h2 class="has-text-white theme-beta subtitle is-3"><i class="fa fa-wrench" aria-hidden="true"></i> Beta Disclaimer</h2>
-            </div>
-            <div class="beta_modal-body theme-dk">
-                <p class="has-text-white ">Welcome <br> You have reached the public beta of quazarfuturetech.com<br> If you find any bugs it is our humble request that you report them on the <a href="https://github.com/QuazarFutureTech/qft.github.io/issues">GitHub
-            repository</a> of this website. <br> Thank you!</p>
-            </div>
-            <div class="beta_modal-foot theme-beta">
-                <h3 class="has-text-white is-5 ">QuazarFutureTech</h3>
-            </div>
-        </div>
-    </div>
     <div id="modalFrame" class="modal has-text-centered">
         <div class="modal-container">
         <div class="modal-head theme-main">
@@ -413,10 +494,10 @@ app.listen(port, () => {
                 <img src="assets/images/favicons/QFT_Logo.png" alt="Logo" class="mb-3">
                 <hr style="background-color: rgb(0, 132, 255); border-color: rgb(0, 132, 255); border-radius: 0px; height: 1px;" />
                 <ul class="sci">
-                    <li><a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <span class="hidden"><li><a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a></li></span>
+                    <span class="hidden"><li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li></span>
+                    <li><a href="https://tinyurl.com/QFTYoutube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/groups/quazarfuturetech"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
 
@@ -425,10 +506,10 @@ app.listen(port, () => {
                 <ul>
                     <li><a href="#section-about">About</a></li>
                     <li><a href="https://sites.google.com/view/qft-faqs/faqs">FAQ</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <span class="hidden"><li><a href="#">Privacy Policy</a></li></span>
                     <span class="hidden"><li><a href="jobs.html" >Jobs <span style="color: #43b581;">- We're hiring!</span></a> </li></span>
-                    <li><a href="status.html">Status</a></li>
-                    <li><a href="support.html">Contact</a></li>
+                    <span class="hidden"><li><a href="status.html">Status</a></li></span>
+                    <span class="hidden"><li><a href="support.html">Contact</a></li></span>
                 </ul>
             </div>
             <div class="sec contact">
@@ -436,11 +517,11 @@ app.listen(port, () => {
                 <ul class="info">
                     <li>
                         <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                        <p><a href="tel:13525175375">+1(352)517-5375</a></p>
+                        <p><a href="tel:14079066251">+1(407)906-6251</a></p>
                     </li>
                     <li>
                         <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                        <p><a href="mailto:quazarfuturetech@gmail.com ">quazarfuturetech@gmail.com</a></p>
+                        <p><a href="mailto:quazarfuturetech@gmail.com">quazarfuturetech@gmail.com</a></p>
                     </li>
                 </ul>
             </div>
@@ -453,6 +534,7 @@ app.listen(port, () => {
     <script src="assets/js/app.js"></script>
     <script src="assets/js/modals.js"></script>
     <script src="assets/js/Carosel.js"></script>
+    <script src="assets/js/ring-carousel.js"></script>
 
     <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
         const button = new Crate({

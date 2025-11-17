@@ -1,244 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Element Test Doc</title>
-            <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-        <style>
-            *{
-                margin:0;
-                padding:0;
-                box-sizing: border-box;
-                font-family: 'Poppins', sans-serif;
-            }
-            body {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                min-height: 100vh;
-                flex-direction: column;
-                background-color: #ede7f6;
-                height: 100%;
-            }
-            footer{
-                position: relative;
-                width: 100%;
-                height: 100%;
-                padding: 50px 100px;
-                background: #111;
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-            footer .container
-            {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                flex-direction: row;
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Ring Carousel — Fixed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #000;
+      --card: #111;
+      --accent: #00ffff;
+      --radius: 500px; /* ring depth */
+      --transition: 0.8s ease-in-out-bezier(.2,.7,.2,1);
+    }
 
-            }
-            footer .container .sec
-            {
-                margin-right:30px;
+    body {
+      margin: 0;
+      font-family: Poppins, system-ui, sans-serif;
+      background: var(--bg);
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-            }
-            footer .container .sec.aboutus
-            {
-                width: 40%;
-                
-            }
-            footer .container h2
-            {
-                position: relative;
-                color:#fff;
-                margin-bottom: 15px;
-            }
-            footer .container h2:before
-            {
-              content: '';
-              position: absolute;
-              bottom: -5px;
-              left: 0;
-              width: 50px;
-              height: 2px;
-              background:  rgb(0, 132, 255); 
-            }
-             footer .container .sec img
-            {   display: flex;
-                width: 50%;
-                height: auto;
-            }
-            footer .container .sec p
-            {
-             color: #999;  
-            }
-            .sci {
-                margin-top: 20px;
-                display: flex;
-            }
-            .sci li{
-                list-style: none;
-            }
-            .sci li a{
-                display: inline-block;
-                height: 40px;
-                width: 40px;
-                background: #222;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 10px;
-                text-decoration: none;
-                border-radius: 4px;
-                transition: ease-in-out .5s;
-            }
-            .sci li a:hover {
-                background: rgb(0, 132, 255);
-                transition: ease-in-out .5s;
-            }
-            .sci li a .fa {
-                color: #fff;
-                font-size:20px;
-            }
-            .quicklinks{
-                position:relative;
-                width:25%;
-            }
-            .quicklinks ul li {
-            list-style: none;
-            }
-            .quicklinks ul li a{
-                color: #999;
-                text-decoration: none;
-                margin-bottom: 10px;
-                display:inline-block;
-                transition: ease-in-out .5s;
-            }
-            .quicklinks ul li a:hover{
-                color: #fff;
-                transition: ease-in-out .5s;  
-            }
-            .contact
-            {
-                width:calc(35% - 60px);
-                margin-right: 0 !important;
-            }
-            .contact .info{
-                position: relative;
-            }
-            .contact .info li
-            {
-                display: flex;
-                margin-bottom: 16px;
-            }
-            .contact .info li span:nth-child(1)
-            {
-                color: #fff;
-                font-size: 20px;
-                margin-right: 10px;
-            }
-            .contact .info li span
-            {
-                color: #999;
-            }
-            .contact .info li a
-            {
-                color: #999;
-                text-decoration: none;
-                transition: ease-in-out .5s; 
-            }
-            .contact .info li a:hover
-            {
-                color: #fff;
-                transition: ease-in-out .5s; 
-            }
-            .copyright{
-                width:100%;
-                color:#999;
-                background: #181818;
-                padding: 8px 100px;
-                text-align:center
-            }
-            @media (max-width:991px) {
-                footer{
-                    padding: 40px;
-                    transition: ease-in-out .5s; 
-                }
-                footer .container{
-                    flex-direction: column;
-                    transition: ease-in-out .5s; 
-                }
-                footer .container .sec{
-                    margin-right: 0;
-                    margin-bottom: 40px;
-                    transition: ease-in-out .5s; 
-                }
-                footer .container .sec.aboutus{
-                    width: 100%;
-                    transition: ease-in-out .5s; 
-                }
-                footer .container .sec.quicklinks{
-                    width: 100%;
-                    transition: ease-in-out .5s; 
-                }
-                footer .container .sec.contact{
-                    width: 100%;
-                    transition: ease-in-out .5s; 
-                }
-                .copyright{
-                padding: 8px 40px;
-                transition: ease-in-out .5s; 
-            }
-            }
-        </style>
-    </head>
-    <body>
-    <footer>
-       <div class= "container">
-        <div class ="sec aboutus">
-        <img src="assets/images/logo.png" alt="Logo">
-        <p>QFT | QuazarFutureTech - Better Technology For a Better Future! <br>We are a next-genreation technology development organization based in Florida [U.S.A.] <br> Our main goal is to create new technologies, and challenge the impossible!</p>
-            <ul class="sci"> 
-            <li><a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
-        </ul>     
-        </div>
-        
-        <div class="sec quicklinks">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Jobs <span>- We're hiring!</span></a> </li>
-                <li><a href="#">Status</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-       <div class="sec contact">
-        <h2>Contact Info</h2>
-        <ul class="info">
-            <li> 
-                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                <span>9100 SW 27th Ave <br>Ocala, FL 34476, <br> USA</span>
-            </li>
-            <li> 
-                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                <p><a href="tel:13527275820">+1(352)727-5820</a></p>
-            </li>
-            <li> 
-                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                <p><a href="mailto:quazarfuturetech@gmail.com ">quazarfuturetech@gmail.com</a></p>
-            </li>
-        </ul>
-       </div>
-       </div> 
-    </footer>  
-     <div class="copyright">&copy; QuazarFutureTech&trade; 2022 - All Rights Reserved </div>
-    </body>
+    h1 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      font-weight: 600;
+    }
+
+    .carousel-container {
+      position: relative;
+      perspective: 1200px;
+      height: 440px;
+      overflow: hidden;
+      touch-action: pan-y; /* we handle horizontal */
+      -webkit-user-select: none; user-select: none;
+    }
+
+    .carousel-track {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+      transition: transform var(--transition);
+      will-change: transform;
+      z-index: 1; /* keep track behind controls */
+      pointer-events: none; /* avoid blocking controls; inner cards keep pointer-events:auto */
+    }
+
+    /* Each card is positioned in the ring. Do NOT add scale here. */
+    .service-card {
+      position: absolute;
+      width: 280px;
+      height: 340px;
+      left: calc(50% - 140px);
+      top: 40px;
+      transform-origin: center center;
+      /* ring transform is set via JS: rotateY(...) translateZ(...) */
+      pointer-events: none; /* let inner receive events cleanly */
+    }
+
+    /* Inner wrapper receives interactive styles, scaling, etc. */
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      background: var(--card);
+      color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      -webkit-user-select: none; user-select: none;
+      pointer-events: auto; /* clickable/touchable */
+    }
+
+    /* Active card scales the inner, not the ring transform */
+    .service-card.active .card-inner {
+      transform: scale(1.08);
+      box-shadow: 0 16px 32px rgba(0,255,255,0.22);
+    }
+
+    /* Dragging feedback: shrink all inners slightly */
+    .dragging .card-inner {
+      transform: scale(0.94);
+    }
+
+    .carousel-controls {
+      position: absolute;
+      bottom: 6px;
+      left: 0; right: 0;
+      text-align: center;
+      z-index: 10000; /* ensure controls are above transformed track */
+      pointer-events: auto;
+    }
+
+    .carousel-controls button {
+      background: var(--accent);
+      border: none;
+      border-radius: 50%;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      color: #111;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-controls { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Services</h1>
+  <div class="carousel-container" id="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="service-card"><div class="card-inner">Software Development</div></div>
+      <div class="service-card"><div class="card-inner">Graphic Design</div></div>
+      <div class="service-card"><div class="card-inner">Systems Architecture</div></div>
+      <div class="service-card"><div class="card-inner">3D Printing</div></div>
+      <div class="service-card"><div class="card-inner">Platform Engineering</div></div>
+    </div>
+    <div class="carousel-controls">
+      <button class="prev_card" type="button" aria-label="Previous">‹</button>
+      <button class="next_card" type="button" aria-label="Next">›</button>
+    </div>
+  </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("carousel");
+      const track = document.getElementById("carouselTrack");
+      const cards = Array.from(track.querySelectorAll(".service-card"));
+      const nextBtn = container.querySelector(".next_card");
+      const prevBtn = container.querySelector(".prev_card");
+
+      let angle = 0;
+      const count = cards.length;
+      const step = 360 / count;
+      const radius = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--radius')) || 500;
+
+      // Position cards around the ring
+      cards.forEach((card, i) => {
+        const theta = i * step;
+        card.style.transform = `rotateY(${theta}deg) translateZ(${radius}px)`;
+      });
+
+      // Ensure the track is pulled back by radius so the ring is centered
+      track.style.transform = `translateZ(-${radius}px) rotateY(${angle}deg)`;
+
+      // Rotate the ring
+      function rotateBy(deltaSteps) {
+        angle += deltaSteps * step;
+        track.style.transform = `translateZ(-${radius}px) rotateY(${angle}deg)`;
+        updateActive();
+      }
+
+      // Active card based on nearest face angle. Accept optional angle to support
+      // previewing during drag (so the highlighted card follows the finger).
+      function updateActive(currentAngle = angle) {
+        const normalized = ((-currentAngle % 360) + 360) % 360;
+        const index = Math.round(normalized / step) % count;
+        cards.forEach((card, i) => card.classList.toggle("active", i === index));
+      }
+
+      // Buttons
+      nextBtn?.addEventListener("click", () => rotateBy(-1));
+      prevBtn?.addEventListener("click", () => rotateBy(+1));
+
+      // Swipe with smoother inertia and snap
+      let startX = null;
+      let lastD = 0; // last drag angle (deg)
+      let lastTime = 0;
+      let dragging = false;
+      let degPerMs = 0; // degrees per millisecond
+      let rafId = null;
+
+      function onTouchStart(e) {
+        // Ignore starts when interacting with controls (buttons).
+        const tgt = e.target || e.srcElement;
+        if (tgt && tgt.closest && tgt.closest('.carousel-controls')) return;
+
+        dragging = true;
+        container.classList.add('dragging');
+        const x = (e.touches?.[0]?.clientX ?? e.clientX);
+        startX = x;
+        lastD = 0;
+        lastTime = performance.now();
+        degPerMs = 0;
+        cancelAnimationFrame(rafId);
+      }
+
+      function onTouchMove(e) {
+        if (!dragging) return;
+        const x = (e.touches?.[0]?.clientX ?? e.clientX);
+        const now = performance.now();
+        const dxTotal = x - startX;
+        // Map pixels to angle: sensitivity controls how many px per degree
+        // Increase sensitivity value to make swipes less sensitive (more px required per degree)
+        const sensitivity = 8.0; // px per degree (higher = less sensitive)
+        const dAngle = dxTotal / sensitivity; // positive dx -> positive angle
+
+        // Show interactive drag (temporary transform). For our convention, dragging left (dx negative)
+        // produces negative dAngle which previews moving to next card (rotate negative).
+        track.style.transform = `translateZ(-${radius}px) rotateY(${angle + dAngle}deg)`;
+
+        // compute degrees per millisecond using change since last move
+        const dDelta = dAngle - lastD;
+        const dt = Math.max(1, now - lastTime);
+        degPerMs = dDelta / dt;
+        lastD = dAngle;
+        lastTime = now;
+
+        // Update active using the preview angle so the highlight follows the finger.
+        updateActive(angle + dAngle);
+      }
+
+      function snapToNearestFrom(a) {
+        const normalized = ((-a % 360) + 360) % 360;
+        const nearestIndex = Math.round(normalized / step) % count;
+        return -nearestIndex * step; // base reference (may be shifted by +/-360 later)
+      }
+
+      function animateTo(target, duration = 500) {
+        cancelAnimationFrame(rafId);
+        const start = performance.now();
+        const from = angle;
+        function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+        function frame(now) {
+          const p = Math.min(1, (now - start) / duration);
+          const eased = easeOutCubic(p);
+          angle = from + (target - from) * eased;
+          track.style.transform = `translateZ(-${radius}px) rotateY(${angle}deg)`;
+          updateActive();
+          if (p < 1) rafId = requestAnimationFrame(frame);
+        }
+        rafId = requestAnimationFrame(frame);
+      }
+
+      function onTouchEnd() {
+        if (!dragging) return;
+        dragging = false;
+        container.classList.remove('dragging');
+
+        // last preview drag angle is lastD; project angle by recent velocity. Use a shorter
+        // projection window so snaps are less aggressive and jarring.
+        const projectedAngle = angle + lastD + degPerMs * 80; // project ~80ms into future
+
+        // compute the nearest base target (may be equivalent modulo 360)
+        const baseTarget = snapToNearestFrom(projectedAngle);
+
+        // Shift baseTarget by multiples of 360 so we rotate the shortest angular distance
+        let target = baseTarget;
+        // Bring target closest to current "angle"
+        while (target - angle > 180) target -= 360;
+        while (target - angle < -180) target += 360;
+
+        // choose duration based on velocity (faster flick -> slightly longer but eased)
+        const base = 220;
+        const extra = Math.min(300, Math.abs(degPerMs) * 600);
+        const duration = Math.max(180, base + extra);
+
+        animateTo(target, duration);
+
+        startX = null;
+        lastD = 0;
+        degPerMs = 0;
+      }
+
+      // Pointer/touch bindings
+      container.addEventListener("touchstart", onTouchStart, { passive: true });
+      container.addEventListener("touchmove", onTouchMove, { passive: false });
+      container.addEventListener("touchend", onTouchEnd);
+      container.addEventListener("mousedown", (e) => { onTouchStart(e); e.preventDefault(); });
+      window.addEventListener("mousemove", onTouchMove);
+      window.addEventListener("mouseup", onTouchEnd);
+
+      updateActive();
+    });
+  </script>
+</body>
 </html>

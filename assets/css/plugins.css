@@ -10591,16 +10591,16 @@ a.text-dark:hover {
     53%,
     80%,
     to {
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: ease-in-out-bezier(.215, .61, .355, 1);
         transform: translateZ(0)
     }
     40%,
     43% {
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: ease-in-out-bezier(.755, .05, .855, .06);
         transform: translate3d(0, -30px, 0)
     }
     70% {
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: ease-in-out-bezier(.755, .05, .855, .06);
         transform: translate3d(0, -15px, 0)
     }
     90% {
@@ -10843,7 +10843,7 @@ a.text-dark:hover {
     60%,
     80%,
     to {
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+        animation-timing-function: ease-in-out-bezier(.215, .61, .355, 1)
     }
     0% {
         opacity: 0;
@@ -10879,7 +10879,7 @@ a.text-dark:hover {
     75%,
     90%,
     to {
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+        animation-timing-function: ease-in-out-bezier(.215, .61, .355, 1)
     }
     0% {
         opacity: 0;
@@ -10910,7 +10910,7 @@ a.text-dark:hover {
     75%,
     90%,
     to {
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+        animation-timing-function: ease-in-out-bezier(.215, .61, .355, 1)
     }
     0% {
         opacity: 0;
@@ -10941,7 +10941,7 @@ a.text-dark:hover {
     75%,
     90%,
     to {
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+        animation-timing-function: ease-in-out-bezier(.215, .61, .355, 1)
     }
     0% {
         opacity: 0;
@@ -10972,7 +10972,7 @@ a.text-dark:hover {
     75%,
     90%,
     to {
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+        animation-timing-function: ease-in-out-bezier(.215, .61, .355, 1)
     }
     0% {
         opacity: 0;
@@ -11772,12 +11772,12 @@ a.text-dark:hover {
     0% {
         opacity: 0;
         transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-        animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+        animation-timing-function: ease-in-out-bezier(.55, .055, .675, .19)
     }
     60% {
         opacity: 1;
         transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-        animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+        animation-timing-function: ease-in-out-bezier(.175, .885, .32, 1)
     }
 }
 
@@ -11789,12 +11789,12 @@ a.text-dark:hover {
     0% {
         opacity: 0;
         transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
-        animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+        animation-timing-function: ease-in-out-bezier(.55, .055, .675, .19)
     }
     60% {
         opacity: 1;
         transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
-        animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+        animation-timing-function: ease-in-out-bezier(.175, .885, .32, 1)
     }
 }
 
@@ -11806,12 +11806,12 @@ a.text-dark:hover {
     0% {
         opacity: 0;
         transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
-        animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+        animation-timing-function: ease-in-out-bezier(.55, .055, .675, .19)
     }
     60% {
         opacity: 1;
         transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
-        animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+        animation-timing-function: ease-in-out-bezier(.175, .885, .32, 1)
     }
 }
 
@@ -11823,12 +11823,12 @@ a.text-dark:hover {
     0% {
         opacity: 0;
         transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-        animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+        animation-timing-function: ease-in-out-bezier(.55, .055, .675, .19)
     }
     60% {
         opacity: 1;
         transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-        animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+        animation-timing-function: ease-in-out-bezier(.175, .885, .32, 1)
     }
 }
 
@@ -11857,13 +11857,13 @@ a.text-dark:hover {
     40% {
         opacity: 1;
         transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-        animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+        animation-timing-function: ease-in-out-bezier(.55, .055, .675, .19)
     }
     to {
         opacity: 0;
         transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
         transform-origin: center bottom;
-        animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+        animation-timing-function: ease-in-out-bezier(.175, .885, .32, 1)
     }
 }
 
@@ -11907,13 +11907,13 @@ a.text-dark:hover {
     40% {
         opacity: 1;
         transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-        animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+        animation-timing-function: ease-in-out-bezier(.55, .055, .675, .19)
     }
     to {
         opacity: 0;
         transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
         transform-origin: center bottom;
-        animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+        animation-timing-function: ease-in-out-bezier(.175, .885, .32, 1)
     }
 }
 
