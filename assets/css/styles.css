@@ -1040,7 +1040,42 @@
         opacity: 100%;
         transition: 0.5s;
     }
-    
+#screen_overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#screen_overlay.active {
+  opacity: 1;
+}
+
+#secretText {
+  color: #00ffcc; /* neon cyan */
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif; /* futuristic font */
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  z-index: 11;
+}
+
+#secretText.visible {
+  opacity: 1;
+}
+
+#secretText.fadeout {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
     #logo {
         animation-name: fade;
         animation-duration: 2s;
@@ -1049,6 +1084,7 @@
         -webkit-animation-duration: 2s;
         /* Safari 4.0 - 8.0 */
         font-size: 6vw;
+        display: inline;
     }
     /* Change background color of buttons on hover */
     

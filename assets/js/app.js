@@ -37,6 +37,60 @@ document.addEventListener("DOMContentLoaded", () => {
   generateCircuit(15);
 });
 
+function activateEasterEgg() {
+  const overlay = document.getElementById("screen_overlay");
+  const text = document.getElementById("secretText");
+
+  // Step 1: Fade overlay to black
+  overlay.classList.add("active");
+
+  // Step 2: Show text after overlay is fully opaque
+  setTimeout(() => {
+    text.classList.add("visible");
+  }, 1000); // wait for overlay fade-in
+
+  // Step 3: Keep text visible for 3 seconds
+  setTimeout(() => {
+    text.classList.add("fadeout");
+  }, 4000); // 1s fade-in + 3s hold
+
+  // Step 4: Redirect after text fades out
+  setTimeout(() => {
+    window.location.href = "secret.html";
+  }, 5500); // allow 1.5s fade-out
+}
+
+
+
+// --- Logo multi-click trigger ---
+let logoClicks = 0;
+document.getElementById("logo").addEventListener("click", () => {
+  logoClicks++;
+  if (logoClicks === 5) { // 5 presses unlocks
+    activateEasterEgg();
+  }
+});
+
+// --- Keyboard combo trigger ---
+let secret = [];
+const code = [
+  "ArrowUp","ArrowUp","ArrowDown","ArrowDown",
+  "ArrowLeft","ArrowRight","ArrowLeft","ArrowRight",
+  "KeyB","KeyA"
+];
+
+window.addEventListener("keydown", e => {
+  secret.push(e.code);
+  // Keep only the last N entries
+  if (secret.length > code.length) secret.shift();
+
+  // Check if sequence matches
+  if (secret.join(",") === code.join(",")) {
+    activateEasterEgg();
+    secret = [];
+  }
+});
+
 /* --- Scroll + Navbar --- */
 window.onscroll = function() {
   scrollEvent();
@@ -103,10 +157,8 @@ function scrollEvent() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
     navbar.style.position = "fixed";
-    document.getElementById("logo").style.display = 'inline';
   } else {
     navbar.classList.remove("sticky");
-    document.getElementById("logo").style.display = 'none';
   }
 }
 
