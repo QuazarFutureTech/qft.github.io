@@ -50,31 +50,41 @@ class VirtualJoystick {
   end() { this.active = false; this.thrust = 0; }
 }
 
-// --- Setup ---
-const joystick = new VirtualJoystick(60, window.innerHeight - 60, 60);
-const joystickEl = document.getElementById("joystick");
-const stickEl = document.getElementById("stick");
-
-// --- Wiring ---
-joystickEl.addEventListener("touchstart", e => {
-  const t = e.touches[0];
-  joystick.start(t.clientX, t.clientY);
+// --- Wiring (pointer events to support multi-touch) ---
+let joystickPointerId = null;
+joystickEl.addEventListener('pointerdown', e => {
+  if (e.pointerType !== 'touch' && e.pointerType !== 'pen') return; // prefer touch/pen
+  joystickPointerId = e.pointerId;
+  joystick.start(e.clientX, e.clientY);
+  try { joystickEl.setPointerCapture && joystickEl.setPointerCapture(e.pointerId); } catch (err) {}
 });
-
-joystickEl.addEventListener("touchmove", e => {
-  const t = e.touches[0];
-  joystick.update(t.clientX, t.clientY);
-
+joystickEl.addEventListener('pointermove', e => {
+  if (e.pointerId !== joystickPointerId) return;
+  joystick.update(e.clientX, e.clientY);
   // Move knob visually
   const dx = Math.cos(joystick.angle) * joystick.thrust * joystick.maxRadius;
   const dy = Math.sin(joystick.angle) * joystick.thrust * joystick.maxRadius;
   stickEl.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
 });
+joystickEl.addEventListener('pointerup', e => {
+  if (e.pointerId !== joystickPointerId) return;
+  joystick.end();
+  stickEl.style.transform = 'translate(-50%, -50%)'; // reset knob
+  try { joystickEl.releasePointerCapture && joystickEl.releasePointerCapture(e.pointerId); } catch (err) {}
+  joystickPointerId = null;
+});
+joystickEl.addEventListener('pointercancel', e => {
+  if (e.pointerId !== joystickPointerId) return;
+  joystick.end();
+  stickEl.style.transform = 'translate(-50%, -50%)';
+  joystickPointerId = null;
+});
 
 joystickEl.addEventListener("touchend", () => {
   joystick.end();
   stickEl.style.transform = "translate(-50%, -50%)"; // reset knob
-});
+}, { passive: false });
+
 
 // --- Touch Controls Visibility ---
 
@@ -284,6 +294,9 @@ function spawnExplosion(x, y, type = "enemy") {
     state.particles[state.particles.length - 1].color = color;
   }
 
+  // Vibrate device slightly for explosion feedback (if supported)
+  try { if (navigator && navigator.vibrate) navigator.vibrate(40); } catch (e) {}
+
   // Layer 2: heavier debris (slower, medium lifetime)
   const debris = isEnemy ? 160 : (isShip ? 240 : 40);
   for (let i = 0; i < debris; i++) {
@@ -382,6 +395,8 @@ function spawnShipSpawnEffect(x, y) {
     pulse: true,
     pulseMax: 220
   });
+  // Vibrate device slightly for spawn feedback (if supported)
+  try { if (navigator && navigator.vibrate) navigator.vibrate(30); } catch (e) {}
 }
 
 // Particle updates are handled in the main update() loop (with dt).
