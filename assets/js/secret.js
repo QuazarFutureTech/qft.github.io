@@ -12,7 +12,6 @@
   // Game states
   let gameState = "start"; // "start","playing","gameover"
   let paused = false;
-  let thrustPower = 0; // global variable
 
   // Input
   const keys = { ArrowUp:false, ArrowDown:false, ArrowLeft:false, ArrowRight:false, Space:false };
@@ -63,39 +62,29 @@ const joystick = new VirtualJoystick(60, window.innerHeight - 60, 60);
 const joystickEl = document.getElementById('joystick');
 const stickEl = document.getElementById('stick');
 
-// Use pointer events for unified mouse/touch/stylus handling and pointer capture
+
+
 joystickEl.addEventListener('pointerdown', e => {
   if (e.cancelable) e.preventDefault();
   joystick.start(e.clientX, e.clientY);
   joystick.activePointerId = e.pointerId;
-  try { joystickEl.setPointerCapture && joystickEl.setPointerCapture(e.pointerId); } catch (err) { }
-});
+}, { passive: false });
 
-// Track pointer moves on the window so movement continues if pointer leaves the element
-window.addEventListener('pointermove', e => {
-  if (!joystick.active) return;
-  if (joystick.activePointerId != null && e.pointerId !== joystick.activePointerId) return;
+joystickEl.addEventListener('pointermove', e => {
+  if (e.pointerId !== joystick.activePointerId) return;
   joystick.update(e.clientX, e.clientY);
-  // Move knob visually
   const dx = Math.cos(joystick.angle) * joystick.thrust * joystick.maxRadius;
   const dy = Math.sin(joystick.angle) * joystick.thrust * joystick.maxRadius;
   stickEl.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
-});
+}, { passive: false });
 
-window.addEventListener('pointerup', e => {
-  if (joystick.activePointerId != null && e.pointerId !== joystick.activePointerId) return;
+joystickEl.addEventListener('pointerup', e => {
+  if (e.pointerId !== joystick.activePointerId) return;
   joystick.end();
   joystick.activePointerId = null;
   stickEl.style.transform = 'translate(-50%, -50%)';
-  try { joystickEl.releasePointerCapture && joystickEl.releasePointerCapture(e.pointerId); } catch (err) { }
-});
-
-window.addEventListener('pointercancel', e => {
-  if (joystick.activePointerId != null && e.pointerId !== joystick.activePointerId) return;
-  joystick.end();
-  joystick.activePointerId = null;
-  stickEl.style.transform = 'translate(-50%, -50%)';
-});
+}, { passive: false });
+// --- Fire Button ---
 
 
 const fireBtn = document.querySelector('#firePad .btn.big');
@@ -104,20 +93,28 @@ let firePointerId = null;
 fireBtn.addEventListener('pointerdown', e => {
   if (e.cancelable) e.preventDefault();
   firePointerId = e.pointerId;
-  shootBullet(); // your existing bullet firing logic
-  try { fireBtn.setPointerCapture && fireBtn.setPointerCapture(e.pointerId); } catch (err) { }
-});
+  shoot(); // your existing bullet firing logic
+}, { passive: false });
 
 fireBtn.addEventListener('pointerup', e => {
   if (firePointerId !== null && e.pointerId !== firePointerId) return;
   firePointerId = null;
-  try { fireBtn.releasePointerCapture && fireBtn.releasePointerCapture(e.pointerId); } catch (err) { }
 });
 
 fireBtn.addEventListener('pointercancel', e => {
   if (firePointerId !== null && e.pointerId !== firePointerId) return;
   firePointerId = null;
-});
+}, { passive: false });
+
+const pauseBtn = document.querySelector('#pause .btn');
+
+pauseBtn.addEventListener('pointerdown', e => {
+  e.preventDefault();
+  e.stopPropagation(); // prevent bubbling into joystick/tap-anywhere
+  paused = !paused;
+  console.log("Pause toggled:", paused);
+  
+}, { passive: false });
 
 // --- Touch Controls Visibility ---
 
@@ -125,6 +122,17 @@ const touchControls = document.getElementById("touchControls");
 
 // Default: show controls if touch is supported
 if (navigator.maxTouchPoints > 0) {
+    // Tap anywhere to continue
+document.addEventListener("touchstart", () => {
+  if (gameState === "start") {
+    restart();
+    gameState = "playing";
+  } else if (gameState === "gameover") {
+    restart();
+    gameState = "playing";
+  }
+}, { passive: false });
+
   touchControls.classList.remove("hidden");
 } else {
   touchControls.classList.add("hidden");
@@ -146,44 +154,15 @@ window.addEventListener("keydown", () => {
   window.addEventListener('keyup', e => { if (e.code in keys) keys[e.code] = false; });
 
 
-// Tap anywhere to continue
-document.addEventListener("touchstart", () => {
-  if (gameState === "start") {
-    restart();
-    gameState = "playing";
-  } else if (gameState === "gameover") {
-    restart();
-    gameState = "playing";
-  }
-});
 
-// Click anywhere to continue (desktop mouse)
-document.addEventListener("click", () => {
-  if (gameState === "start") {
-    restart();
-    gameState = "playing";
-  } else if (gameState === "gameover") {
-    restart();
-    gameState = "playing";
-  }
-});
-
-
-
-document.querySelectorAll('.btn').forEach(el => {
+/*document.querySelectorAll('.btn').forEach(el => {
   if (el.id === "firePad") return; // skip fire button
   const a = el.dataset.a;
   el.onpointerdown = e => { e.preventDefault(); setAction(a,true); };
   el.onpointerup   = e => { e.preventDefault(); setAction(a,false); };
   el.onpointerleave= el.onpointercancel = e => setAction(a,false);
-});
+});*/
 
-  function setAction(a,v){
-    if(a==="up")keys.ArrowUp=v; else if(a==="down")keys.ArrowDown=v;
-    else if(a==="left")keys.ArrowLeft=v; else if(a==="right")keys.ArrowRight=v;
-    else if(a==="shoot")actions.shoot=v; else if(a==="thrust")actions.thrust=v;
-    else if(a==="shield")actions.shield=v; else if(a==="pause"&&v)paused=!paused;
-  }
 function wrap(v, max) {
   if (v < 0) return v + max;
   if (v >= max) return v - max;
@@ -606,7 +585,7 @@ ship.y = wrap(ship.y, canvas.height);
     // Homing: find nearest enemy or pickup within range and steer towards it
     // Reduce homing intensity on smaller screens — compute a screen scale [0..1]
     const screenScale = Math.min(1, window.innerWidth / 800); // 800px+ uses full homing
-    const homingRange = 120 + Math.round(screenScale * 160); // 120..280 depending on width
+    const homingRange = 10 + Math.round(screenScale * 160); // 120..280 depending on width
     let target = null;
     let minDist = homingRange * homingRange; // squared distance
     // Prefer enemies but allow pickups to be targeted as well
@@ -1052,7 +1031,8 @@ ctx.globalAlpha = 1;
     state.bullets=[]; state.enemies=[]; state.particles=[];
     resetShip(); spawnWave(); paused=false;
   }
-
+    joystickEl.addEventListener('pointerdown', () => console.log('Joystick pressed'));
+fireBtn.addEventListener('pointerdown', () => console.log('Fire pressed'));
   // Main loop with delta time
   let last=performance.now();
   function loop(now){
