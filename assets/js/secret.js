@@ -96,6 +96,29 @@ window.addEventListener('pointercancel', e => {
   joystick.activePointerId = null;
   stickEl.style.transform = 'translate(-50%, -50%)';
 });
+
+
+const fireBtn = document.querySelector('#firePad .btn.big');
+let firePointerId = null;
+
+fireBtn.addEventListener('pointerdown', e => {
+  if (e.cancelable) e.preventDefault();
+  firePointerId = e.pointerId;
+  shootBullet(); // your existing bullet firing logic
+  try { fireBtn.setPointerCapture && fireBtn.setPointerCapture(e.pointerId); } catch (err) { }
+});
+
+fireBtn.addEventListener('pointerup', e => {
+  if (firePointerId !== null && e.pointerId !== firePointerId) return;
+  firePointerId = null;
+  try { fireBtn.releasePointerCapture && fireBtn.releasePointerCapture(e.pointerId); } catch (err) { }
+});
+
+fireBtn.addEventListener('pointercancel', e => {
+  if (firePointerId !== null && e.pointerId !== firePointerId) return;
+  firePointerId = null;
+});
+
 // --- Touch Controls Visibility ---
 
 const touchControls = document.getElementById("touchControls");
@@ -147,12 +170,14 @@ document.addEventListener("click", () => {
 
 
 
-  document.querySelectorAll('.btn').forEach(el => {
-    const a = el.dataset.a;
-    el.onpointerdown = e => { e.preventDefault(); setAction(a,true); };
-    el.onpointerup   = e => { e.preventDefault(); setAction(a,false); };
-    el.onpointerleave= el.onpointercancel = e => setAction(a,false);
-  });
+document.querySelectorAll('.btn').forEach(el => {
+  if (el.id === "firePad") return; // skip fire button
+  const a = el.dataset.a;
+  el.onpointerdown = e => { e.preventDefault(); setAction(a,true); };
+  el.onpointerup   = e => { e.preventDefault(); setAction(a,false); };
+  el.onpointerleave= el.onpointercancel = e => setAction(a,false);
+});
+
   function setAction(a,v){
     if(a==="up")keys.ArrowUp=v; else if(a==="down")keys.ArrowDown=v;
     else if(a==="left")keys.ArrowLeft=v; else if(a==="right")keys.ArrowRight=v;
