@@ -37,8 +37,12 @@ class VirtualJoystick {
     this.dy = 0;
     this.thrust = 0;
     this.angle = 0;
+    this.activePointerId = null;
   }
-  start(x, y) { this.active = true; this.update(x, y); }
+  start(x, y) {
+    this.active = true;
+    this.update(x, y);
+  }
   update(x, y) {
     const dx = x - this.centerX;
     const dy = y - this.centerY;
@@ -47,45 +51,51 @@ class VirtualJoystick {
     this.thrust = dist / this.maxRadius;
     this.dx = dx; this.dy = dy;
   }
-  end() { this.active = false; this.thrust = 0; }
+  end() {
+    this.active = false;
+    this.thrust = 0;
+    this.activePointerId = null;
+  }
 }
 
-// --- Wiring (pointer events to support multi-touch) ---
-let joystickPointerId = null;
+// --- Setup ---
+const joystick = new VirtualJoystick(60, window.innerHeight - 60, 60);
+const joystickEl = document.getElementById('joystick');
+const stickEl = document.getElementById('stick');
+
+// Use pointer events for unified mouse/touch/stylus handling and pointer capture
 joystickEl.addEventListener('pointerdown', e => {
-  if (e.pointerType !== 'touch' && e.pointerType !== 'pen') return; // prefer touch/pen
-  joystickPointerId = e.pointerId;
+  if (e.cancelable) e.preventDefault();
   joystick.start(e.clientX, e.clientY);
-  try { joystickEl.setPointerCapture && joystickEl.setPointerCapture(e.pointerId); } catch (err) {}
+  joystick.activePointerId = e.pointerId;
+  try { joystickEl.setPointerCapture && joystickEl.setPointerCapture(e.pointerId); } catch (err) { }
 });
-joystickEl.addEventListener('pointermove', e => {
-  if (e.pointerId !== joystickPointerId) return;
+
+// Track pointer moves on the window so movement continues if pointer leaves the element
+window.addEventListener('pointermove', e => {
+  if (!joystick.active) return;
+  if (joystick.activePointerId != null && e.pointerId !== joystick.activePointerId) return;
   joystick.update(e.clientX, e.clientY);
   // Move knob visually
   const dx = Math.cos(joystick.angle) * joystick.thrust * joystick.maxRadius;
   const dy = Math.sin(joystick.angle) * joystick.thrust * joystick.maxRadius;
   stickEl.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
 });
-joystickEl.addEventListener('pointerup', e => {
-  if (e.pointerId !== joystickPointerId) return;
+
+window.addEventListener('pointerup', e => {
+  if (joystick.activePointerId != null && e.pointerId !== joystick.activePointerId) return;
   joystick.end();
-  stickEl.style.transform = 'translate(-50%, -50%)'; // reset knob
-  try { joystickEl.releasePointerCapture && joystickEl.releasePointerCapture(e.pointerId); } catch (err) {}
-  joystickPointerId = null;
-});
-joystickEl.addEventListener('pointercancel', e => {
-  if (e.pointerId !== joystickPointerId) return;
-  joystick.end();
+  joystick.activePointerId = null;
   stickEl.style.transform = 'translate(-50%, -50%)';
-  joystickPointerId = null;
+  try { joystickEl.releasePointerCapture && joystickEl.releasePointerCapture(e.pointerId); } catch (err) { }
 });
 
-joystickEl.addEventListener("touchend", () => {
+window.addEventListener('pointercancel', e => {
+  if (joystick.activePointerId != null && e.pointerId !== joystick.activePointerId) return;
   joystick.end();
-  stickEl.style.transform = "translate(-50%, -50%)"; // reset knob
-}, { passive: false });
-
-
+  joystick.activePointerId = null;
+  stickEl.style.transform = 'translate(-50%, -50%)';
+});
 // --- Touch Controls Visibility ---
 
 const touchControls = document.getElementById("touchControls");
@@ -189,6 +199,20 @@ state.respawnDelay = 0;   // countdown before ship respawn
     speed:0.2+Math.random()*0.5,
     size:Math.random()<0.1?2:1
   }));
+
+  // Vibration helper (throttled) — only used when `navigator.vibrate` exists
+  let _lastVibrate = 0;
+  function tryVibrate(pattern, minInterval = 120) {
+    if (!('vibrate' in navigator)) return;
+    const now = Date.now();
+    if (now - _lastVibrate < minInterval) return;
+    try {
+      navigator.vibrate(pattern);
+      _lastVibrate = now;
+    } catch (e) {
+      // Ignore vibration errors (some browsers may throw on invalid patterns)
+    }
+  }
 
   function resetShip(){ state.ship.visible = true; state.ship.x=canvas.width/2; state.ship.y=canvas.height/2; state.ship.vx=0; state.ship.updatevy=0; state.ship.angle=-Math.PI/2; state.ship.inv=120; }
 function spawnWave(n = 6 + state.wave) {
@@ -294,9 +318,6 @@ function spawnExplosion(x, y, type = "enemy") {
     state.particles[state.particles.length - 1].color = color;
   }
 
-  // Vibrate device slightly for explosion feedback (if supported)
-  try { if (navigator && navigator.vibrate) navigator.vibrate(40); } catch (e) {}
-
   // Layer 2: heavier debris (slower, medium lifetime)
   const debris = isEnemy ? 160 : (isShip ? 240 : 40);
   for (let i = 0; i < debris; i++) {
@@ -338,6 +359,8 @@ function spawnExplosion(x, y, type = "enemy") {
     pulse: true,
     pulseMax: isShip ? 480 : (isEnemy ? 360 : 160)
   });
+  // vibrate for explosions (short, throttled)
+  tryVibrate(isShip ? [60,30,40] : 40, 120);
 }
 
 function spawnShipSpawnEffect(x, y) {
@@ -395,8 +418,8 @@ function spawnShipSpawnEffect(x, y) {
     pulse: true,
     pulseMax: 220
   });
-  // Vibrate device slightly for spawn feedback (if supported)
-  try { if (navigator && navigator.vibrate) navigator.vibrate(30); } catch (e) {}
+  // vibrate on ship spawn (longer stronger pattern)
+  tryVibrate([80,30,80], 200);
 }
 
 // Particle updates are handled in the main update() loop (with dt).
@@ -556,7 +579,9 @@ ship.y = wrap(ship.y, canvas.height);
   // --- Bullets update ---
   state.bullets.forEach(b => {
     // Homing: find nearest enemy or pickup within range and steer towards it
-    const homingRange = 140;
+    // Reduce homing intensity on smaller screens — compute a screen scale [0..1]
+    const screenScale = Math.min(1, window.innerWidth / 800); // 800px+ uses full homing
+    const homingRange = 120 + Math.round(screenScale * 160); // 120..280 depending on width
     let target = null;
     let minDist = homingRange * homingRange; // squared distance
     // Prefer enemies but allow pickups to be targeted as well
@@ -588,8 +613,10 @@ ship.y = wrap(ship.y, canvas.height);
       const dy = target.y - b.y;
       const targetAngle = Math.atan2(dy, dx);
       const angleDiff = normalizeAngleDiff(targetAngle - b.angle);
-      // Very smooth tracking: 0.05 is subtle, 0.10 is moderate, 0.15 is snappy
-      const trackingFactor = 0.15;
+      // Tracking factor scales with screen size: less intense on small screens
+      const maxTracking = 0.15; // desktop/smaller screens cap
+      const minTracking = 0.05; // minimum subtle homing
+      const trackingFactor = Math.max(minTracking, maxTracking * screenScale);
       b.angle += angleDiff * trackingFactor;
     }
     
