@@ -1,3 +1,13 @@
+window.addEventListener('load', function() {
+  const preloader = document.getElementById('qft-preloader');
+  
+  // Optional: A minimal timeout to ensure users see the animation 
+  // even if the site loads instantly (prevents a flashing glitch).
+  setTimeout(() => {
+    preloader.classList.add('fade-out');
+  }, 1000); // 1000ms = 1 second
+});
+
 /* --- Procedural Circuit Generator --- */
 function generateCircuit(nodesCount = 10) {
   const svgNS = "http://www.w3.org/2000/svg";
@@ -156,7 +166,6 @@ function activateTopScroll() {
 function scrollEvent() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
-    navbar.style.position = "fixed";
   } else {
     navbar.classList.remove("sticky");
   }

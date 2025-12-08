@@ -181,22 +181,20 @@
 /* Hover: activate spin */
 /* On hover, circle appears */
 .menu_icon:hover::before {
-
- border-color: #7873f5; /* brand color */
+box-shadow: var(--glow-shadow);
   transform: translate(-50%, -50%) scale(1); /* expand to full size */
-    animation: spin 1s linear infinite;
 }
 
 
 /* Click (toggle .change): keep spinning, change color */
 .menu_icon.change::before {
-  border-color: #7873f5;
-  animation: spin 1s linear infinite;
+    box-shadow: var(--glow-shadow);
+  transform: translate(-50%, -50%) scale(1); /* expand to full size */
 }
 
 @keyframes spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(360deg); }
+  from { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) scale(1) rotate(360deg); }
 }
 
 
@@ -890,7 +888,7 @@
     
     #navbar {
         position: absolute;
-        padding-top: 1px;
+        top: 1px;
         margin: 0%;
         z-index: 4;
         background-color: none;
@@ -899,7 +897,11 @@
         width: 100%;
         transition: ease-in-out 0.5s;
     }
-    
+    #navbar.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
     #navbar img {
         z-index: 2;
         background-color: none;
