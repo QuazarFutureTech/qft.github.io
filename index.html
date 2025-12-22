@@ -407,27 +407,31 @@
         </div>
     </section>
     <div style="box-shadow: 0 0 24px black"></div>
-    <script>
-        const express = require("express");
-const app = express();
-const port = 8080 || process.env.PORT;
-
-//Send index
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + "index.html");
-});
-
-//Example
-app.get('/page', (req, res) => {
-  res.sendFile(__dirname + "page.html");
-});
-
-//Run server
-app.listen(port, () => {
-  console.log("Online");
-});
-    </script>
     <script src="assets/js/accordion.js"></script>
+
+    <div id="modalBeta" class="modal has-text-centered">
+    <div class="beta_modal-content">
+        <div class="beta_modal-head theme-beta">
+            <span class="beta_close">&times;</span>
+            <h2 class="has-text-white theme-beta subtitle is-3" id="betaTitle">
+                <i class="fa fa-wrench" aria-hidden="true"></i> Beta Disclaimer
+            </h2>
+        </div>
+        <div class="beta_modal-body theme-dk">
+            <p class="has-text-white" id="betaMessage">
+                Welcome <br> 
+                You have reached the public beta of quazarfuturetech.com<br> 
+                If you find any bugs it is our humble request that you report them on the 
+                <a href="https://github.com/QuazarFutureTech/qft.github.io/issues">GitHub repository</a> 
+                of this website. <br> Thank you!
+            </p>
+        </div>
+        <div class="beta_modal-foot theme-beta">
+            <h3 class="has-text-white is-5">QuazarFutureTech&trade;</h3>
+        </div>
+    </div>
+</div>
+
     <div id="modalFrame" class="modal has-text-centered">
         <div class="modal-container">
         <div class="modal-head theme-main">

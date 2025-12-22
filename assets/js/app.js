@@ -66,7 +66,7 @@ function activateEasterEgg() {
 
   // Step 4: Redirect after text fades out
   setTimeout(() => {
-    window.location.href = "secret.html";
+    window.location.href = "/secret/game.html";
   }, 5500); // allow 1.5s fade-out
 }
 
